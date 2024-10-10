@@ -40,6 +40,8 @@
             pkgs.raycast
             pkgs.lsd
             pkgs.wget
+            pkgs.doppler
+            pkgs.gh
           ];
 
         fonts.packages = [
@@ -101,6 +103,8 @@
             "bitwarden"
             "insomnia"
             "spotify"
+            "notion"
+            "notion-calendar"
           ];
           brews = [
             "mas"
