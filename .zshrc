@@ -7,11 +7,6 @@ export EDITOR=code
 export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk/27.0.11902837
 export ANDROID_HOME=$HOME/Library/Android/sdk
 
-if [[ -s "${$HOME}/dotfiles/nix/configuration.nix" ]]; then
-   export NIX_PATH=$HOME/dotfiles/nix/configuration.nix
-fi
-
-
 alias ls="lsd -1"
 
 function dev() {
@@ -72,9 +67,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 export CROSS_CONTAINER_ENGINE=podman
 
-elif [[ `uname` == "Darwin" ]]; then
-    alias db='darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix-darwin#mac"'
+if [[ `uname` == "Darwin" ]]; then
+    alias db='darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix/nix-darwin#mac"'
 else
-    NIX_PATH="nixos-config=~/dotfiles/nix/configuration.nix"
-    alias db='sudo nixos-rebuild switch -I $NIX_PATH'
+    alias db='sudo nixos-rebuild switch --flake "/home/bahnasawy/dotfiles/nix/nixos"'
 fi
