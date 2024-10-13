@@ -8,13 +8,12 @@
 
   home.packages = [
   ];
-
   home.file = {
     ".config" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/bahnasawy/dotfiles/.config";
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/.config";
     };
     ".zshrc" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/home/bahnasawy/dotfiles/.zshrc";
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/.zshrc";
     };
   };
   home.sessionVariables = {
@@ -23,5 +22,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-}
 
+  targets.darwin.currentHostDefaults."com.apple.controlcenter".BatteryShowPercentage = true;
+}
