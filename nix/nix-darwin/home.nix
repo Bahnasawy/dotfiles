@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  imports = [ ./configs/packages.nix ];
   home.username = "bahnasawy";
   home.homeDirectory = "/Users/bahnasawy";
 
@@ -10,9 +11,13 @@
   home.file = {
     ".config" = {
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/.config";
+      recursive = true;
     };
     ".zshrc" = {
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/.zshrc";
+    };
+    ".zpreztorc" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/.zpreztorc";
     };
   };
   home.sessionVariables = {
