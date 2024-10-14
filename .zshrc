@@ -68,7 +68,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export CROSS_CONTAINER_ENGINE=podman
 
 if [[ `uname` == "Darwin" ]]; then
+    alias nu='sudo nix flake update /Users/bahnasawy/dotfiles/nix/nix-darwin#mac'
     alias db='darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix/nix-darwin#mac"'
 else
+    alias nu='sudo nix flake update /home/bahnasawy/dotfiles/nix/nixos'
     alias db='sudo nixos-rebuild switch --flake "/home/bahnasawy/dotfiles/nix/nixos"'
 fi

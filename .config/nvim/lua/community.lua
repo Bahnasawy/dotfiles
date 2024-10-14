@@ -18,6 +18,7 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.nix" },
   -- colorscheme
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
