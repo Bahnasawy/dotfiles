@@ -12,7 +12,7 @@
     home-manager
     zoxide
     fzf
-    nodejs_22
+    nodejs_20
     tree-sitter
     rustup
     neovide
