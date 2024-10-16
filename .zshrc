@@ -4,8 +4,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 export EDITOR=code
-export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk/27.0.11902837
-export ANDROID_HOME=$HOME/Library/Android/sdk
 
 alias ls="lsd -1"
 
@@ -23,11 +21,11 @@ function dev() {
 
 alias download="wget -P $HOME/Downloads"
 
-alias rc="source $HOME/.zshrc"
+alias rc="source $HOME/dotfiles/.zshrc"
 
 export TOOLCHAINS=swift
 
-alias zshrc="nvim $HOME/.zshrc"
+alias zshrc="nvim $HOME/dotfiles/.zshrc"
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
@@ -68,9 +66,13 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export CROSS_CONTAINER_ENGINE=podman
 
 if [[ `uname` == "Darwin" ]]; then
-    alias nu='sudo nix flake update /Users/bahnasawy/dotfiles/nix/nix-darwin'
+    export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk/27.0.11902837
+    export ANDROID_HOME=$HOME/Library/Android/sdk
+    alias nu='sudo nix flake update /Users/bahnasawy/dotfiles/nix/nix-darwin#mac'
     alias db='darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix/nix-darwin#mac"'
 else
+    export ANDROID_NDK_HOME=$HOME/Android/Sdk/ndk/28.0.12433566
+    export ANDROID_HOME=$HOME/Android/Sdk
     alias nu='sudo nix flake update /home/bahnasawy/dotfiles/nix/nixos'
     alias db='sudo nixos-rebuild switch --flake "/home/bahnasawy/dotfiles/nix/nixos"'
 fi

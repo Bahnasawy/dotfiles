@@ -56,4 +56,26 @@
   hardware.graphics.extraPackages32 = with pkgs; [
     driversi686Linux.amdvlk
   ];
+
+  programs.adb.enable = true;
+
+  programs.steam = {
+    enable = true;
+    # gamescopeSession.enable = true;
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ];
+  };
+
+  fonts.packages = [
+    (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];})
+  ];
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    gradle_8
+    aapt
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+  ];
 }

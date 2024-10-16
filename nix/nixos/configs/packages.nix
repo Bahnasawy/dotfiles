@@ -17,7 +17,6 @@
     tree-sitter
     gcc
     python3
-    rustup
     xclip
     zsh-prezto
     lazygit
@@ -32,7 +31,14 @@
     bitwarden-desktop
     bun
     filelight
-    #steam
-    #proton-ge-bin
+    amdvlk
+    android-studio
+    htop-vim
+    jdk17
+    neovide
+    exercism
+    cargo
+    rustc
+    rust-analyzer
   ];
 }

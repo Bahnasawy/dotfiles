@@ -1,5 +1,6 @@
 {...}: {
   programs.plasma = {
+    enable = true;
     workspace = {
       colorScheme = "BreezeDark";
       theme = "breeze-dark";
