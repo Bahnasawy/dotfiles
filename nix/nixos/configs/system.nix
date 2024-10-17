@@ -49,19 +49,10 @@
     "video=HDMI-A-1:1920x1080@60"
   ];
 
-  hardware.graphics.extraPackages = with pkgs; [
-    amdvlk
-  ];
-
-  hardware.graphics.extraPackages32 = with pkgs; [
-    driversi686Linux.amdvlk
-  ];
-
   programs.adb.enable = true;
 
   programs.steam = {
     enable = true;
-    # gamescopeSession.enable = true;
     extraCompatPackages = with pkgs; [
       proton-ge-bin
     ];

@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+  programs.bat = {
+    enable = true;
+  };
   home.packages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
@@ -28,10 +31,9 @@
     deadnix
     statix
     doppler
-    bitwarden-desktop
+    # bitwarden-desktop
     bun
     filelight
-    amdvlk
     android-studio
     htop-vim
     jdk17
@@ -40,5 +42,6 @@
     cargo
     rustc
     rust-analyzer
+    home-manager
   ];
 }

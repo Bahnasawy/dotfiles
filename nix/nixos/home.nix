@@ -8,6 +8,9 @@
     ./configs/plasma.nix
     ./configs/config.nix
   ];
+
+  programs.home-manager.enable = true;
+
   home.username = "bahnasawy";
   home.homeDirectory = "/home/bahnasawy";
 
@@ -16,7 +19,4 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }

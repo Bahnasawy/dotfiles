@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   programs.plasma = {
     enable = true;
     workspace = {
@@ -18,5 +18,20 @@
         ];
       };
     };
+    powerdevil.AC = {
+      autoSuspend.action = "nothing";
+      autoSuspend.idleTimeout = null;
+      dimDisplay = {
+        enable = false;
+        idleTimeout = null;
+      };
+      powerButtonAction = "turnOffScreen";
+      turnOffDisplay. idleTimeout = null;
+    };
+    krunner = {
+      activateWhenTypingOnDesktop = true;
+      position = "center";
+    };
+    workspace.wallpaperPictureOfTheDay = {provider = "apod";};
   };
 }
