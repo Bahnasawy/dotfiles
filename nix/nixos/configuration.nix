@@ -44,4 +44,5 @@
     fsType = "ext4";
   };
   environment.defaultPackages = with pkgs; [networkmanager];
+  networking.hostName = "pc";
 }

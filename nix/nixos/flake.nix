@@ -23,7 +23,7 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
   in {
-    homeConfigurations."nixos" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."pc" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
 
       modules = [
@@ -33,7 +33,7 @@
       # sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
     };
 
-    nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
+    nixosConfigurations."pc" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
