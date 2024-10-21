@@ -31,7 +31,6 @@
     deadnix
     statix
     doppler
-    # bitwarden-desktop
     bun
     filelight
     android-studio
@@ -43,5 +42,7 @@
     rustc
     rust-analyzer
     home-manager
+    yakuake
+    nix-output-monitor
   ];
 }

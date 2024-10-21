@@ -33,5 +33,6 @@
       position = "center";
     };
     workspace.wallpaperPictureOfTheDay = {provider = "apod";};
+    panels = [];
   };
 }

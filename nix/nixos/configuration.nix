@@ -43,4 +43,5 @@
     device = "/dev/disk/by-uuid/5c6f78fc-a6ec-418d-9896-f879bffcd4c3";
     fsType = "ext4";
   };
+  environment.defaultPackages = with pkgs; [networkmanager];
 }
