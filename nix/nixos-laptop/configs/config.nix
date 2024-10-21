@@ -23,10 +23,4 @@
     source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/.zpreztorc;
     recursive = true;
   };
-
-  programs.git = {
-    enable = true;
-    userName = "bahnasawy";
-    userEmail = "yousef.elbahnasawy@gmail.com";
-  };
 }
