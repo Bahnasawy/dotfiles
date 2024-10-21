@@ -1,8 +1,4 @@
-{
-  self,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./configs/homebrew.nix
     ./configs/system.nix
@@ -16,7 +12,7 @@
 
   nix.settings.experimental-features = "nix-command flakes";
 
-  system.configurationRevision = self.rev or self.dirtyRev or null;
+  # system.configurationRevision = self.rev or self.dirtyRev or null;
 
   nixpkgs.hostPlatform = "aarch64-darwin";
 }

@@ -26,5 +26,8 @@
     deadnix
     statix
     ripgrep
+    cocoapods
+    nodejs_20
+    nix-output-monitor
   ];
 }

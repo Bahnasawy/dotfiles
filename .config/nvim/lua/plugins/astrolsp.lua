@@ -172,27 +172,51 @@ return {
       -- the key is the server that is being setup with `lspconfig`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
       nixd = function(_)
-        require("lspconfig").nixd.setup {
-          cmd = { "nixd" },
-          settings = {
-            nixd = {
-              nixpkgs = {
-                expr = "import <nixpkgs> { }",
-              },
-              formatting = {
-                command = { "nixfmt" },
-              },
-              options = {
-                nixos = {
-                  expr = '(builtins.getFlake (toString ./.)).nixosConfigurations."nixos".options',
+        if vim.loop.os_uname().sysname == "Linux" then
+          require("lspconfig").nixd.setup {
+            cmd = { "nixd" },
+            settings = {
+              nixd = {
+                nixpkgs = {
+                  expr = "import <nixpkgs> { }",
                 },
-                home_manager = {
-                  expr = '(builtins.getFlake (toString ./.)).homeConfigurations."nixos".options',
+                formatting = {
+                  command = { "nixfmt" },
+                },
+                options = {
+                  nixos = {
+                    expr = '(builtins.getFlake (toString ./.)).nixosConfigurations."nixos".options',
+                  },
+                  home_manager = {
+                    expr = '(builtins.getFlake (toString ./.)).homeConfigurations."nixos".options',
+                  },
                 },
               },
             },
-          },
-        }
+          }
+        else
+          require("lspconfig").nixd.setup {
+            cmd = { "nixd" },
+            settings = {
+              nixd = {
+                nixpkgs = {
+                  expr = "import <nixpkgs> { }",
+                },
+                formatting = {
+                  command = { "nixfmt" },
+                },
+                options = {
+                  darwin = {
+                    expr = '(builtins.getFlake (toString ./.)).darwinConfigurations."mac".options',
+                  },
+                  -- home_manager = {
+                  --   expr = '(builtins.getFlake (toString ./.)).homeConfigurations."mac".options',
+                  -- },
+                },
+              },
+            },
+          }
+        end
       end, -- or a custom handler function can be passed
     },
     lsp_handlers = false,

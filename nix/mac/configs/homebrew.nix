@@ -11,9 +11,13 @@
       "spotify"
       "notion"
       "notion-calendar"
+      "whatsapp"
+      "expo-orbit"
+      "expressvpn"
     ];
     brews = [
       "mas"
+      "fastlane"
     ];
     masApps = {
       "XCode" = 497799835;
