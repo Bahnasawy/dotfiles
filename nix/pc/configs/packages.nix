@@ -3,9 +3,9 @@
     enable = true;
   };
   home.packages = with pkgs; [
+    neovim
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    neovim
     gh
     kitty
     google-chrome
@@ -43,6 +43,5 @@
     rust-analyzer
     home-manager
     yakuake
-    nix-output-monitor
   ];
 }

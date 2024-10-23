@@ -63,6 +63,8 @@ eval "$(fzf --zsh)"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 export CROSS_CONTAINER_ENGINE=podman
 
 if [[ `uname` == "Darwin" ]]; then
@@ -73,6 +75,6 @@ if [[ `uname` == "Darwin" ]]; then
 else
     export ANDROID_NDK_HOME=$HOME/Android/Sdk/ndk/28.0.12433566
     export ANDROID_HOME=$HOME/Android/Sdk
-    alias nu='sudo nix flake update --flake "/home/bahnasawy/dotfiles/nix" |& nom'
-    alias db='sudo nixos-rebuild switch --flake "/home/bahnasawy/dotfiles/nix#$(hostname)" |& nom'
+    alias nu='sudo nix flake update --flake "/home/bahnasawy/dotfiles/nix"'
+    alias db='sudo nixos-rebuild switch --flake "/home/bahnasawy/dotfiles/nix#$(hostname)"'
 fi

@@ -32,7 +32,11 @@
       activateWhenTypingOnDesktop = true;
       position = "center";
     };
-    workspace.wallpaperPictureOfTheDay = {provider = "apod";};
+    workspace = {
+      wallpaperPictureOfTheDay = {provider = "bing";};
+      wallpaperFillMode = "preserveAspectCrop";
+    };
+
     panels = [];
   };
 }

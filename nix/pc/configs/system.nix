@@ -69,4 +69,13 @@
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
+
+  environment.defaultPackages = with pkgs; [
+    # neovim
+  ];
+
+  nix = {
+    enable = true;
+    settings.max-jobs = 64;
+  };
 }

@@ -24,73 +24,102 @@
     plasma-manager,
     nix-darwin,
     nix-homebrew,
-  } @ inputs: {
-    # homeConfigurations."pc" = home-manager.lib.homeManagerConfiguration {
-    #   inherit pkgs;
-    #
-    #   modules = [
-    #     plasma-manager.homeManagerModules.plasma-manager
-    #     ./home.nix
-    #   ];
-    #   # sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
-    # };
+  } @ inputs: let
+    linuxSystem = "x86_64-linux";
+    linuxPackages = import nixpkgs {inherit linuxSystem;};
 
-    nixosConfigurations."pc" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./pc/configuration.nix
+    darwinSystem = "aarch64-darwin";
+    darwinPackages = import nixpkgs {inherit darwinSystem;};
+  in {
+    homeConfigurations = {
+      pc = home-manager.lib.homeManagerConfiguration {
+        inherit linuxPackages;
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
-          home-manager.users.bahnasawy = import ./pc/home.nix;
+        modules = [
+          plasma-manager.homeManagerModules.plasma-manager
+          ./pc/home.nix
+        ];
+      };
 
-          home-manager.sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
-        }
-      ];
+      laptop = home-manager.lib.homeManagerConfiguration {
+        inherit linuxPackages;
+
+        modules = [
+          plasma-manager.homeManagerModules.plasma-manager
+          ./laptop/home.nix
+        ];
+      };
+
+      mac = home-manager.lib.homeManagerConfiguration {
+        inherit darwinPackages;
+
+        modules = [
+          ./mac/home.nix
+        ];
+      };
     };
 
-    nixosConfigurations."laptop" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./laptop/configuration.nix
+    nixosConfigurations = {
+      pc = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./pc/configuration.nix
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
-          home-manager.users.bahnasawy = import ./laptop/home.nix;
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.users.bahnasawy = import ./pc/home.nix;
 
-          home-manager.sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
-        }
-      ];
+            home-manager.sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
+          }
+        ];
+      };
+
+      laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./laptop/configuration.nix
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.users.bahnasawy = import ./laptop/home.nix;
+
+            home-manager.sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
+          }
+        ];
+      };
     };
 
-    darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
-      modules = [
-        ./mac/configuration.nix
-        nix-homebrew.darwinModules.nix-homebrew
-        {
-          nix-homebrew = {
-            enable = true;
-            enableRosetta = true;
-            user = "bahnasawy";
-          };
-        }
+    darwinConfigurations = {
+      mac = nix-darwin.lib.darwinSystem {
+        modules = [
+          ./mac/configuration.nix
 
-        home-manager.darwinModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.bahnasawy = import ./mac/home.nix;
-          };
-          users.users.bahnasawy.home = "/Users/bahnasawy";
-        }
-      ];
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              enableRosetta = true;
+              user = "bahnasawy";
+            };
+          }
+
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.bahnasawy = import ./mac/home.nix;
+            };
+            users.users.bahnasawy.home = "/Users/bahnasawy";
+          }
+        ];
+      };
     };
   };
 }

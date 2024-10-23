@@ -185,10 +185,10 @@ return {
                 },
                 options = {
                   nixos = {
-                    expr = '(builtins.getFlake (toString ./.)).nixosConfigurations."nixos".options',
+                    expr = "(builtins.getFlake (toString ./.)).nixosConfigurations." .. vim.fn.hostname() .. ".options",
                   },
                   home_manager = {
-                    expr = '(builtins.getFlake (toString ./.)).homeConfigurations."nixos".options',
+                    expr = "(builtins.getFlake (toString ./.)).homeConfigurations." .. vim.fn.hostname() .. ".options",
                   },
                 },
               },
@@ -206,12 +206,12 @@ return {
                   command = { "nixfmt" },
                 },
                 options = {
-                  darwin = {
-                    expr = '(builtins.getFlake (toString ./.)).darwinConfigurations."mac".options',
+                  nixos = {
+                    expr = "(builtins.getFlake (toString ./.)).darwinConfigurations.mac.options",
                   },
-                  -- home_manager = {
-                  --   expr = '(builtins.getFlake (toString ./.)).homeConfigurations."mac".options',
-                  -- },
+                  home_manager = {
+                    expr = "(builtins.getFlake (toString ./.)).homeConfigurations.mac.options",
+                  },
                 },
               },
             },
