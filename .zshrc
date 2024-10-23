@@ -70,8 +70,8 @@ export CROSS_CONTAINER_ENGINE=podman
 if [[ `uname` == "Darwin" ]]; then
     export ANDROID_NDK_HOME=$HOME/Library/Android/sdk/ndk/27.0.11902837
     export ANDROID_HOME=$HOME/Library/Android/sdk
-    alias nu='sudo nix flake update --flake /Users/bahnasawy/dotfiles/nix |& nom'
-    alias db='darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix#mac" |& nom'
+    alias nu='sudo nix flake update --flake /Users/bahnasawy/dotfiles/nix'
+    alias db='darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix#mac"'
 else
     export ANDROID_NDK_HOME=$HOME/Android/Sdk/ndk/28.0.12433566
     export ANDROID_HOME=$HOME/Android/Sdk
