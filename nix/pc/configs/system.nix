@@ -34,6 +34,12 @@
     pipewire = {
       enable = true;
       pulse.enable = true;
+      extraConfig.pipewire.adjust-sample-rate = {
+        "context.properties" = {
+          "default.clock.rate" = 44100;
+          "defautlt.allowed-rates" = [44100 48000];
+        };
+      };
     };
   };
 
@@ -66,6 +72,7 @@
   programs.nix-ld.libraries = with pkgs; [
     gradle_8
     aapt
+    lua-language-server
     # Add any missing dynamic libraries for unpackaged programs
     # here, NOT in environment.systemPackages
   ];
