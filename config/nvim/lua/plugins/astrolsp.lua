@@ -206,7 +206,7 @@ return {
                   command = { "nixfmt" },
                 },
                 options = {
-                  nixos = {
+                  nixdawin = {
                     expr = "(builtins.getFlake (toString ./.)).darwinConfigurations.mac.options",
                   },
                   home_manager = {

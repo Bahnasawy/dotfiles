@@ -54,5 +54,7 @@
 
   programs.zsh.enable = true; # default shell on catalina
 
-  services.nix-daemon.enable = true;
+  services = {
+    nix-daemon.enable = true;
+  };
 }

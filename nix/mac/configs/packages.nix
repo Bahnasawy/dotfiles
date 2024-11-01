@@ -28,5 +28,10 @@
     ripgrep
     cocoapods
     nodejs_20
+    openjdk17
   ];
+
+  programs.bat = {
+    enable = true;
+  };
 }
