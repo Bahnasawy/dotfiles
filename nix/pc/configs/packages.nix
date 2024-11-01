@@ -43,5 +43,11 @@
     rust-analyzer
     home-manager
     yakuake
+    lsof
+    killall
+    bitwarden-cli
+    beekeeper-studio
+    expressvpn
+    pnpm
   ];
 }

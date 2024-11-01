@@ -26,14 +26,14 @@
     nix-homebrew,
   } @ inputs: let
     linuxSystem = "x86_64-linux";
-    linuxPackages = import nixpkgs {inherit linuxSystem;};
+    linuxPackages = nixpkgs.legacyPackages.${linuxSystem};
 
     darwinSystem = "aarch64-darwin";
-    darwinPackages = import nixpkgs {inherit darwinSystem;};
+    darwinPackages = nixpkgs.legacyPackages.${darwinSystem};
   in {
     homeConfigurations = {
       pc = home-manager.lib.homeManagerConfiguration {
-        inherit linuxPackages;
+        pkgs = linuxPackages;
 
         modules = [
           plasma-manager.homeManagerModules.plasma-manager
@@ -42,7 +42,7 @@
       };
 
       laptop = home-manager.lib.homeManagerConfiguration {
-        inherit linuxPackages;
+        pkgs = linuxPackages;
 
         modules = [
           plasma-manager.homeManagerModules.plasma-manager
@@ -51,7 +51,7 @@
       };
 
       mac = home-manager.lib.homeManagerConfiguration {
-        inherit darwinPackages;
+        pkgs = darwinPackages;
 
         modules = [
           ./mac/home.nix

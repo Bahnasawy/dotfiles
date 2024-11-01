@@ -41,6 +41,42 @@
         };
       };
     };
+    openssh = {
+      enable = true;
+    };
+    expressvpn = {
+      enable = true;
+    };
+    postgresql = {
+      enable = true;
+      ensureDatabases = ["bahnasawy" "eshop"];
+      ensureUsers = [
+        {
+          name = "bahnasawy";
+          ensureDBOwnership = true;
+          ensureClauses = {
+            superuser = true;
+            createrole = true;
+            createdb = true;
+            login = true;
+          };
+        }
+      ];
+      authentication = pkgs.lib.mkOverride 10 ''
+        #type database  DBuser  auth-method
+        local all       all     trust
+        host all       all     127.0.0.1/32 md5
+      '';
+      initialScript = pkgs.writeText "backend-initScript" ''
+        REVOKE ALL ON DATABASE eshop FROM bahnasawy;
+        GRANT CONNECT ON DATABASE eshop TO bahnasawy;
+        GRANT SELECT ON ALL TABLES IN SCHEMA public TO bahnasawy;
+        GRANT INSERT ON ALL TABLES IN SCHEMA public TO bahnasawy;
+        GRANT UPDATE ON ALL TABLES IN SCHEMA public TO bahnasawy;
+        ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO bahnasawy;
+        ALTER DATABASE eshop SET search_path TO bahnasawy;
+      '';
+    };
   };
 
   programs.zsh.enable = true;
@@ -84,5 +120,11 @@
   nix = {
     enable = true;
     settings.max-jobs = 64;
+  };
+
+  virtualisation = {
+    docker = {
+      enable = true;
+    };
   };
 }
