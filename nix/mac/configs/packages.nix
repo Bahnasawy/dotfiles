@@ -15,7 +15,6 @@
     nodejs_20
     tree-sitter
     rustup
-    neovide
     raycast
     lsd
     wget
@@ -29,6 +28,7 @@
     cocoapods
     nodejs_20
     openjdk17
+    # neovide
   ];
 
   programs.bat = {
