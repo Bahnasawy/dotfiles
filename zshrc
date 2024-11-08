@@ -21,7 +21,7 @@ function dev() {
 
 alias download="wget -P $HOME/Downloads"
 
-alias rc="source $HOME/dotfiles/.zshrc"
+alias rc="source $HOME/.zshrc"
 
 export TOOLCHAINS=swift
 
