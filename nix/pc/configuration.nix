@@ -16,9 +16,10 @@
   users.users.bahnasawy = {
     isNormalUser = true;
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    shell = pkgs.nushell;
   };
 
-  users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.nushell;
 
   boot.extraModprobeConfig = ''
     blacklist nouveau

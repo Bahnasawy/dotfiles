@@ -3,7 +3,7 @@
     enable = true;
   };
   home.packages = with pkgs; [
-    neovim
+    # neovim
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     gh
@@ -11,8 +11,6 @@
     google-chrome
     bluez
     git
-    zsh
-    zoxide
     fzf
     lsd
     luarocks
@@ -21,7 +19,6 @@
     gcc
     python3
     xclip
-    zsh-prezto
     lazygit
     ripgrep
     unzip
@@ -47,7 +44,9 @@
     killall
     bitwarden-cli
     beekeeper-studio
-    expressvpn
     pnpm
+    lua5_1
+    gzip
+    zig
   ];
 }

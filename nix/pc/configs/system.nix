@@ -44,9 +44,6 @@
     openssh = {
       enable = true;
     };
-    expressvpn = {
-      enable = true;
-    };
     postgresql = {
       enable = true;
       ensureDatabases = ["bahnasawy" "eshop"];
@@ -79,8 +76,6 @@
     };
   };
 
-  programs.zsh.enable = true;
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -91,26 +86,26 @@
     "video=HDMI-A-1:1920x1080@60"
   ];
 
-  programs.adb.enable = true;
-
-  programs.steam = {
-    enable = true;
-    extraCompatPackages = with pkgs; [
-      proton-ge-bin
+  programs = {
+    adb.enable = true;
+    steam = {
+      enable = true;
+      extraCompatPackages = with pkgs; [
+        proton-ge-bin
+      ];
+    };
+    nix-ld.enable = true;
+    nix-ld.libraries = with pkgs; [
+      gradle_8
+      aapt
+      lua-language-server
+      # Add any missing dynamic libraries for unpackaged programs
+      # here, NOT in environment.systemPackages
     ];
   };
 
   fonts.packages = [
     (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];})
-  ];
-
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    gradle_8
-    aapt
-    lua-language-server
-    # Add any missing dynamic libraries for unpackaged programs
-    # here, NOT in environment.systemPackages
   ];
 
   environment.defaultPackages = with pkgs; [
