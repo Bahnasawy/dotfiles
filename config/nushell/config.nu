@@ -1,8 +1,12 @@
-def db [] {
+def db [--impure] {
   if $"(^uname)" == "Darwin" {
       darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix#mac"
   } else {
-      sudo nixos-rebuild switch --flake $"/home/bahnasawy/dotfiles/nix#(hostname)"
+        if $impure {
+            sudo nixos-rebuild switch --flake $"/home/bahnasawy/dotfiles/nix#(hostname)" --impure
+        } else {
+            sudo nixos-rebuild switch --flake $"/home/bahnasawy/dotfiles/nix#(hostname)"
+        }
   }
 }
 

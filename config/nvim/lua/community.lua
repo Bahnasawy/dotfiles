@@ -42,7 +42,7 @@ return {
   -- fuzzy-finder
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
   -- completion
-  -- { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.completion.supermaven-nvim" },
 
   -- utility
   { import = "astrocommunity.utility.telescope-lazy-nvim" },

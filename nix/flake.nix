@@ -41,6 +41,14 @@
         ];
       };
 
+      wsl = home-manager.lib.homeManagerConfiguration {
+        pkgs = linuxPackages;
+
+        modules = [
+          ./wsl/home.nix
+        ];
+      };
+
       laptop = home-manager.lib.homeManagerConfiguration {
         pkgs = linuxPackages;
 
@@ -73,6 +81,21 @@
             home-manager.users.bahnasawy = import ./pc/home.nix;
 
             home-manager.sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
+          }
+        ];
+      };
+
+      wsl = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./wsl/configuration.nix
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.users.bahnasawy = import ./wsl/home.nix;
           }
         ];
       };
