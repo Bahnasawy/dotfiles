@@ -10,12 +10,18 @@ def db [--impure] {
   }
 }
 
-def nu [] {
+def fu [] {
   if $"(^uname)" == "Darwin" {
       nix flake update --flake /Users/bahnasawy/dotfiles/nix
   } else {
       sudo nix flake update --flake "/home/bahnasawy/dotfiles/nix"
   }
+}
+
+def dev [] {
+    if $"(ls | str contains 'bun' name | where name == true | get 'name' | get 0)" == 'true' {
+        bun run dev
+    }
 }
 
 $env.EDITOR = 'nvim'

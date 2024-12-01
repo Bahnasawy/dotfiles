@@ -7,13 +7,29 @@
   home.username = "bahnasawy";
   home.homeDirectory = "/Users/bahnasawy";
 
-  home.stateVersion = "24.05"; # Please read the comment before changing.
+  home.stateVersion = "25.05"; # Please read the comment before changing.
 
-  home.packages = [
-  ];
+  home.packages = [];
+
   home.file = {
-    ".config" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config";
+    ".config/nvim" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/nvim";
+      recursive = true;
+    };
+    ".config/gh" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/gh";
+      recursive = true;
+    };
+    ".config/kitty" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/kitty";
+      recursive = true;
+    };
+    ".config/neovide" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/neovide";
+      recursive = true;
+    };
+    ".config/raycast" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/raycast";
       recursive = true;
     };
     ".zshrc" = {

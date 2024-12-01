@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "GnArLyGoBLiN's configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -12,8 +12,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    nix-darwin.url = "github:LnL7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-darwin = {
+      url = "github:LnL7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
@@ -120,14 +122,16 @@
 
     darwinConfigurations = {
       mac = nix-darwin.lib.darwinSystem {
+        # specialArgs = {inherit inputs self;};
         modules = [
+          # darwinConfiguration
           ./mac/configuration.nix
 
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
               enable = true;
-              enableRosetta = true;
+              # enableRosetta = true;
               user = "bahnasawy";
             };
           }

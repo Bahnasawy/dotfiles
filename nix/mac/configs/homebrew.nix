@@ -18,6 +18,10 @@
     brews = [
       "mas"
       "fastlane"
+      "bun"
+    ];
+    taps = [
+      "oven-sh/bun"
     ];
     masApps = {
       "XCode" = 497799835;

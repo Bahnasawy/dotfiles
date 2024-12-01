@@ -8,6 +8,7 @@ return { -- override nvim-cmp plugin
     -- modify the sources part of the options table
     opts.sources = cmp.config.sources {
       { name = "nvim_lsp", priority = 1000 },
+      { name = "supermaven", priority = 950 },
       { name = "codeium", group_index = 1, priority = 900 },
       -- {
       --   name = "buffer",

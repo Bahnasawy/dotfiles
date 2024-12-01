@@ -43,7 +43,6 @@ return {
   { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
   -- completion
   { import = "astrocommunity.completion.supermaven-nvim" },
-
   -- utility
   { import = "astrocommunity.utility.telescope-lazy-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
