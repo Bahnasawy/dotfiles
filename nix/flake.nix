@@ -17,6 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    neovim.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs = {
@@ -26,12 +27,17 @@
     plasma-manager,
     nix-darwin,
     nix-homebrew,
+    neovim,
   } @ inputs: let
     linuxSystem = "x86_64-linux";
     linuxPackages = nixpkgs.legacyPackages.${linuxSystem};
 
     darwinSystem = "aarch64-darwin";
     darwinPackages = nixpkgs.legacyPackages.${darwinSystem};
+
+    overlays = [
+      neovim.overlays.default
+    ];
   in {
     homeConfigurations = {
       pc = home-manager.lib.homeManagerConfiguration {
@@ -40,6 +46,9 @@
         modules = [
           plasma-manager.homeManagerModules.plasma-manager
           ./pc/home.nix
+          {
+            nixpkgs.overlays = overlays;
+          }
         ];
       };
 
@@ -48,6 +57,9 @@
 
         modules = [
           ./wsl/home.nix
+          {
+            nixpkgs.overlays = overlays;
+          }
         ];
       };
 
@@ -57,6 +69,9 @@
         modules = [
           plasma-manager.homeManagerModules.plasma-manager
           ./laptop/home.nix
+          {
+            nixpkgs.overlays = overlays;
+          }
         ];
       };
 
@@ -65,6 +80,9 @@
 
         modules = [
           ./mac/home.nix
+          {
+            nixpkgs.overlays = overlays;
+          }
         ];
       };
     };
@@ -83,6 +101,7 @@
             home-manager.users.bahnasawy = import ./pc/home.nix;
 
             home-manager.sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
+            nixpkgs.overlays = overlays;
           }
         ];
       };
@@ -98,6 +117,7 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             home-manager.users.bahnasawy = import ./wsl/home.nix;
+            nixpkgs.overlays = overlays;
           }
         ];
       };
@@ -115,6 +135,7 @@
             home-manager.users.bahnasawy = import ./laptop/home.nix;
 
             home-manager.sharedModules = [plasma-manager.homeManagerModules.plasma-manager];
+            nixpkgs.overlays = overlays;
           }
         ];
       };
@@ -144,6 +165,7 @@
               users.bahnasawy = import ./mac/home.nix;
             };
             users.users.bahnasawy.home = "/Users/bahnasawy";
+            nixpkgs.overlays = overlays;
           }
         ];
       };
