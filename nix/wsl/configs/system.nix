@@ -11,7 +11,5 @@
     settings.max-jobs = 64;
   };
 
-  fonts.packages = [
-    (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];})
-  ];
+  system.stateVersion = "25.05";
 }
