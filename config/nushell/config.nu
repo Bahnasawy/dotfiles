@@ -59,6 +59,7 @@ let external_completer = {|spans|
 
 $env.config = {
   show_banner: false,
+  edit_mode: vi    # emacs or vi
   completions: {
   case_sensitive: false # case-sensitive completions
   quick: true    # set to false to prevent auto-selecting completions
