@@ -12,4 +12,14 @@
   };
 
   system.stateVersion = "25.05";
+
+  programs = {
+    nix-ld.enable = true;
+    nix-ld.libraries = with pkgs; [
+      lua-language-server
+      nodejs
+      # Add any missing dynamic libraries for unpackaged programs
+      # here, NOT in environment.systemPackages
+    ];
+  };
 }
