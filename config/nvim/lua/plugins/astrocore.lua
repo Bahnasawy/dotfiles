@@ -55,7 +55,7 @@ return {
         ["<right>"] = "<C-w><right>",
         ["<up>"] = "<C-w><up>",
         ["<down>"] = "<C-w><down>",
-        ["<C-'>"] = {
+        ["<C-]>"] = {
           "<cmd>ToggleTerm direction=tab<cr>",
           silent = true,
           desc = "Toggle floating terminal",
@@ -107,6 +107,20 @@ return {
         ["<leader>pnp"] = {
           function() require("package-info").change_version() end,
           desc = "Pick package version",
+        },
+      },
+      i = {
+        ["<C-]>"] = {
+          "<cmd>ToggleTerm direction=tab<cr>",
+          silent = true,
+          desc = "Toggle floating terminal",
+        },
+      },
+      t = {
+        ["<C-]>"] = {
+          "<cmd>ToggleTerm direction=tab<cr>",
+          silent = true,
+          desc = "Toggle floating terminal",
         },
       },
     },

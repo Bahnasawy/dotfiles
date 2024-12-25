@@ -8,7 +8,7 @@
 return {
   { "AstroNvim/astrocommunity" },
   -- pack
-  { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.lua", ft={"lua"} },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.yaml" },
