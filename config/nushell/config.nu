@@ -79,3 +79,8 @@ split row (char esep) |
 prepend /home/bahnasawy/.apps |
 append /usr/bin/env
 )
+if $"(^uname)" == "Darwin" {
+    $env.ANDROID_HOME = "/Users/bahnasawy/Library/Android/sdk"
+} else {
+    $env.ANDROID_HOME = "/home/bahnasawy/Android/Sdk"
+}

@@ -14,6 +14,8 @@
       "whatsapp"
       "expo-orbit"
       "expressvpn"
+      "zed"
+      "ghostty"
     ];
     brews = [
       "mas"

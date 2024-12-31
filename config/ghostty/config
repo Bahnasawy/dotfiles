@@ -1,0 +1,5 @@
+font-family = JetBrainsMonoNL Nerd Font Mono
+command = /etc/profiles/per-user/bahnasawy/bin/nu
+theme = Kanagawa Dragon
+font-size = 14
+macos-option-as-alt=true

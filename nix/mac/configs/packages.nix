@@ -31,11 +31,14 @@
     cocoapods
     nodejs_20
     openjdk17
-    # neovide
     vscode
     discord
     sqlite
     python313Packages.virtualenv
+    luarocks
+    lua5_1
+    fd
+    go
   ];
 
   programs.bat = {
