@@ -16,6 +16,7 @@
       "expressvpn"
       "zed"
       "ghostty"
+      "shortcat"
     ];
     brews = [
       "mas"
