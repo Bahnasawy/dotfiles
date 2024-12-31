@@ -2,6 +2,7 @@ return {
   {
     "smoka7/hop.nvim",
     opts = {},
+    lazy = true,
     keys = {
       {
         "`",

@@ -1,4 +1,5 @@
 return {
   "LhKipp/nvim-nu",
-  ft = "nu"
+  lazy = true,
+  ft = {"nu"}
 }

@@ -39,5 +39,6 @@
     home-manager
     bitwarden-cli
     python313Packages.virtualenv
+    fd
   ];
 }

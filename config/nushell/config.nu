@@ -52,6 +52,7 @@ let external_completer = {|spans|
 
     match $spans.0 {
         # use zoxide completions for zoxide commands
+        z | zi => $zoxide_completer
         __zoxide_z | __zoxide_zi => $zoxide_completer
         _ => $carapace_completer
     } | do $in $spans
@@ -77,10 +78,15 @@ $env.config = {
 $env.PATH = ($env.PATH |
 split row (char esep) |
 prepend /home/bahnasawy/.apps |
-append /usr/bin/env
+append /usr/bin/env |
+append /etc/profiles/per-user/bahnasawy/bin |
+append /opt/homebrew/bin |
+append /run/current-system/sw/bin
 )
 if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/Users/bahnasawy/Library/Android/sdk"
 } else {
     $env.ANDROID_HOME = "/home/bahnasawy/Android/Sdk"
 }
+
+source /Users/bahnasawy/dotfiles/config/nushell/zoxide.nu
