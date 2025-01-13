@@ -48,5 +48,7 @@
     lua5_1
     gzip
     zig
+    ghostty
+    neofetch
   ];
 }
