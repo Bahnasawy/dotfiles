@@ -13,6 +13,10 @@
 
   system.stateVersion = "25.05";
 
+  fonts.packages = [
+    pkgs.nerd-fonts.jetbrains-mono
+  ];
+
   programs = {
     nix-ld.enable = true;
     nix-ld.libraries = with pkgs; [

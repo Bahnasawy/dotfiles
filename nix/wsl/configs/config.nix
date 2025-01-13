@@ -3,9 +3,12 @@
     source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/nvim;
     recursive = true;
   };
-
   home.file.".zoxide.nu" = {
     source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/zoxide.nu;
+  };
+  home.file.".config/ghostty" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/bahnasawy/dotfiles/config/ghostty";
+    recursive = true;
   };
   programs = {
     nushell = {

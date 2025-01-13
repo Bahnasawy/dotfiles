@@ -40,5 +40,8 @@
     bitwarden-cli
     python313Packages.virtualenv
     fd
+    ghostty
+    cowsay
+    cmatrix
   ];
 }
