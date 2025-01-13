@@ -89,4 +89,4 @@ if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/home/bahnasawy/Android/Sdk"
 }
 
-source /Users/bahnasawy/dotfiles/config/nushell/zoxide.nu
+source ~/dotfiles/config/nushell/zoxide.nu
