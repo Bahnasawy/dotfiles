@@ -52,6 +52,6 @@ return {
   -- { import = "astrocommunity.recipes.neovide" },
   -- code-runner
   { import = "astrocommunity.code-runner.toggletasks-nvim" },
-  -- { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
   -- bars and lines
+  { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
 }
