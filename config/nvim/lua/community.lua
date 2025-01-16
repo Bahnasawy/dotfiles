@@ -8,7 +8,7 @@
 return {
   { "AstroNvim/astrocommunity" },
   -- pack
-  { import = "astrocommunity.pack.lua", ft={"lua"} },
+  { import = "astrocommunity.pack.lua", ft = { "lua" } },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.yaml" },
@@ -49,7 +49,7 @@ return {
   -- lsp
   { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   -- recipes
-  { import = "astrocommunity.recipes.neovide" },
+  -- { import = "astrocommunity.recipes.neovide" },
   -- code-runner
   { import = "astrocommunity.code-runner.toggletasks-nvim" },
   -- { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
