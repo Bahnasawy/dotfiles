@@ -39,6 +39,8 @@
     lua5_1
     fd
     go
+    htop
+    android-tools
   ];
 
   programs.bat = {
