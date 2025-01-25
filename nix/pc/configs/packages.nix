@@ -50,5 +50,6 @@
     zig
     ghostty
     neofetch
+    bitwarden-desktop
   ];
 }
