@@ -15,7 +15,7 @@
       "expo-orbit"
       "expressvpn"
       "zed"
-      "ghostty"
+      "ghostty@tip"
       "shortcat"
     ];
     brews = [
