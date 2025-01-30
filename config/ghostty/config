@@ -4,5 +4,3 @@ theme = Kanagawa Dragon
 font-size = 14
 macos-option-as-alt=true
 fullscreen = true
-window-decoration = false
-macos-titlebar-style = hidden
