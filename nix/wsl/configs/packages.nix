@@ -43,5 +43,7 @@
     ghostty
     cowsay
     cmatrix
+    ouch
+    dwt1-shell-color-scripts
   ];
 }
