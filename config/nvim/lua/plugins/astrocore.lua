@@ -79,7 +79,7 @@ return {
           function()
             local bufs = vim.fn.getbufinfo { buflisted = 1 }
             require("astrocore.buffer").close(0)
-            if require("astrocore").is_available "alpha-nvim" and not bufs[2] then require("alpha").start(true) end
+            if not bufs[2] then require("snacks").dashboard.open() end
           end,
           desc = "Close buffer",
         },
@@ -107,6 +107,10 @@ return {
         ["<leader>pnp"] = {
           function() require("package-info").change_version() end,
           desc = "Pick package version",
+        },
+        ["<leader>fn"] = {
+          function() require("snacks").notifier.show_history() end,
+          desc = "Show notification history",
         },
       },
       i = {
