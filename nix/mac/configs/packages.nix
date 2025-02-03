@@ -41,6 +41,7 @@
     go
     htop
     android-tools
+    ngrok
   ];
 
   programs.bat = {
