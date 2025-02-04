@@ -47,11 +47,11 @@ return {
           function() require("astrocore.buffer").nav(-vim.v.count1) end,
           desc = "Previous buffer",
         },
-        ["h"] = "hzz",
-        ["j"] = "jzz",
-        ["k"] = "kzz",
-        ["l"] = "lzz",
-        ["m"] = "x",
+        h = "hzz",
+        j = "jzz",
+        k = "kzz",
+        l = "lzz",
+        m = "x",
         ["<left>"] = "<C-w><left>",
         ["<right>"] = "<C-w><right>",
         ["<up>"] = "<C-w><up>",
@@ -61,17 +61,17 @@ return {
           silent = true,
           desc = "Toggle floating terminal",
         },
-        ["<leader>D"] = {
+        ["<Leader>D"] = {
           "<cmd>DBUI<cr>",
           silent = true,
           desc = "Open Dadbod UI",
         },
-        ["<leader>tN"] = {
+        ["<Leader>tN"] = {
           "<cmd>tabnew<cr>",
           silent = true,
           desc = "Open a new tab",
         },
-        ["<leader>fR"] = {
+        ["<Leader>fR"] = {
           "<cmd>Spectre<cr>",
           silent = true,
           desc = "Find and replace",
@@ -80,40 +80,40 @@ return {
           function() Snacks.bufdelete.delete() end,
           desc = "Close buffer",
         },
-        ["<leader>s"] = { name = "Simulators" },
-        ["<leader>zd"] = { function() Snacks.picker.zoxide() end, desc = "Change directory" },
-        ["<leader>si"] = {
+        ["<Leader>s"] = { name = "Simulators" },
+        ["<Leader>zd"] = { function() Snacks.picker.zoxide() end, desc = "Change directory" },
+        ["<Leader>si"] = {
           function() require("simulators.apple_simulator").open_simulator() end,
           desc = "Start ios simulator",
         },
-        ["<leader>sa"] = {
+        ["<Leader>sa"] = {
           function() require("simulators.android_emulator").run() end,
           desc = "Start android simulator",
         },
-        ["<leader>pn"] = {
+        ["<Leader>pn"] = {
           desc = "Node Package Info",
         },
-        ["<leader>pns"] = {
+        ["<Leader>pns"] = {
           function() require("package-info").show { silent = true, noremap = true } end,
           desc = "Show package versions",
         },
-        ["<leader>pnu"] = {
+        ["<Leader>pnu"] = {
           function() require("package-info").update() end,
           desc = "Update package",
         },
-        ["<leader>pnp"] = {
+        ["<Leader>pnp"] = {
           function() require("package-info").change_version() end,
           desc = "Pick package version",
         },
-        ["<leader>fn"] = {
+        ["<Leader>fn"] = {
           function() Snacks.picker.notifications() end,
           desc = "Show notification history",
         },
-        ["<leader>ff"] = {
+        ["<Leader>ff"] = {
           function() Snacks.picker.files() end,
           desc = "Find file",
         },
-        ["<leader>fw"] = {
+        ["<Leader>fw"] = {
           function() Snacks.picker.grep_word() end,
           desc = "Find word",
         },
