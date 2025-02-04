@@ -1,3 +1,4 @@
+--# selene: allow(undefined_variable)
 -- if true then return {} emd -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
@@ -76,15 +77,11 @@ return {
           desc = "Find and replace",
         },
         ["<Leader>c"] = {
-          function()
-            local bufs = vim.fn.getbufinfo { buflisted = 1 }
-            require("astrocore.buffer").close(0)
-            if not bufs[2] then require("snacks").dashboard.open() end
-          end,
+          function() Snacks.bufdelete.delete() end,
           desc = "Close buffer",
         },
         ["<leader>s"] = { name = "Simulators" },
-        ["<leader>zd"] = { function() require("telescope").extensions.zoxide.list() end, desc = "Change directory" },
+        ["<leader>zd"] = { function() Snacks.picker.zoxide() end, desc = "Change directory" },
         ["<leader>si"] = {
           function() require("simulators.apple_simulator").open_simulator() end,
           desc = "Start ios simulator",
@@ -109,8 +106,16 @@ return {
           desc = "Pick package version",
         },
         ["<leader>fn"] = {
-          function() require("snacks").notifier.show_history() end,
+          function() Snacks.picker.notifications() end,
           desc = "Show notification history",
+        },
+        ["<leader>ff"] = {
+          function() Snacks.picker.files() end,
+          desc = "Find file",
+        },
+        ["<leader>fw"] = {
+          function() Snacks.picker.grep_word() end,
+          desc = "Find word",
         },
       },
       i = {
