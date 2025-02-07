@@ -110,11 +110,19 @@ return {
           desc = "Show notification history",
         },
         ["<Leader>ff"] = {
-          function() Snacks.picker.files() end,
+          function()
+            Snacks.picker.files {
+              dirs = { "./" },
+            }
+          end,
           desc = "Find file",
         },
         ["<Leader>fw"] = {
-          function() Snacks.picker.grep_word() end,
+          function()
+            Snacks.picker.grep {
+              dirs = { "./" },
+            }
+          end,
           desc = "Find word",
         },
       },
