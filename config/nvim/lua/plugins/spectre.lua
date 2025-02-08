@@ -4,6 +4,9 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
+  keys = {
+    { "<Leader>fR", "<cmd>Spectre<cr>", silent = true, desc = "Find and replace" },
+  },
   config = function()
     require("spectre").setup {
       find_engine = {

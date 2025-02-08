@@ -1,4 +1,4 @@
 return {
   "nanotee/zoxide.vim",
-  lazy=true
+  lazy = true,
 }

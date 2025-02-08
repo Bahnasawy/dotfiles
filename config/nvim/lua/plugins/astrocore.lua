@@ -56,11 +56,6 @@ return {
         ["<right>"] = "<C-w><right>",
         ["<up>"] = "<C-w><up>",
         ["<down>"] = "<C-w><down>",
-        ["<C-]>"] = {
-          "<cmd>ToggleTerm direction=tab<cr>",
-          silent = true,
-          desc = "Toggle floating terminal",
-        },
         ["<Leader>D"] = {
           "<cmd>DBUI<cr>",
           silent = true,
@@ -71,27 +66,12 @@ return {
           silent = true,
           desc = "Open a new tab",
         },
-        ["<Leader>fR"] = {
-          "<cmd>Spectre<cr>",
-          silent = true,
-          desc = "Find and replace",
-        },
-        ["<Leader>c"] = {
-          function() Snacks.bufdelete.delete() end,
-          desc = "Close buffer",
-        },
-        ["<Leader>s"] = { name = "Simulators" },
-        ["<Leader>zd"] = { function() Snacks.picker.zoxide() end, desc = "Change directory" },
-        ["<Leader>si"] = {
-          function() require("simulators.apple_simulator").open_simulator() end,
-          desc = "Start ios simulator",
-        },
-        ["<Leader>sa"] = {
-          function() require("simulators.android_emulator").run() end,
-          desc = "Start android simulator",
-        },
         ["<Leader>pn"] = {
           desc = "Node Package Info",
+        },
+        ["<Leader>pnss"] = {
+          function() require("package-info").show { silent = true, noremap = true } end,
+          desc = "Show package versions",
         },
         ["<Leader>pns"] = {
           function() require("package-info").show { silent = true, noremap = true } end,
@@ -104,26 +84,6 @@ return {
         ["<Leader>pnp"] = {
           function() require("package-info").change_version() end,
           desc = "Pick package version",
-        },
-        ["<Leader>fn"] = {
-          function() Snacks.picker.notifications() end,
-          desc = "Show notification history",
-        },
-        ["<Leader>ff"] = {
-          function()
-            Snacks.picker.files {
-              dirs = { "./" },
-            }
-          end,
-          desc = "Find file",
-        },
-        ["<Leader>fw"] = {
-          function()
-            Snacks.picker.grep {
-              dirs = { "./" },
-            }
-          end,
-          desc = "Find word",
         },
       },
       i = {

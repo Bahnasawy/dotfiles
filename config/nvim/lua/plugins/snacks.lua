@@ -52,10 +52,14 @@ return {
     -- Top Pickers & Explorer
     { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
     { "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
-    { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
     { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
     { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
-    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
+    -- buffer
+    { "<Leader>c", function() Snacks.bufdelete.delete() end, desc = "Close buffer" },
+    { "<Leader>bc", function() Snacks.bufdelete.other() end, desc = "Close all buffers except current" },
+    { "<Leader>bC", function() Snacks.bufdelete.all() end, desc = "Close all buffers" },
+    -- zoxide
+    { "<leader>zd", function() Snacks.picker.zoxide() end, desc = "Zoxide" },
     -- find
     { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>fc", function() Snacks.picker.files { cwd = vim.fn.stdpath "config" } end, desc = "Find Config File" },
