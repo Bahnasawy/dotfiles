@@ -1,7 +1,7 @@
 return {
-  "cutlass.nvim",
+  "gbprod/cutlass.nvim",
   opts = {
     cut_key = "x",
   },
-  lazy = true
+  lazy = true,
 }
