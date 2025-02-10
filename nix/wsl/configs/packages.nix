@@ -37,7 +37,6 @@
     rustc
     rust-analyzer
     home-manager
-    bitwarden-cli
     python313Packages.virtualenv
     fd
     ghostty
