@@ -43,6 +43,7 @@
     android-tools
     ngrok
     dwt1-shell-color-scripts
+    vlc-bin
   ];
 
   programs.bat = {
