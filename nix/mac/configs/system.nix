@@ -52,10 +52,6 @@
 
   programs.zsh.enable = true; # default shell on catalina
 
-  services = {
-    nix-daemon.enable = true;
-  };
-
   fonts.packages = [
     pkgs.nerd-fonts.jetbrains-mono
   ];
