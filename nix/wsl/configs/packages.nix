@@ -44,5 +44,6 @@
     cmatrix
     ouch
     dwt1-shell-color-scripts
+    ast-grep
   ];
 }
