@@ -81,7 +81,8 @@ prepend /home/bahnasawy/.apps |
 append /usr/bin/env |
 append /etc/profiles/per-user/bahnasawy/bin |
 append /opt/homebrew/bin |
-append /run/current-system/sw/bin
+append /run/current-system/sw/bin |
+append /Users/bahnasawy/.bun/bin
 )
 if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/Users/bahnasawy/Library/Android/sdk"

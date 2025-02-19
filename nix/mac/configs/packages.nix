@@ -44,6 +44,12 @@
     ngrok
     dwt1-shell-color-scripts
     vlc-bin
+    git-lfs
+    sqlfluff
+    fish
+    prettierd
+    nodePackages.prettier
+    ast-grep
   ];
 
   programs.bat = {

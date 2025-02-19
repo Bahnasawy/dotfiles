@@ -1,0 +1,33 @@
+{
+  "neoconf": {
+    "plugins": {
+      "lspconfig": {
+        "enabled": true
+      },
+      "jsonls": {
+        "enabled": true
+      },
+      "lua_ls": {
+        "enabled": true
+      }
+    },
+    "global_settings": "neoconf.json"
+  },
+  "lspconfig": {
+    "vtsls": {
+      "typescript.tsserver.maxTsServerMemory": 8192,
+      "vtsls.experimental.completion.enableServerSideFuzzyMatch": false,
+      "typescript.preferences.includePackageJsonAutoImports": "off",
+      "javascript.preferences.autoImportFileExcludePatterns": [
+        "node_modules/**/*"
+      ],
+      "vtsls.autoUseWorkspaceTsdk": false
+    },
+    "tailwindcss": {
+      "tailwindCSS.hovers": true
+    },
+    "pyright": {
+      "python.analysis.typeCheckingMode": "strict"
+    }
+  }
+}

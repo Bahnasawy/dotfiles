@@ -13,3 +13,8 @@ map("n", "<leader>zd", function()
 end, { desc = "Open LazyGit" })
 
 map("n", "<leader>m", ":w<cr>", { desc = "Save File", silent = true })
+
+map("n", "h", "hzz")
+map("n", "j", "jzz")
+map("n", "k", "kzz")
+map("n", "l", "lzz")
