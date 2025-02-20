@@ -82,12 +82,15 @@ append /usr/bin/env |
 append /etc/profiles/per-user/bahnasawy/bin |
 append /opt/homebrew/bin |
 append /run/current-system/sw/bin |
-append /Users/bahnasawy/.bun/bin
+append /Users/bahnasawy/.bun/bin |
+append /home/bahnasawy/.bun/bin |
+append /home/bahnasawy/.local/bin 
 )
 if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/Users/bahnasawy/Library/Android/sdk"
 } else {
     $env.ANDROID_HOME = "/home/bahnasawy/Android/Sdk"
 }
+$env.config.shell_integration.osc133 = false
 
 source ~/dotfiles/config/nushell/zoxide.nu

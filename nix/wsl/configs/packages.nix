@@ -18,7 +18,6 @@
     nodejs_20
     tree-sitter
     gcc
-    python3
     xclip
     zsh-prezto
     lazygit
@@ -45,5 +44,10 @@
     ouch
     dwt1-shell-color-scripts
     ast-grep
+    uv
+    python314
+    sqlite
+    lua51Packages.jsregexp
+    sqlfluff
   ];
 }
