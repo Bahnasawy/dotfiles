@@ -18,5 +18,3 @@ map("n", "h", "hzz")
 map("n", "j", "jzz")
 map("n", "k", "kzz")
 map("n", "l", "lzz")
-
-map({ "n", "t" }, "<C-]>", ":ToggleTerm<cr>", { desc = "ToggleTerm", silent = true, remap = true })
