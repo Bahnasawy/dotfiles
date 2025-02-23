@@ -84,6 +84,6 @@
     };
 
     zoxide.enable = true;
-    # zoxide.enableNushellIntegration = true;
+    zoxide.enableNushellIntegration = true;
   };
 }

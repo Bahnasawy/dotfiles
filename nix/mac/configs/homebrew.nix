@@ -17,6 +17,7 @@
       "zed"
       "ghostty@tip"
       "shortcat"
+      "zen-browser"
     ];
     brews = [
       "mas"

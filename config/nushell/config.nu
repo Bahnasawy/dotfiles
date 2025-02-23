@@ -92,5 +92,3 @@ if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/home/bahnasawy/Android/Sdk"
 }
 $env.config.shell_integration.osc133 = false
-
-source ~/dotfiles/config/nushell/zoxide.nu
