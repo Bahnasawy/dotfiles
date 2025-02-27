@@ -3,5 +3,5 @@ return {
   opts = {
     cut_key = "x",
   },
-  lazy = true,
+  lazy = false,
 }
