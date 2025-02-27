@@ -23,7 +23,6 @@
       "mas"
       "fastlane"
       "bun"
-      "openjdk@17"
     ];
     taps = [
       "oven-sh/bun"

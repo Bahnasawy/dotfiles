@@ -77,10 +77,10 @@ $env.config = {
 }
 $env.PATH = ($env.PATH |
 split row (char esep) |
+prepend /opt/homebrew/bin |
 prepend /home/bahnasawy/.apps |
+prepend /etc/profiles/per-user/bahnasawy/bin |
 append /usr/bin/env |
-append /etc/profiles/per-user/bahnasawy/bin |
-append /opt/homebrew/bin |
 append /run/current-system/sw/bin |
 append /Users/bahnasawy/.bun/bin |
 append /home/bahnasawy/.bun/bin |

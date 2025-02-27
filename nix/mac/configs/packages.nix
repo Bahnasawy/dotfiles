@@ -30,7 +30,6 @@
     ripgrep
     cocoapods
     nodejs_20
-    openjdk17
     vscode
     discord
     sqlite
@@ -54,6 +53,11 @@
 
   programs.bat = {
     enable = true;
+  };
+
+  programs.java = {
+    enable = true;
+    package = pkgs.openjdk17;
   };
 
   programs = {
