@@ -48,6 +48,6 @@
     python314
     sqlite
     lua51Packages.jsregexp
-    sqlfluff
+    go
   ];
 }
