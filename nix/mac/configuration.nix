@@ -2,18 +2,14 @@
   pkgs,
   self,
   ...
-}: {
+}:
+{
   imports = [
     ./configs/homebrew.nix
     ./configs/system.nix
   ];
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = [
-    pkgs.neovim
-  ];
-
-  # nix.package = pkgs.nix;
   nix.enable = true;
 
   # Necessary for using flakes on this system.

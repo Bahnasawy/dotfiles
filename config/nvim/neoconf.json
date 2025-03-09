@@ -16,12 +16,7 @@
   "lspconfig": {
     "vtsls": {
       "typescript.tsserver.maxTsServerMemory": 8192,
-      "vtsls.experimental.completion.enableServerSideFuzzyMatch": false,
-      "typescript.preferences.includePackageJsonAutoImports": "off",
-      "javascript.preferences.autoImportFileExcludePatterns": [
-        "node_modules/**/*"
-      ],
-      "vtsls.autoUseWorkspaceTsdk": false
+      "vtsls.autoUseWorkspaceTsdk": true
     },
     "tailwindcss": {
       "tailwindCSS.hovers": true
