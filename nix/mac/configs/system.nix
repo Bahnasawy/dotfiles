@@ -2,14 +2,16 @@
   config,
   pkgs,
   ...
-}: {
-  system.activationScripts.applications.text = let
-    env = pkgs.buildEnv {
-      name = "system-applications";
-      paths = config.environment.systemPackages;
-      pathsToLink = "/Applications";
-    };
-  in
+}:
+{
+  system.activationScripts.applications.text =
+    let
+      env = pkgs.buildEnv {
+        name = "system-applications";
+        paths = config.environment.systemPackages;
+        pathsToLink = "/Applications";
+      };
+    in
     pkgs.lib.mkForce ''
       # Set up applications.
       echo "setting up /Applications..." >&2
@@ -57,4 +59,13 @@
   ];
 
   users.users.bahnasawy.shell = pkgs.nushell;
+
+  # Useful other development tools
+  environment.systemPackages = with pkgs; [
+    dive # look into docker image layers
+    podman-tui # status of containers in the terminal
+    docker-compose # start group of containers for dev
+    nixfmt-rfc-style
+    #podman-compose # start group of containers for dev
+  ];
 }

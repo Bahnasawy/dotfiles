@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   homebrew = {
     enable = true;
     casks = [
@@ -18,6 +19,7 @@
       "ghostty@tip"
       "shortcat"
       "zen-browser"
+      "beekeeper-studio"
     ];
     brews = [
       "mas"

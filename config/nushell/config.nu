@@ -1,13 +1,13 @@
-def db [--impure] {
+def  db --wrapped [...rest] {
   if $"(^uname)" == "Darwin" {
-      darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix#mac"
+      darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix#mac" ...$rest
   } else {
-        if $impure {
-            sudo nixos-rebuild switch --flake $"/home/bahnasawy/dotfiles/nix#(hostname)" --impure
-        } else {
-            sudo nixos-rebuild switch --flake $"/home/bahnasawy/dotfiles/nix#(hostname)"
-        }
+    sudo nixos-rebuild switch --flake $"/home/bahnasawy/dotfiles/nix#(hostname)" ...$rest
   }
+}
+
+def collect-garbage [] {
+  sudo nix-collect-garbage -d
 }
 
 def fu [] {
@@ -92,3 +92,4 @@ if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/home/bahnasawy/Android/Sdk"
 }
 $env.config.shell_integration.osc133 = false
+$env.DOCKER_HOST = 'unix:///var/folders/q_/0jh_5hwj08dfz60rfjbhh2l80000gn/T/podman/podman-machine-default-api.sock'
