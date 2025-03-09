@@ -49,5 +49,6 @@
     sqlite
     lua51Packages.jsregexp
     go
+    zip
   ];
 }
