@@ -92,4 +92,8 @@ if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/home/bahnasawy/Android/Sdk"
 }
 $env.config.shell_integration.osc133 = false
-$env.DOCKER_HOST = 'unix:///var/folders/q_/0jh_5hwj08dfz60rfjbhh2l80000gn/T/podman/podman-machine-default-api.sock'
+if $"(^hostname)" == "Darwin" {
+  $env.DOCKER_HOST = 'unix:///var/folders/q_/0jh_5hwj08dfz60rfjbhh2l80000gn/T/podman/podman-machine-default-api.sock'
+} else {
+  $env.DOCKER_HOST = "DOCKER_HOST='unix:///run/user/1000/podman/podman-machine-default-api.sock'"
+}
