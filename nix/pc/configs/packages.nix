@@ -29,7 +29,7 @@
     statix
     doppler
     bun
-    filelight
+    kdePackages.filelight
     android-studio
     htop-vim
     jdk17
@@ -39,7 +39,6 @@
     rustc
     rust-analyzer
     home-manager
-    yakuake
     lsof
     killall
     bitwarden-cli
