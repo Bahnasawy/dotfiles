@@ -50,6 +50,7 @@
     prettierd
     nodePackages.prettier
     ast-grep
+    nixfmt-rfc-style
   ];
 
   programs.bat = {

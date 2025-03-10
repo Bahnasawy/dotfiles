@@ -3,19 +3,23 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ./configs/system.nix
   ];
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
   nixpkgs.config.allowUnfree = true;
   users.users.bahnasawy = {
     isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.nushell;
   };
 
@@ -36,7 +40,12 @@
     # Remove NVIDIA VGA/3D controller devices
     ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", ATTR{power/control}="auto", ATTR{remove}="1"
   '';
-  boot.blacklistedKernelModules = ["nouveau" "nvidia" "nvidia_drm" "nvidia_modeset"];
+  boot.blacklistedKernelModules = [
+    "nouveau"
+    "nvidia"
+    "nvidia_drm"
+    "nvidia_modeset"
+  ];
 
   system.stateVersion = "24.11";
 
@@ -44,6 +53,12 @@
     device = "/dev/disk/by-uuid/5c6f78fc-a6ec-418d-9896-f879bffcd4c3";
     fsType = "ext4";
   };
-  environment.defaultPackages = with pkgs; [networkmanager];
+  environment.defaultPackages = with pkgs; [ networkmanager ];
   networking.hostName = "pc";
+
+  environment.systemPackages = with pkgs; [
+    dive
+    podman-tui
+    docker-compose
+  ];
 }

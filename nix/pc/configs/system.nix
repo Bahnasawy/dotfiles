@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   boot.loader = {
     systemd-boot.enable = false;
     efi.canTouchEfiVariables = true;
@@ -37,7 +38,10 @@
       extraConfig.pipewire.adjust-sample-rate = {
         "context.properties" = {
           "default.clock.rate" = 44100;
-          "defautlt.allowed-rates" = [44100 48000];
+          "defautlt.allowed-rates" = [
+            44100
+            48000
+          ];
         };
       };
     };
@@ -46,7 +50,10 @@
     };
     postgresql = {
       enable = true;
-      ensureDatabases = ["bahnasawy" "eshop"];
+      ensureDatabases = [
+        "bahnasawy"
+        "eshop"
+      ];
       ensureUsers = [
         {
           name = "bahnasawy";
@@ -118,8 +125,10 @@
   };
 
   virtualisation = {
-    docker = {
+    podman = {
       enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
     };
   };
 }

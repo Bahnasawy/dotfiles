@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.bat = {
     enable = true;
   };
@@ -50,5 +51,9 @@
     ghostty
     neofetch
     bitwarden-desktop
+    nixfmt-rfc-style
+    dwt1-shell-color-scripts
+    qemu
+    virtiofsd
   ];
 }
