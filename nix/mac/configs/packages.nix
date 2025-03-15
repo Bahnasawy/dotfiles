@@ -1,6 +1,8 @@
 {
   pkgs,
   config,
+  lib,
+  home,
   ...
 }:
 {
@@ -51,18 +53,18 @@
     nodePackages.prettier
     ast-grep
     nixfmt-rfc-style
+    uv
   ];
 
-  programs.bat = {
-    enable = true;
-  };
-
-  programs.java = {
-    enable = true;
-    package = pkgs.openjdk17;
-  };
-
   programs = {
+    bat = {
+      enable = true;
+      extraPackages = with pkgs.bat-extras; [ batman ];
+    };
+    java = {
+      enable = true;
+      package = pkgs.openjdk17;
+    };
     nushell = {
       enable = true;
       shellAliases = {
@@ -91,5 +93,17 @@
 
     zoxide.enable = true;
     zoxide.enableNushellIntegration = true;
+
+    git = {
+      enable = true;
+      userEmail = "yousef.elbahnasawy@gmail.com";
+      userName = "bahnasawy";
+    };
   };
+
+  # home.activation.uv = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
+  #   (
+  #     uv pythin install 3.14 --default --preview
+  #   )
+  # '';
 }

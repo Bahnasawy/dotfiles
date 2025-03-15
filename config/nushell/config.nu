@@ -78,6 +78,7 @@ $env.config = {
 $env.PATH = ($env.PATH |
 split row (char esep) |
 prepend /opt/homebrew/bin |
+prepend /Users/bahnasawy/.local/bin |
 prepend /home/bahnasawy/.apps |
 prepend /etc/profiles/per-user/bahnasawy/bin |
 append /usr/bin/env |
@@ -97,3 +98,5 @@ if $"(^hostname)" == "Darwin" {
 } else {
   $env.DOCKER_HOST = "DOCKER_HOST='unix:///run/user/1000/podman/podman-machine-default-api.sock'"
 }
+
+alias man = batman

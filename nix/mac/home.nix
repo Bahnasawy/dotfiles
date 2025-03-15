@@ -1,15 +1,15 @@
 {
   config,
-  pkgs,
   ...
-}: {
-  imports = [./configs/packages.nix];
+}:
+{
+  imports = [ ./configs/packages.nix ];
   home.username = "bahnasawy";
   home.homeDirectory = "/Users/bahnasawy";
 
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
-  home.packages = [];
+  home.packages = [ ];
 
   home.file = {
     ".config/nvim" = {
@@ -34,6 +34,10 @@
     };
     ".config/raycast" = {
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/raycast";
+      recursive = true;
+    };
+    ".config/bat" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/bat";
       recursive = true;
     };
     ".zshrc" = {
