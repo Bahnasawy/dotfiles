@@ -1,6 +1,6 @@
 return {
   "tris203/precognition.nvim",
-  branch = "v2",
+  branch = "main",
   dependencies = { "echasnovski/mini.test" },
   --event = "VeryLazy",
   opts = {
