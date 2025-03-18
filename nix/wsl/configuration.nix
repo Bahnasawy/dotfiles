@@ -14,7 +14,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   imports = [
-    <nixos-wsl/modules>
     ./configs/system.nix
   ];
 

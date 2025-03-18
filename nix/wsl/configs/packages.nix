@@ -30,7 +30,6 @@
     statix
     doppler
     bun
-    htop-vim
     exercism
     cargo
     rustc
@@ -50,5 +49,7 @@
     lua51Packages.jsregexp
     go
     zip
+    icu.dev
+    nixfmt-rfc-style
   ];
 }
