@@ -16,6 +16,10 @@
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/nvim";
       recursive = true;
     };
+    ".config/nushell" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/nushell";
+      recursive = true;
+    };
     ".config/ghostty" = {
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/ghostty";
       recursive = true;
