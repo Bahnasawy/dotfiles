@@ -2,6 +2,7 @@ return {
   "tris203/precognition.nvim",
   branch = "main",
   dependencies = { "echasnovski/mini.test" },
+  enabled = false,
   --event = "VeryLazy",
   opts = {
     -- startVisible = true,

@@ -20,6 +20,7 @@
       "shortcat"
       "zen-browser"
       "beekeeper-studio"
+      "docker"
     ];
     brews = [
       "mas"

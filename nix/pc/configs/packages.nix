@@ -32,7 +32,6 @@
     bun
     kdePackages.filelight
     android-studio
-    htop-vim
     jdk17
     neovide
     exercism
@@ -55,5 +54,10 @@
     dwt1-shell-color-scripts
     qemu
     virtiofsd
+    sqlite
   ];
+
+  home.sessionVariables = {
+    LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
+  };
 }
