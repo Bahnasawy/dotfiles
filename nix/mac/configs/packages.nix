@@ -54,7 +54,12 @@
     ast-grep
     nixfmt-rfc-style
     uv
+    sqlite
   ];
+
+  home.sessionVariables = {
+    LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
+  };
 
   programs = {
     bat = {
