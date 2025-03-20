@@ -55,6 +55,7 @@
     nixfmt-rfc-style
     uv
     sqlite
+    postgresql
   ];
 
   home.sessionVariables = {
