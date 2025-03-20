@@ -1,4 +1,4 @@
-font-family = JetBrainsMonoNL Nerd Font Mono
+font-family = JetBrainsMonoNL Nerd Font Mono +calt
 command = /etc/profiles/per-user/bahnasawy/bin/nu
 theme = catppuccin-mocha
 font-size = 14
