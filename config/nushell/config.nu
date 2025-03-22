@@ -85,7 +85,7 @@ append /usr/bin/env |
 append /run/current-system/sw/bin |
 append /Users/bahnasawy/.bun/bin |
 append /home/bahnasawy/.bun/bin |
-append /home/bahnasawy/.local/bin 
+append /home/bahnasawy/.local/bin
 )
 if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/Users/bahnasawy/Library/Android/sdk"

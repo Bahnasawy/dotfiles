@@ -36,7 +36,6 @@
     vscode
     discord
     sqlite
-    python313Packages.virtualenv
     luarocks
     lua5_1
     fd
@@ -47,7 +46,6 @@
     dwt1-shell-color-scripts
     vlc-bin
     git-lfs
-    sqlfluff
     fish
     prettierd
     nodePackages.prettier

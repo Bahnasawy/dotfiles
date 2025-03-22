@@ -16,7 +16,7 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    nix-homebrew.url = "git+https://github.com/zhaofengli/nix-homebrew?ref=refs/pull/71/merge";
     neovim.url = "github:nix-community/neovim-nightly-overlay";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
@@ -30,7 +30,7 @@
       nix-darwin,
       nix-homebrew,
       neovim,
-    nixos-wsl,
+      nixos-wsl,
     }@inputs:
     let
       linuxSystem = "x86_64-linux";
@@ -114,7 +114,8 @@
         wsl = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            nixos-wsl.nixosModules.default ./wsl/configuration.nix
+            nixos-wsl.nixosModules.default
+            ./wsl/configuration.nix
 
             home-manager.nixosModules.home-manager
             {
