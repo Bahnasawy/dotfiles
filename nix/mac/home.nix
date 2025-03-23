@@ -32,10 +32,6 @@
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/kitty";
       recursive = true;
     };
-    ".config/neovide" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/neovide";
-      recursive = true;
-    };
     ".config/raycast" = {
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/raycast";
       recursive = true;

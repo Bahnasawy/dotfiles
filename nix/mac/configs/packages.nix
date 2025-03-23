@@ -7,22 +7,18 @@
 }:
 {
   home.packages = with pkgs; [
-    neovim
     mkalias
-    zsh-prezto
     iterm2
     postman
     git
     lazygit
     openssh
-    home-manager
     zoxide
     fzf
-    nodejs_20
+    nodejs
     tree-sitter
     rustup
     raycast
-    lsd
     wget
     doppler
     gh
@@ -32,7 +28,6 @@
     statix
     ripgrep
     cocoapods
-    nodejs_20
     vscode
     discord
     sqlite
@@ -44,15 +39,10 @@
     android-tools
     ngrok
     dwt1-shell-color-scripts
-    vlc-bin
     git-lfs
-    fish
-    prettierd
-    nodePackages.prettier
     ast-grep
     nixfmt-rfc-style
     uv
-    sqlite
     postgresql
   ];
 
@@ -102,6 +92,36 @@
       enable = true;
       userEmail = "yousef.elbahnasawy@gmail.com";
       userName = "bahnasawy";
+    };
+
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      withPython3 = true;
+      withNodeJs = true;
+    };
+
+    neovide = {
+      enable = true;
+      settings = {
+        fork = false;
+        frame = "full";
+        idle = true;
+        maximized = false;
+        neovim-bin = pkgs.neovim.out;
+        no-multigrid = false;
+        srgb = false;
+        tabs = true;
+        theme = "auto";
+        title-hidden = true;
+        vsync = true;
+        wsl = false;
+
+        font = {
+          normal = [ ];
+          size = 14.0;
+        };
+      };
     };
   };
 

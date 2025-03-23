@@ -32,7 +32,6 @@
     dock.orientation = "left";
     dock.persistent-apps = [
       "/Applications/Arc.app"
-      # "${pkgs.neovide}/Applications/Neovide.app"
       "/System/Applications/Mail.app"
     ];
     finder.FXPreferredViewStyle = "clmv";
