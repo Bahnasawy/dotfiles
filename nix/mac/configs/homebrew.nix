@@ -21,6 +21,7 @@
       "zen-browser"
       "beekeeper-studio"
       "docker"
+      "neovide"
     ];
     brews = [
       "mas"

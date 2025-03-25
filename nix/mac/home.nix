@@ -28,6 +28,10 @@
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/gh";
       recursive = true;
     };
+    ".config/neovide" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/neovide";
+      recursive = true;
+    };
     ".config/kitty" = {
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/kitty";
       recursive = true;
