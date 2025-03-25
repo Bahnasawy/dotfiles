@@ -7,6 +7,8 @@ map("n", "<Left>", "<C-w>h", { desc = "Go to Left Window", remap = false })
 map("n", "<Down>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
 map("n", "<Up>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
 map("n", "<Right>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+map("n", "j", "jzz")
+map("n", "k", "kzz")
 
 map("n", "<leader>m", ":w<cr>", { desc = "Save File", silent = true })
 map("n", "m", "x")
