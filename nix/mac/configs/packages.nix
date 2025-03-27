@@ -1,8 +1,6 @@
 {
   pkgs,
   config,
-  lib,
-  home,
   ...
 }:
 {
@@ -44,6 +42,7 @@
     nixfmt-rfc-style
     uv
     postgresql
+    ghostscript
   ];
 
   home.sessionVariables = {
