@@ -1,8 +1,5 @@
 { pkgs, ... }:
 {
-  programs.bat = {
-    enable = true;
-  };
   home.packages = with pkgs; [
     neovim
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
@@ -59,5 +56,12 @@
 
   home.sessionVariables = {
     LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
+  };
+
+  programs = {
+    bat = {
+      enable = true;
+      extraPackages = with pkgs.bat-extras; [ batman ];
+    };
   };
 }

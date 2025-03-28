@@ -36,7 +36,7 @@ return {
       },
     },
     keys = {
-      { "<leader>/", LazyVim.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
+      { "<leader>/", LazyVim.pick("live_grep", { root = true }), desc = "Grep (cwd)" },
       { "<leader>zd", require("snacks").picker.zoxide, { desc = "Open LazyGit" } },
     },
   },
