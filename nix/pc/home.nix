@@ -1,12 +1,12 @@
 {
   config,
-  pkgs,
+  android-nixpkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./configs/packages.nix
-    ./configs/plasma.nix
-    ./configs/config.nix
+    ./configs/dots.nix
   ];
 
   programs = {

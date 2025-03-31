@@ -1,6 +1,5 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }:
@@ -16,10 +15,18 @@
   ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    android_sdk.accept_license = true;
+  };
+
   users.users.bahnasawy = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "kvm"
+      "adbusers"
+    ]; # Enable ‘sudo’ for the user.
     shell = pkgs.nushell;
   };
 
@@ -49,10 +56,10 @@
 
   system.stateVersion = "24.11";
 
-  fileSystems."/home/bahnasawy/Games" = {
-    device = "/dev/disk/by-uuid/5c6f78fc-a6ec-418d-9896-f879bffcd4c3";
-    fsType = "ext4";
-  };
+  # fileSystems."/home/bahnasawy/Games" = {
+  #   device = "/dev/disk/by-uuid/5c6f78fc-a6ec-418d-9896-f879bffcd4c3";
+  #   fsType = "ext4";
+  # };
   environment.defaultPackages = with pkgs; [ networkmanager ];
   networking.hostName = "pc";
 

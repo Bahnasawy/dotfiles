@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -113,10 +111,6 @@
 
   fonts.packages = [
     pkgs.nerd-fonts.jetbrains-mono
-  ];
-
-  environment.defaultPackages = with pkgs; [
-    # neovim
   ];
 
   nix = {

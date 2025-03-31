@@ -1,11 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.packages = with pkgs; [
     neovim
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     gh
-    kitty
     google-chrome
     bluez
     git
@@ -28,30 +27,22 @@
     doppler
     bun
     kdePackages.filelight
-    android-studio
     jdk17
     neovide
     exercism
     cargo
     rustc
     rust-analyzer
-    home-manager
-    lsof
-    killall
-    bitwarden-cli
     beekeeper-studio
-    pnpm
     lua5_1
     gzip
     zig
     ghostty
     neofetch
-    bitwarden-desktop
     nixfmt-rfc-style
     dwt1-shell-color-scripts
-    qemu
-    virtiofsd
     sqlite
+    gparted
   ];
 
   home.sessionVariables = {
@@ -63,5 +54,91 @@
       enable = true;
       extraPackages = with pkgs.bat-extras; [ batman ];
     };
+
+    nushell = {
+      enable = true;
+      shellAliases = {
+        vi = "nvim";
+        vim = "nvim";
+        nano = "nvim";
+      };
+
+      configFile.source = config.lib.file.mkOutOfStoreSymlink ../../../config/nushell/config.nu;
+    };
+
+    carapace.enable = true;
+    carapace.enableNushellIntegration = true;
+
+    starship = {
+      enable = true;
+      enableNushellIntegration = true;
+      settings = {
+        add_newline = true;
+        character = {
+          success_symbol = "[➜](bold green)";
+          error_symbol = "[➜](bold red)";
+        };
+      };
+    };
+
+    zoxide.enable = true;
+    zoxide.enableNushellIntegration = true;
+
+    plasma = {
+      enable = true;
+      workspace = {
+        colorScheme = "BreezeDark";
+        theme = "breeze-dark";
+        lookAndFeel = "org.kde.breezedark.desktop";
+      };
+      input = {
+        keyboard = {
+          layouts = [
+            {
+              layout = "us";
+            }
+            {
+              layout = "ar";
+            }
+          ];
+        };
+      };
+      powerdevil.AC = {
+        autoSuspend.action = "nothing";
+        autoSuspend.idleTimeout = null;
+        dimDisplay = {
+          enable = false;
+          idleTimeout = null;
+        };
+        powerButtonAction = "turnOffScreen";
+        turnOffDisplay.idleTimeout = null;
+      };
+      krunner = {
+        activateWhenTypingOnDesktop = true;
+        position = "center";
+      };
+      workspace = {
+        wallpaperPictureOfTheDay = {
+          provider = "bing";
+        };
+        wallpaperFillMode = "preserveAspectCrop";
+      };
+
+      panels = [ ];
+    };
   };
+
+  android-sdk.enable = true;
+
+  # Optional; default path is "~/.local/share/android".
+  android-sdk.path = "/home/bahnasawy/.android/sdk";
+
+  android-sdk.packages =
+    sdk: with sdk; [
+      build-tools-34-0-0
+      cmdline-tools-latest
+      emulator
+      platforms-android-34
+      sources-android-34
+    ];
 }

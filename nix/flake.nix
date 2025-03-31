@@ -19,6 +19,11 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     neovim.url = "github:nix-community/neovim-nightly-overlay";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+
+    android-nixpkgs = {
+      url = "github:tadfisher/android-nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -31,6 +36,7 @@
       nix-homebrew,
       neovim,
       nixos-wsl,
+      android-nixpkgs,
     }@inputs:
     let
       linuxSystem = "x86_64-linux";
@@ -105,7 +111,10 @@
               home-manager.backupFileExtension = "backup";
               home-manager.users.bahnasawy = import ./pc/home.nix;
 
-              home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+              home-manager.sharedModules = [
+                plasma-manager.homeManagerModules.plasma-manager
+                android-nixpkgs.hmModule
+              ];
               nixpkgs.overlays = overlays;
             }
           ];
