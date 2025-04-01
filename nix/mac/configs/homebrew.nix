@@ -6,7 +6,6 @@
       "iina"
       "the-unarchiver"
       "arc"
-      "android-studio"
       "bitwarden"
       "insomnia"
       "spotify"

@@ -34,7 +34,6 @@
     fd
     go
     htop
-    android-tools
     ngrok
     dwt1-shell-color-scripts
     git-lfs

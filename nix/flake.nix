@@ -47,6 +47,7 @@
 
       overlays = [
         neovim.overlays.default
+        android-nixpkgs.overlays.default
       ];
     in
     {
@@ -106,15 +107,18 @@
 
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.users.bahnasawy = import ./pc/home.nix;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.bahnasawy = import ./pc/home.nix;
 
-              home-manager.sharedModules = [
-                plasma-manager.homeManagerModules.plasma-manager
-                android-nixpkgs.hmModule
-              ];
+                sharedModules = [
+                  plasma-manager.homeManagerModules.plasma-manager
+                ];
+
+                extraSpecialArgs = { inherit android-nixpkgs; };
+              };
               nixpkgs.overlays = overlays;
             }
           ];
@@ -159,18 +163,15 @@
       darwinModules.podman = ./mac/modules/podman.nix;
       darwinConfigurations = {
         mac = nix-darwin.lib.darwinSystem {
-          # specialArgs = {inherit inputs self;};
-
           modules = [
             ./mac/configuration.nix
-
             ./mac/modules/podman.nix
 
             nix-homebrew.darwinModules.nix-homebrew
             {
               nix-homebrew = {
                 enable = true;
-                # enableRosetta = true;
+                enableRosetta = true;
                 user = "bahnasawy";
               };
             }
@@ -181,8 +182,10 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 users.bahnasawy = import ./mac/home.nix;
+                extraSpecialArgs = { inherit android-nixpkgs; };
               };
               users.users.bahnasawy.home = "/Users/bahnasawy";
+
               nixpkgs.overlays = overlays;
             }
           ];

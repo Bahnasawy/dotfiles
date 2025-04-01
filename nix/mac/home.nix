@@ -1,56 +1,41 @@
 {
+  android-nixpkgs,
   config,
   ...
 }:
 {
-  imports = [ ./configs/packages.nix ];
+  imports = [
+    ./configs/packages.nix
+    ./configs/dots.nix
+    android-nixpkgs.hmModule
+    {
+      android-sdk.enable = true;
+
+      # Optional; default path is "~/.local/share/android".
+      android-sdk.path = "${config.home.homeDirectory}/.android/sdk";
+
+      android-sdk.packages =
+        sdk: with sdk; [
+          build-tools-35-0-0
+          build-tools-34-0-0
+          cmdline-tools-latest
+          emulator
+          platforms-android-35
+          platforms-android-34
+          sources-android-35
+          sources-android-34
+          ndk-26-1-10909125
+          system-images-android-35-google-apis-arm64-v8a
+          platform-tools
+          cmake-3-22-1
+        ];
+    }
+  ];
   home.username = "bahnasawy";
   home.homeDirectory = "/Users/bahnasawy";
 
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
-  home.packages = [ ];
-
-  home.file = {
-    ".config/nvim" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/nvim";
-      recursive = true;
-    };
-    ".config/nushell" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/nushell";
-      recursive = true;
-    };
-    ".config/ghostty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/ghostty";
-      recursive = true;
-    };
-    ".config/gh" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/gh";
-      recursive = true;
-    };
-    ".config/neovide" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/neovide";
-      recursive = true;
-    };
-    ".config/kitty" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/kitty";
-      recursive = true;
-    };
-    ".config/raycast" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/raycast";
-      recursive = true;
-    };
-    ".config/bat" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/bat";
-      recursive = true;
-    };
-    ".zshrc" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/zshrc";
-    };
-    ".zpreztorc" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/zpreztorc";
-    };
-  };
   home.sessionVariables = {
     EDITOR = "nvim";
   };
