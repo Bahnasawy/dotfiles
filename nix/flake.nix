@@ -112,12 +112,11 @@
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 users.bahnasawy = import ./pc/home.nix;
+                extraSpecialArgs = { inherit android-nixpkgs; };
 
                 sharedModules = [
                   plasma-manager.homeManagerModules.plasma-manager
                 ];
-
-                extraSpecialArgs = { inherit android-nixpkgs; };
               };
               nixpkgs.overlays = overlays;
             }

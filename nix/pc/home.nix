@@ -7,6 +7,7 @@
   imports = [
     ./configs/packages.nix
     ./configs/dots.nix
+    android-nixpkgs.hmModule
     {
       android-sdk.enable = true;
 

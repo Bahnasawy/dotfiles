@@ -33,7 +33,6 @@
     cargo
     rustc
     rust-analyzer
-    beekeeper-studio
     lua5_1
     gzip
     zig
@@ -127,18 +126,4 @@
       panels = [ ];
     };
   };
-
-  android-sdk.enable = true;
-
-  # Optional; default path is "~/.local/share/android".
-  android-sdk.path = "/home/bahnasawy/.android/sdk";
-
-  android-sdk.packages =
-    sdk: with sdk; [
-      build-tools-34-0-0
-      cmdline-tools-latest
-      emulator
-      platforms-android-34
-      sources-android-34
-    ];
 }
