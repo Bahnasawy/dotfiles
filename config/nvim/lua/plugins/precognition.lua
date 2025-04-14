@@ -1,9 +1,13 @@
 return {
   "tris203/precognition.nvim",
-  branch = "main",
-  dependencies = { "echasnovski/mini.test" },
+  branch = "v2",
+  -- commit = ""
+  event = "VeryLazy",
   enabled = false,
-  --event = "VeryLazy",
+  dependencies = {
+    "chrisgrieser/nvim-spider",
+    { "echasnovski/mini.test", version = false },
+  },
   opts = {
     -- startVisible = true,
     -- showBlankVirtLine = true,
