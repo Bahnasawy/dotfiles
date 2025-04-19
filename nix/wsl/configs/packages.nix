@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.bat = {
     enable = true;
   };
@@ -51,5 +52,7 @@
     zip
     icu.dev
     nixfmt-rfc-style
+    nix-output-monitor
+    # python312
   ];
 }
