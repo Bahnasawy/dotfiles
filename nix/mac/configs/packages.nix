@@ -42,6 +42,8 @@
     uv
     postgresql
     ghostscript
+    neofetch
+    btop
   ];
 
   home.sessionVariables = {

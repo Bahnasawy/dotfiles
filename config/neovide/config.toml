@@ -1,7 +1,7 @@
 fork = false
 frame = "full"
 idle = true
-maximized = false
+maximized = true
 neovim-bin = "/etc/profiles/per-user/bahnasawy/bin/nvim"
 no-multigrid = false
 srgb = true

@@ -11,13 +11,19 @@ return {
   } },
   {
     "tris203/precognition.nvim",
-    branch = "v2",
-    -- commit = ""
+    branch = "main",
     event = "VeryLazy",
     enabled = false,
     dependencies = {
-      "chrisgrieser/nvim-spider",
-      { "echasnovski/mini.test", version = false },
+      {
+        "chrisgrieser/nvim-spider",
+        commit = "0b084100cda46fc2ff0c99eb169433dfa9751199",
+        keys = {
+          { "w", "<cmd>lua require('spider').motion('w')<CR>", mode = { "n", "o", "x" } },
+          { "e", "<cmd>lua require('spider').motion('e')<CR>", mode = { "n", "o", "x" } },
+          { "b", "<cmd>lua require('spider').motion('b')<CR>", mode = { "n", "o", "x" } },
+        },
+      },
     },
     opts = {
       -- startVisible = true,
@@ -124,7 +130,6 @@ return {
         },
       },
       keys = {
-        { "<leader>/", LazyVim.pick("live_grep", { root = true }), desc = "Grep (cwd)" },
         { "<leader>zd", require("snacks").picker.zoxide, { desc = "Open LazyGit" } },
       },
     },
