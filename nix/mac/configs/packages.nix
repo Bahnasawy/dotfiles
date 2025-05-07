@@ -44,7 +44,6 @@
     ghostscript
     neofetch
     btop
-    cargo-cross
   ];
 
   home.sessionVariables = {
