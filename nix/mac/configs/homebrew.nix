@@ -21,6 +21,7 @@
       "beekeeper-studio"
       "docker"
       "neovide"
+      "transmission"
     ];
     brews = [
       "mas"
