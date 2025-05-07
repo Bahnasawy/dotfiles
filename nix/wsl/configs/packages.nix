@@ -1,7 +1,10 @@
 { pkgs, ... }:
 {
-  programs.bat = {
-    enable = true;
+  programs = {
+    bat = {
+      enable = true;
+      extraPackages = with pkgs.bat-extras; [ batman ];
+    };
   };
   home.packages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.

@@ -9,4 +9,8 @@ return {
     dependencies = { "kkharji/sqlite.lua" },
     opts = {},
   },
+  {
+    "gbprod/yanky.nvim",
+    lazy = true,
+  },
 }

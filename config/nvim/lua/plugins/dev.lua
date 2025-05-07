@@ -8,12 +8,11 @@ return {
     },
     ft = { "http", "rest" },
     opts = {
-      -- your configuration comes here
       global_keymaps = true,
     },
   },
   -- Typescript
-  { "dmmulroy/ts-error-translator.nvim", ft = { "typescriptreact", "typescript" } },
+  { "dmmulroy/ts-error-translator.nvim", lazy = true, ft = { "typescriptreact", "typescript" } },
   {
     "dmmulroy/tsc.nvim",
     ft = { "typescriptreact", "typescript" },
@@ -25,6 +24,7 @@ return {
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    ft = { "typescriptreact", "typescript" },
     opts = {},
   },
   {
