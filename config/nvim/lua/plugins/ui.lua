@@ -11,13 +11,14 @@ return {
   } },
   {
     "tris203/precognition.nvim",
-    branch = "main",
     event = "VeryLazy",
-    enabled = false,
+    enabled = true,
     dependencies = {
       {
         "chrisgrieser/nvim-spider",
-        commit = "0b084100cda46fc2ff0c99eb169433dfa9751199",
+        commit = "871b019cecced368abc575de039406d08acc3299",
+        opts = {},
+        lazy = true,
         keys = {
           { "w", "<cmd>lua require('spider').motion('w')<CR>", mode = { "n", "o", "x" } },
           { "e", "<cmd>lua require('spider').motion('e')<CR>", mode = { "n", "o", "x" } },
