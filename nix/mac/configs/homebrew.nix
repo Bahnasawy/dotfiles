@@ -17,11 +17,11 @@
       "zed"
       "ghostty@tip"
       "shortcat"
-      "zen-browser"
       "beekeeper-studio"
       "docker"
       "neovide"
       "transmission"
+      "microsoft-remote-desktop"
     ];
     brews = [
       "mas"

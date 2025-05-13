@@ -33,6 +33,10 @@
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/bat";
       recursive = true;
     };
+    ".config/yazi" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/yazi";
+      recursive = true;
+    };
     ".zshrc" = {
       source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/zshrc";
     };

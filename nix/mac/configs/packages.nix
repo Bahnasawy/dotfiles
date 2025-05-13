@@ -44,6 +44,7 @@
     ghostscript
     neofetch
     btop
+    yazi
   ];
 
   home.sessionVariables = {
