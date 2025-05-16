@@ -67,6 +67,7 @@ return {
     event = "TextYankPost",
     lazy = false,
     priority = 10,
+    enabled = false,
     opts = {
       overwrite = {
         yank = {

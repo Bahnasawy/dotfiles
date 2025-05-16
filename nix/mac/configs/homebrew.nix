@@ -27,6 +27,7 @@
       "mas"
       "fastlane"
       "bun"
+      "libiconv"
     ];
     taps = [
       "oven-sh/bun"

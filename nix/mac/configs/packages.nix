@@ -45,6 +45,9 @@
     neofetch
     btop
     yazi
+    cargo-cross
+    pkgsCross.mingwW64.buildPackages.gcc
+    pkgsCross.mingw32.buildPackages.gcc
   ];
 
   home.sessionVariables = {
