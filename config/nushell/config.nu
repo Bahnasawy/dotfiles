@@ -52,7 +52,7 @@ let external_completer = {|spans|
 
     match $spans.0 {
         # use zoxide completions for zoxide commands
-        z | zi => $zoxide_completer
+        z | zi | cd => $zoxide_completer
         __zoxide_z | __zoxide_zi => $zoxide_completer
         _ => $carapace_completer
     } | do $in $spans
@@ -91,8 +91,9 @@ if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/Users/bahnasawy/.android/sdk"
     $env.ANDROID_SDK_ROOT = "/Users/bahnasawy/.android/sdk"
 } else {
-    $env.ANDROID_HOME = "/home/bahnasawy/Android/Sdk"
+    $env.ANDROID_HOME = "/home/bahnasawy/.android/sdk"
 }
 $env.config.shell_integration.osc133 = false
 
 alias man = batman
+alias z = cd
