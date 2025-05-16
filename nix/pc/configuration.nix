@@ -68,4 +68,6 @@
     podman-tui
     docker-compose
   ];
+
+  time.timeZone = "Africa/Cairo";
 }
