@@ -28,7 +28,6 @@
     bun
     kdePackages.filelight
     jdk17
-    neovide
     exercism
     cargo
     rustc
@@ -42,6 +41,7 @@
     dwt1-shell-color-scripts
     sqlite
     gparted
+    yazi
   ];
 
   home.sessionVariables = {
@@ -124,6 +124,7 @@
       };
 
       panels = [ ];
+
     };
   };
 }
