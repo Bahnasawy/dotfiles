@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   i18n.defaultLocale = "en_US.UTF-8";
 
   nix = {
@@ -11,7 +12,7 @@
     settings.max-jobs = 64;
   };
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
   fonts.packages = [
     pkgs.nerd-fonts.jetbrains-mono
@@ -29,7 +30,7 @@
 
   environment = {
     sessionVariables = {
-          LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
-  };
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+    };
   };
 }

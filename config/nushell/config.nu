@@ -1,6 +1,6 @@
 def  db --wrapped [...rest] {
   if $"(^uname)" == "Darwin" {
-      darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix#mac" ...$rest 
+      sudo darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix#mac" ...$rest 
   } else {
     sudo nixos-rebuild switch --flake $"/home/bahnasawy/dotfiles/nix#(hostname)" ...$rest
   }

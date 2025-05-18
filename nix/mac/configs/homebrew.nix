@@ -19,7 +19,6 @@
       "shortcat"
       "beekeeper-studio"
       "docker"
-      "neovide"
       "transmission"
       "microsoft-remote-desktop"
     ];
