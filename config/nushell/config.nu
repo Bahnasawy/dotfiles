@@ -85,7 +85,8 @@ append /usr/bin/env |
 append /run/current-system/sw/bin |
 append /Users/bahnasawy/.bun/bin |
 append /home/bahnasawy/.bun/bin |
-append /home/bahnasawy/.local/bin
+append /home/bahnasawy/.local/bin |
+append /home/bahnasawy/.local/share/uv/python/cpython-3.14.0a6-linux-x86_64-gnu/bin
 )
 if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/Users/bahnasawy/.android/sdk"
