@@ -47,7 +47,10 @@
     yazi
     cargo-cross
     pkgsCross.mingwW64.buildPackages.gcc
-    pkgsCross.mingw32.buildPackages.gcc
+    pkgsCross.mingwW64.stdenv.cc
+    pkgsCross.mingwW64.windows.pthreads
+    gcc
+    bacon
   ];
 
   home.sessionVariables = {

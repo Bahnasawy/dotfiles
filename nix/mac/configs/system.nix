@@ -27,6 +27,7 @@
 
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  system.primaryUser = "bahnasawy";
   system.defaults = {
     dock.autohide = true;
     dock.orientation = "left";
