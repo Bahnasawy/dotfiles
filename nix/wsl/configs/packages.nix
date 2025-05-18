@@ -39,7 +39,6 @@
     rustc
     rust-analyzer
     home-manager
-    python313Packages.virtualenv
     fd
     ghostty
     cowsay
@@ -48,7 +47,6 @@
     dwt1-shell-color-scripts
     ast-grep
     uv
-    python314
     sqlite
     lua51Packages.jsregexp
     go
@@ -56,6 +54,7 @@
     icu.dev
     nixfmt-rfc-style
     nix-output-monitor
-    # python312
+    yazi
+    nixos-rebuild-ng
   ];
 }

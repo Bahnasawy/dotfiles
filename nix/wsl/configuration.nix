@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   wsl.enable = true;
   wsl.defaultUser = "bahnasawy";
 
@@ -17,16 +18,24 @@
     ./configs/system.nix
   ];
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
   nixpkgs.config.allowUnfree = true;
   users.users.bahnasawy = {
     isNormalUser = true;
-    extraGroups = ["wheel" "networkmanager"]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ]; # Enable ‘sudo’ for the user.
   };
 
   users.defaultUserShell = pkgs.nushell;
 
   networking.hostName = "wsl";
+
+  time.timeZone = "Africa/Cairo";
 }
