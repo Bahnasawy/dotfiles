@@ -11,6 +11,7 @@
       "spotify"
       "notion"
       "notion-calendar"
+      "notion-mail"
       "whatsapp"
       "expo-orbit"
       "expressvpn"
@@ -18,9 +19,9 @@
       "ghostty@tip"
       "shortcat"
       "beekeeper-studio"
-      "docker"
       "transmission"
       "microsoft-remote-desktop"
+      "raycast"
     ];
     brews = [
       "mas"

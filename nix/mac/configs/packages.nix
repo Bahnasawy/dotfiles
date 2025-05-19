@@ -51,6 +51,8 @@
     pkgsCross.mingwW64.windows.pthreads
     gcc
     bacon
+    uv
+    python313
   ];
 
   home.sessionVariables = {

@@ -86,7 +86,7 @@ append /run/current-system/sw/bin |
 append /Users/bahnasawy/.bun/bin |
 append /home/bahnasawy/.bun/bin |
 append /home/bahnasawy/.local/bin |
-append /home/bahnasawy/.local/share/uv/python/cpython-3.14.0a6-linux-x86_64-gnu/bin
+append /opt/homebrew/opt/libiconv/bin
 )
 if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/Users/bahnasawy/.android/sdk"
@@ -95,6 +95,10 @@ if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/home/bahnasawy/.android/sdk"
 }
 $env.config.shell_integration.osc133 = false
+$env.CROSS_CONTAINER_ENGINE = 'podman'
+$env.CROSS_CONTAINER_OPTS = '--platform=linux/amd64'
+
+
 
 alias man = batman
 alias z = cd
