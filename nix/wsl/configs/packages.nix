@@ -56,5 +56,6 @@
     nix-output-monitor
     yazi
     nixos-rebuild-ng
+    python313
   ];
 }
