@@ -55,11 +55,19 @@
     python313
   ];
 
-  home.sessionVariables = {
-    LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
-  };
-
   programs = {
+    zsh = {
+      enable = true;
+
+      sessionVariables = {
+        NIX_LDFLAGS = "${pkgs.libiconv}/lib";
+        LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
+      };
+
+      shellAliases = {
+        ld = "ld -L $NIX_LDFLAGS";
+      };
+    };
     bat = {
       enable = true;
       extraPackages = with pkgs.bat-extras; [ batman ];
@@ -77,6 +85,13 @@
       };
 
       configFile.source = config.lib.file.mkOutOfStoreSymlink ../../../config/nushell/config.nu;
+
+      extraConfig = ''
+        $env.NIX_LDFLAGS = "${pkgs.libiconv}/lib"
+        $env.LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib"
+
+        alias ld = ld -L $env.NIX_LDFLAGS
+      '';
     };
 
     carapace.enable = true;
@@ -100,7 +115,7 @@
     git = {
       enable = true;
       userEmail = "yousef.elbahnasawy@gmail.com";
-      userName = "bahnasawy";
+      userName = "Yousef Elbahnasawy";
     };
 
     neovim = {
@@ -110,10 +125,4 @@
       withNodeJs = true;
     };
   };
-
-  # home.activation.uv = lib.hm.dag.entryAfter [ "linkGeneration" ] ''
-  #   (
-  #     uv pythin install 3.14 --default --preview
-  #   )
-  # '';
 }

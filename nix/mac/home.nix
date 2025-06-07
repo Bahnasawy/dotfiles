@@ -1,6 +1,7 @@
 {
   android-nixpkgs,
   config,
+  pkgs,
   ...
 }:
 {
@@ -39,6 +40,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
   };
 
   # Let Home Manager install and manage itself.

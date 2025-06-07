@@ -25,7 +25,7 @@
           sources-android-35
           sources-android-34
           ndk-26-1-10909125
-          system-images-android-35-google-apis-arm64-v8a
+          system-images-android-35-google-apis-x86-64
           platform-tools
           cmake-3-22-1
         ];
