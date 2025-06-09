@@ -53,6 +53,7 @@
     bacon
     uv
     python313
+    git
   ];
 
   programs = {
@@ -111,12 +112,6 @@
 
     zoxide.enable = true;
     zoxide.enableNushellIntegration = true;
-
-    git = {
-      enable = true;
-      userEmail = "yousef.elbahnasawy@gmail.com";
-      userName = "Yousef Elbahnasawy";
-    };
 
     neovim = {
       enable = true;

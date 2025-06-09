@@ -18,6 +18,7 @@
       "transmission"
       "microsoft-remote-desktop"
       "raycast"
+      "zen"
     ];
     brews = [
       "mas"
