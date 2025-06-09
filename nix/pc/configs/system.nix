@@ -8,6 +8,7 @@
     efi.canTouchEfiVariables = true;
     grub.device = "nodev";
     grub.efiSupport = true;
+    grub.useOSProber = true;
   };
 
   hardware = {
