@@ -58,5 +58,6 @@
     nixos-rebuild-ng
     python313
     moon
+    postgresql
   ];
 }
