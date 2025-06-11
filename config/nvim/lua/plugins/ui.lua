@@ -148,4 +148,13 @@ return {
       { "<C-]>", "<cmd>ToggleTerm<cr>", desc = "ToggleTerm", silent = true, remap = true, mode = { "n", "t" } },
     },
   },
+  {
+    "OXY2DEV/helpview.nvim",
+    lazy = false,
+    opts = {
+      preview = {
+        icon_provider = "devicons",
+      },
+    },
+  },
 }

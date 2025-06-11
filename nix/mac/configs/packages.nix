@@ -46,14 +46,10 @@
     btop
     yazi
     cargo-cross
-    pkgsCross.mingwW64.buildPackages.gcc
-    pkgsCross.mingwW64.stdenv.cc
-    pkgsCross.mingwW64.windows.pthreads
-    gcc
-    bacon
     uv
     python313
     git
+    bacon
   ];
 
   programs = {
