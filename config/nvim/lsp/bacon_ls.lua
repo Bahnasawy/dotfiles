@@ -24,17 +24,37 @@
 --           end
 --         end
 
-local content = table.concat(vim.api.nvim_buf_get_lines(0, 0, -1, false))
-if string.find(content, "windows") then
-  vim.lsp.config("bacon_ls", {
-    init_options = {
-      runBaconInBackgroundCommandArguments = "--headless --job bacon-ls-win",
-    },
-  })
-else
-  vim.lsp.config("bacon_ls", {
-    init_options = {
-      runBaconInBackgroundCommandArguments = "--headless --job bacon-ls",
-    },
-  })
+vim.lsp.enable("rust-analyzer", false)
+
+function os.capture(cmd, raw)
+  local handle = assert(io.popen(cmd, "r"))
+  local output = assert(handle:read("*a"))
+
+  handle:close()
+
+  if raw then
+    return output
+  end
+
+  output = string.gsub(string.gsub(string.gsub(output, "^%s+", ""), "%s+$", ""), "[\n\r]+", " ")
+
+  return output
+end
+
+local file = io.open(os.capture("git rev-parse --show-toplevel") .. "/src/main.rs", "r")
+if file ~= nil then
+  local content = file:read("*a")
+  if string.find(content, "windows") then
+    vim.lsp.config("bacon_ls", {
+      init_options = {
+        runBaconInBackgroundCommandArguments = "--headless --job bacon-ls-win",
+      },
+    })
+  else
+    vim.lsp.config("bacon_ls", {
+      init_options = {
+        runBaconInBackgroundCommandArguments = "--headless --job bacon-ls",
+      },
+    })
+  end
 end
