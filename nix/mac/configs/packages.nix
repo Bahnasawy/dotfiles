@@ -50,6 +50,9 @@
     python313
     git
     bacon
+    exercism
+    jujutsu
+    lazyjj
   ];
 
   programs = {

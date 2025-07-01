@@ -13,4 +13,9 @@ return {
     "gbprod/yanky.nvim",
     lazy = true,
   },
+  {
+    "swaits/lazyjj.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    opts = {},
+  },
 }
