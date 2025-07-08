@@ -53,6 +53,7 @@
     exercism
     jujutsu
     lazyjj
+    moon
   ];
 
   programs = {

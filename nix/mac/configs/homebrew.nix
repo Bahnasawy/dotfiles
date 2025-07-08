@@ -19,6 +19,9 @@
       "microsoft-remote-desktop"
       "raycast"
       "zen"
+      "slack"
+      "anydesk"
+      "handbrake-app"
     ];
     brews = [
       "mas"
@@ -33,6 +36,7 @@
       "XCode" = 497799835;
       "Transporter" = 1450874784;
       "GP Calendar" = 1632951751;
+      "Screenshot Monitor" = 1336124970;
     };
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;

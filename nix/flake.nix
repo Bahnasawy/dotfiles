@@ -64,6 +64,18 @@
           ];
         };
 
+        usb = home-manager.lib.homeManagerConfiguration {
+          pkgs = linuxPackages;
+
+          modules = [
+            plasma-manager.homeManagerModules.plasma-manager
+            ./usb/home.nix
+            {
+              nixpkgs.overlays = overlays;
+            }
+          ];
+        };
+
         wsl = home-manager.lib.homeManagerConfiguration {
           pkgs = linuxPackages;
 
@@ -112,6 +124,29 @@
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 users.bahnasawy = import ./pc/home.nix;
+                extraSpecialArgs = { inherit android-nixpkgs; };
+
+                sharedModules = [
+                  plasma-manager.homeManagerModules.plasma-manager
+                ];
+              };
+              nixpkgs.overlays = overlays;
+            }
+          ];
+        };
+
+        usb = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./usb/configuration.nix
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.bahnasawy = import ./usb/home.nix;
                 extraSpecialArgs = { inherit android-nixpkgs; };
 
                 sharedModules = [

@@ -17,5 +17,8 @@ return {
     "swaits/lazyjj.nvim",
     dependencies = "nvim-lua/plenary.nvim",
     opts = {},
+    keys = {
+      { "<leader>gj", "<cmd>LazyJJ<CR>", { silent = true } },
+    },
   },
 }
