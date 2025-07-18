@@ -27,7 +27,6 @@
     ripgrep
     cocoapods
     vscode
-    discord
     sqlite
     luarocks
     lua5_1
@@ -54,6 +53,8 @@
     jujutsu
     lazyjj
     moon
+    vscode
+    discord
   ];
 
   programs = {

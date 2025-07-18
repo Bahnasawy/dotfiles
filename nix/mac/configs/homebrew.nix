@@ -14,14 +14,15 @@
       "whatsapp"
       "expo-orbit"
       "ghostty@tip"
-      "shortcat"
+      {
+        name = "shortcat";
+        greedy = true;
+      }
       "transmission"
-      "microsoft-remote-desktop"
       "raycast"
       "zen"
-      "slack"
-      "anydesk"
       "handbrake-app"
+      "windows-app"
     ];
     brews = [
       "mas"
