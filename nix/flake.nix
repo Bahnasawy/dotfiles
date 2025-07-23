@@ -76,6 +76,17 @@
           ];
         };
 
+        p2 = home-manager.lib.homeManagerConfiguration {
+          pkgs = linuxPackages;
+
+          modules = [
+            ./p2/home.nix
+            {
+              nixpkgs.overlays = overlays;
+            }
+          ];
+        };
+
         wsl = home-manager.lib.homeManagerConfiguration {
           pkgs = linuxPackages;
 
@@ -153,6 +164,23 @@
                   plasma-manager.homeManagerModules.plasma-manager
                 ];
               };
+              nixpkgs.overlays = overlays;
+            }
+          ];
+        };
+
+        p2 = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            nixos-wsl.nixosModules.default
+            ./p2/configuration.nix
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
+              home-manager.users.brandon = import ./p2/home.nix;
               nixpkgs.overlays = overlays;
             }
           ];
