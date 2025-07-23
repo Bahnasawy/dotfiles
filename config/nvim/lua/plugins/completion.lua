@@ -49,10 +49,10 @@ return {
           cmd = { "nixd" },
           filetypes = { "nix" },
         },
-        bacon_ls = {
-          enabled = diagnostics == "bacon-ls",
-        },
-        rust_analyzer = { enabled = false },
+        -- bacon_ls = {
+        --   enabled = diagnostics == "bacon-ls",
+        -- },
+        -- rust_analyzer = { enabled = false },
       },
       setup = {
         nixd = function(_)
