@@ -2,7 +2,7 @@ def  db --wrapped [...rest] {
   if $"(^uname)" == "Darwin" {
       sudo darwin-rebuild switch --flake "/Users/bahnasawy/dotfiles/nix#mac" ...$rest 
   } else {
-    sudo nixos-rebuild switch --flake $"/home/bahnasawy/dotfiles/nix#(hostname)" ...$rest
+    sudo nixos-rebuild switch --flake $"/home/(whoami)/dotfiles/nix#(hostname)" ...$rest
   }
 }
 
@@ -12,9 +12,9 @@ def collect-garbage [] {
 
 def fu [] {
   if $"(^uname)" == "Darwin" {
-      nix flake update --flake /Users/bahnasawy/dotfiles/nix
+      nix flake update --flake $"/Users/(whoami)/dotfiles/nix"
   } else {
-      sudo nix flake update --flake "/home/bahnasawy/dotfiles/nix"
+      sudo nix flake update --flake $"/home/(whoami)/dotfiles/nix"
   }
 }
 
