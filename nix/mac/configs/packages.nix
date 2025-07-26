@@ -55,6 +55,7 @@
     moon
     vscode
     discord
+    zig
   ];
 
   programs = {
