@@ -37,4 +37,7 @@ return {
   },
     opts = {},
   },
+  {
+    "tpope/vim-dotenv",
+  },
 }

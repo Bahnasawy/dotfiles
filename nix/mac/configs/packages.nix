@@ -104,10 +104,25 @@
       enable = true;
       enableNushellIntegration = true;
       settings = {
+        # "$schema" = "https://starship.rs/config-schema.json";
         add_newline = true;
         character = {
           success_symbol = "[➜](bold green)";
           error_symbol = "[➜](bold red)";
+        };
+        custom = {
+          jj = {
+            command = "prompt";
+            format = "$output";
+            ignore_timeout = true;
+            shell = [
+              "starship-jj"
+              "--ignore-working-copy"
+              "starship"
+            ];
+            use_stdin = false;
+            when = true;
+          };
         };
       };
     };
