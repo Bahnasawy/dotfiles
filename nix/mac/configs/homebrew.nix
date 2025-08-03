@@ -38,6 +38,7 @@
       "Transporter" = 1450874784;
       "GP Calendar" = 1632951751;
       "Screenshot Monitor" = 1336124970;
+      "Blackmagic Disk Speed Test" = 425264550;
     };
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
