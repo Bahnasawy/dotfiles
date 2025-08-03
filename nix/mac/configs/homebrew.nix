@@ -22,7 +22,7 @@
       "raycast"
       "zen"
       "handbrake-app"
-      "windows-app"
+      "virtualbox"
     ];
     brews = [
       "mas"
