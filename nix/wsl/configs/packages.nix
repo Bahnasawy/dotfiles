@@ -59,5 +59,7 @@
     python313
     moon
     postgresql
+    jujutsu
+    lazyjj
   ];
 }
