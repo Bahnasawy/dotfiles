@@ -77,21 +77,21 @@ $env.config = {
 }
 $env.PATH = ($env.PATH |
 split row (char esep) |
-prepend /Users/bahnasawy/.local/bin |
+prepend ~/.local/bin |
 prepend /home/bahnasawy/.apps |
 prepend /etc/profiles/per-user/bahnasawy/bin |
 append /usr/bin/env |
 append /run/current-system/sw/bin |
-append /Users/bahnasawy/.bun/bin |
+append ~/.bun/bin |
 append /home/bahnasawy/.bun/bin |
 append /home/bahnasawy/.local/bin |
-append /Users/bahnasawy/go/bin |
+append ~/go/bin |
 append /opt/homebrew/bin |
-append /Users/bahnasawy/.cargo/bin
+append ~/.cargo/bin
 )
 if $"(^uname)" == "Darwin" {
-    $env.ANDROID_HOME = "/Users/bahnasawy/.android/sdk"
-    $env.ANDROID_SDK_ROOT = "/Users/bahnasawy/.android/sdk"
+    $env.ANDROID_HOME = "~/.android/sdk"
+    $env.ANDROID_SDK_ROOT = "~/.android/sdk"
     # $env.NIX_LDFLAGS = "-L/nix/store/xppzbf3fssn7g35ixgzifkwj54x419n5-libcxx-19.1.7/lib -L/nix/store/zqc178w2vh4lkxmy3znl5s2xl7d401nr-compiler-rt-libc-19.1.7/lib -L/nix/store/fhza62gkyw0mp1h2zls6pl1832zjjf26-libiconv-109/lib -L/nix/store/xdp9yf1r58jzfw1rh68qdhp0d923l07w-libresolv-83/lib -L/nix/store/w2gmrz3ki4lqwb0gw95bjsrwlhknq8ks-libsbuf-14.1.0/lib -L/nix/store/jmq7mr51dql3w8y26kzf4j1s62k6mfww-libutil-72/lib -L/nix/store/xppzbf3fssn7g35ixgzifkwj54x419n5-libcxx-19.1.7/lib -L/nix/store/zqc178w2vh4lkxmy3znl5s2xl7d401nr-compiler-rt-libc-19.1.7/lib -L/nix/store/fhza62gkyw0mp1h2zls6pl1832zjjf26-libiconv-109/lib -L/nix/store/xdp9yf1r58jzfw1rh68qdhp0d923l07w-libresolv-83/lib -L/nix/store/w2gmrz3ki4lqwb0gw95bjsrwlhknq8ks-libsbuf-14.1.0/lib -L/nix/store/jmq7mr51dql3w8y26kzf4j1s62k6mfww-libutil-72/lib"
 } else {
     $env.ANDROID_HOME = "/home/bahnasawy/.android/sdk"
