@@ -28,13 +28,12 @@ return {
   {
     "tpope/vim-dotenv",
   },
-  {
-    "mason-org/mason-lspconfig.nvim",
-    tag = "stable",
-    opts = {},
-    dependencies = {
-      { "mason-org/mason.nvim", tag = "stable", opts = {} },
-      "neovim/nvim-lspconfig",
-    },
-  },
+  -- {
+  --   "olimorris/codecompanion.nvim",
+  --   opts = {},
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-treesitter/nvim-treesitter",
+  --   },
+  -- },
 }
