@@ -50,8 +50,6 @@
     git
     bacon
     exercism
-    jujutsu
-    lazyjj
     moon
     vscode
     discord
@@ -109,20 +107,6 @@
         character = {
           success_symbol = "[➜](bold green)";
           error_symbol = "[➜](bold red)";
-        };
-        custom = {
-          jj = {
-            command = "prompt";
-            format = "$output";
-            ignore_timeout = true;
-            shell = [
-              "starship-jj"
-              "--ignore-working-copy"
-              "starship"
-            ];
-            use_stdin = false;
-            when = true;
-          };
         };
       };
     };
