@@ -56,7 +56,7 @@
           pkgs = linuxPackages;
 
           modules = [
-            plasma-manager.homeManagerModules.plasma-manager
+            plasma-manager.homeModules.plasma-manager
             ./pc/home.nix
             {
               nixpkgs.overlays = overlays;
@@ -68,7 +68,7 @@
           pkgs = linuxPackages;
 
           modules = [
-            plasma-manager.homeManagerModules.plasma-manager
+            plasma-manager.homeModules.plasma-manager
             ./usb/home.nix
             {
               nixpkgs.overlays = overlays;
@@ -102,7 +102,7 @@
           pkgs = linuxPackages;
 
           modules = [
-            plasma-manager.homeManagerModules.plasma-manager
+            plasma-manager.homeModules.plasma-manager
             ./laptop/home.nix
             {
               nixpkgs.overlays = overlays;
@@ -138,7 +138,7 @@
                 extraSpecialArgs = { inherit android-nixpkgs; };
 
                 sharedModules = [
-                  plasma-manager.homeManagerModules.plasma-manager
+                  plasma-manager.homeModules.plasma-manager
                 ];
               };
               nixpkgs.overlays = overlays;
@@ -161,7 +161,7 @@
                 extraSpecialArgs = { inherit android-nixpkgs; };
 
                 sharedModules = [
-                  plasma-manager.homeManagerModules.plasma-manager
+                  plasma-manager.homeModules.plasma-manager
                 ];
               };
               nixpkgs.overlays = overlays;
@@ -215,7 +215,7 @@
               home-manager.backupFileExtension = "backup";
               home-manager.users.bahnasawy = import ./laptop/home.nix;
 
-              home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+              home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
               nixpkgs.overlays = overlays;
             }
           ];

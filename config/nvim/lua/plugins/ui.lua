@@ -6,9 +6,15 @@ return {
       colorscheme = "catppuccin-mocha",
     },
   },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000, opts = {
-    term_colors = true,
-  } },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    commit = "9a9a875e979fe9d2b42423d056f944dd286d0280",
+    priority = 1000,
+    opts = {
+      term_colors = true,
+    },
+  },
   {
     "tris203/precognition.nvim",
     event = "VeryLazy",

@@ -10,12 +10,6 @@ return {
     },
   },
   {
-    "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    ft = { "typescriptreact", "typescript", "javascript" },
-    opts = {},
-  },
-  {
     "rcarriga/nvim-dap-ui",
     dependencies = { "nvim-neotest/nvim-nio" },
   -- stylua: ignore
