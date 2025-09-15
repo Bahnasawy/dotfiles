@@ -42,6 +42,9 @@
     sqlite
     gparted
     yazi
+    protonup-qt
+    umu-launcher
+    wine
   ];
 
   home.sessionVariables = {

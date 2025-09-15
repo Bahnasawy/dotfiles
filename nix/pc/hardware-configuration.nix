@@ -38,6 +38,12 @@
     ];
   };
 
+  fileSystems."/home/bahnasawy/Games" = {
+    device = "/dev/disk/by-label/Games";
+    fsType = "ext4";
+    depends = [ "/" ];
+  };
+
   swapDevices = [
     { device = "/dev/disk/by-label/NIXOSSWAP"; }
   ];

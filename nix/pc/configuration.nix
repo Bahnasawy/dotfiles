@@ -62,6 +62,7 @@
   # };
   environment.defaultPackages = with pkgs; [ networkmanager ];
   networking.hostName = "pc";
+  networking.networkmanager.enable = true;
 
   environment.systemPackages = with pkgs; [
     dive
