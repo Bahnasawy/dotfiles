@@ -9,28 +9,9 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    -- commit = "9a9a875e979fe9d2b42423d056f944dd286d0280",
     priority = 1000,
     opts = {
       term_colors = true,
-    },
-  },
-  {
-    "tris203/precognition.nvim",
-    event = "VeryLazy",
-    enabled = true,
-    dependencies = {
-      {
-        "chrisgrieser/nvim-spider",
-        commit = "871b019cecced368abc575de039406d08acc3299",
-        opts = {},
-        lazy = true,
-        keys = {
-          { "w", "<cmd>lua require('spider').motion('w')<CR>", mode = { "n", "o", "x" } },
-          { "e", "<cmd>lua require('spider').motion('e')<CR>", mode = { "n", "o", "x" } },
-          { "b", "<cmd>lua require('spider').motion('b')<CR>", mode = { "n", "o", "x" } },
-        },
-      },
     },
   },
   {
