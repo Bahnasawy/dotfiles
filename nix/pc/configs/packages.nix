@@ -6,7 +6,6 @@
     wget
     gh
     google-chrome
-    bluez
     git
     fzf
     lsd

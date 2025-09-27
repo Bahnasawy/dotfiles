@@ -24,24 +24,26 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/NIXOSROOT";
-    fsType = "ext4";
-  };
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-label/NIXOSROOT";
+      fsType = "ext4";
+    };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-label/NIXOSBOOT";
-    fsType = "vfat";
-    options = [
-      "fmask=0077"
-      "dmask=0077"
-    ];
-  };
+    "/boot" = {
+      device = "/dev/disk/by-label/NIXOSBOOT";
+      fsType = "vfat";
+      options = [
+        "fmask=0077"
+        "dmask=0077"
+      ];
+    };
 
-  fileSystems."/home/bahnasawy/Games" = {
-    device = "/dev/disk/by-label/Games";
-    fsType = "ext4";
-    depends = [ "/" ];
+    "/home/bahnasawy/Games" = {
+      device = "/dev/disk/by-label/Games";
+      fsType = "ext4";
+      depends = [ "/" ];
+    };
   };
 
   swapDevices = [
