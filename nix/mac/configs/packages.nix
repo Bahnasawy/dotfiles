@@ -39,7 +39,6 @@
     ast-grep
     nixfmt-rfc-style
     uv
-    postgresql
     ghostscript
     neofetch
     btop

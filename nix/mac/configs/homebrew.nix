@@ -29,6 +29,8 @@
       "fastlane"
       "bun"
       "libiconv"
+      "postgis"
+      "postgresql"
     ];
     taps = [
       "oven-sh/bun"
@@ -40,8 +42,11 @@
       "Screenshot Monitor" = 1336124970;
       "Blackmagic Disk Speed Test" = 425264550;
     };
-    onActivation.cleanup = "zap";
-    onActivation.autoUpdate = true;
-    onActivation.upgrade = true;
+    onActivation = {
+      cleanup = "zap";
+      autoUpdate = true;
+      upgrade = true;
+      extraFlags = [ "--verbose" ];
+    };
   };
 }
