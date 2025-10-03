@@ -44,6 +44,8 @@
     protonup-qt
     umu-launcher
     wine
+    go
+    perl
   ];
 
   home.sessionVariables = {
