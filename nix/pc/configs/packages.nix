@@ -46,6 +46,9 @@
     wine
     go
     perl
+    nix-output-monitor
+    zsh
+    fd
   ];
 
   home.sessionVariables = {

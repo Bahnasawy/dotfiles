@@ -12,7 +12,7 @@
   };
 
   hardware = {
-    bluetooth.enable = false; # enables support for Bluetooth
+    bluetooth.enable = true; # enables support for Bluetooth
     bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   };
 
@@ -25,9 +25,14 @@
       enable = true;
     };
     displayManager = {
-      sddm.enable = false;
-      sddm.wayland.enable = true;
-      sddm.settings.General.DisplayServer = "x11-user";
+      sddm = {
+        enable = false;
+        wayland.enable = true;
+        settings.General.DisplayServer = "x11-user";
+        autoLogin = {
+          relogin = true;
+        };
+      };
     };
     desktopManager.plasma6.enable = true;
 
@@ -46,6 +51,14 @@
     };
     openssh = {
       enable = true;
+      ports = [ 22 ];
+      settings = {
+        PasswordAuthentication = true;
+        AllowUsers = null; # Allows all users by default. Can be [ "user1" "user2" ]
+        UseDns = true;
+        X11Forwarding = false;
+        PermitRootLogin = "prohibit-password"; # "yes", "without-password", "prohibit-password", "forced-commands-only", "no"
+      };
     };
     postgresql = {
       enable = true;
@@ -124,6 +137,11 @@
       enable = true;
       dockerCompat = true;
       defaultNetwork.settings.dns_enabled = true;
+      extraPackages = with pkgs; [
+        qemu
+        virtiofsd
+        podman-tui
+      ];
     };
   };
 }
