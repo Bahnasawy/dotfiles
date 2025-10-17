@@ -29,8 +29,7 @@
       "fastlane"
       "bun"
       "libiconv"
-      "postgis"
-      "postgresql"
+      "minio-mc"
     ];
     taps = [
       "oven-sh/bun"

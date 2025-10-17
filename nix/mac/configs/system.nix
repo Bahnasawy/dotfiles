@@ -68,4 +68,19 @@
     nixfmt-rfc-style
     #podman-compose # start group of containers for dev
   ];
+
+  services = {
+    postgresql = {
+      enable = true;
+      # ensureDatabases = [ "gold-db" ];
+      authentication = pkgs.lib.mkOverride 10 ''
+        #type database  DBuser      auth-method
+        local all       all     trust
+        host all       all     127.0.0.1/32 md5
+      '';
+      extraPlugins = with pkgs; [ postgresql14Packages.postgis ];
+      dataDir = "/usr/local/var/postgres";
+      package = pkgs.postgresql_14;
+    };
+  };
 }
