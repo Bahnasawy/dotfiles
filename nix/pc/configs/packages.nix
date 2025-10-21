@@ -49,6 +49,12 @@
     nix-output-monitor
     zsh
     fd
+    uv
+    cairo
+    pkgconf
+    gobject-introspection
+    gtk4
+    python313Packages.evdev
   ];
 
   home.sessionVariables = {

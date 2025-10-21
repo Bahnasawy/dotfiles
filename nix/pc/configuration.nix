@@ -26,6 +26,7 @@
       "wheel"
       "kvm"
       "adbusers"
+      "docker"
     ]; # Enable ‘sudo’ for the user.
     shell = pkgs.nushell;
   };
