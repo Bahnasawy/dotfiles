@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   homebrew = {
     enable = true;
     casks = [
@@ -44,7 +43,7 @@
     onActivation = {
       cleanup = "zap";
       autoUpdate = true;
-      upgrade = true;
+      upgrade = false;
       extraFlags = [ "--verbose" ];
     };
   };

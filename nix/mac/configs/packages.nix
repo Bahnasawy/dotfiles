@@ -53,6 +53,7 @@
     vscode
     discord
     zig
+    tmux
   ];
 
   programs = {

@@ -1,17 +1,16 @@
-{
-  ...
-}:
-{
+_: {
   imports = [
     ./configs/homebrew.nix
     ./configs/system.nix
   ];
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  nix.enable = true;
+  nix = {
+    # List packages installed in system profile. To search by name, run:
+    # $ nix-env -qaP | grep wget
+    enable = true;
 
-  # Necessary for using flakes on this system.
-  nix.settings.experimental-features = "nix-command flakes";
+    # Necessary for using flakes on this system.
+    settings.experimental-features = "nix-command flakes";
+  };
 
   # Enable alternative shell support in nix-darwin.
   # programs.fish.enable = true;
@@ -23,7 +22,9 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 5;
 
-  # The platform the configuration will be used on.
-  nixpkgs.hostPlatform = "aarch64-darwin";
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    # The platform the configuration will be used on.
+    hostPlatform = "aarch64-darwin";
+    config.allowUnfree = true;
+  };
 }
