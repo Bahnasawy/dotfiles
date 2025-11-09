@@ -61,5 +61,6 @@
     postgresql_18
     nil
     sqlcmd
+    tmux
   ];
 }

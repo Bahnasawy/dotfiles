@@ -1,15 +1,23 @@
 { config, ... }:
 {
-  home.file.".config/nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/nvim;
-    recursive = true;
-  };
-  home.file.".zoxide.nu" = {
-    source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/zoxide.nu;
-  };
-  home.file.".config/ghostty" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/bahnasawy/dotfiles/config/ghostty";
-    recursive = true;
+  home = {
+    file = {
+      ".config/nvim" = {
+        source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/nvim;
+        recursive = true;
+      };
+      ".config/tmux" = {
+        source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/tmux;
+        recursive = true;
+      };
+      ".zoxide.nu" = {
+        source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/zoxide.nu;
+      };
+      ".config/ghostty" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/home/bahnasawy/dotfiles/config/ghostty";
+        recursive = true;
+      };
+    };
   };
   programs = {
     nushell = {
