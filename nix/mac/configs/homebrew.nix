@@ -13,10 +13,7 @@ _: {
       "whatsapp"
       "expo-orbit"
       "ghostty@tip"
-      {
-        name = "shortcat";
-        greedy = true;
-      }
+      "shortcat"
       "transmission"
       "raycast"
       "zen"
@@ -43,8 +40,8 @@ _: {
     onActivation = {
       cleanup = "zap";
       autoUpdate = true;
-      upgrade = false;
-      extraFlags = [ "--verbose" ];
+      upgrade = true;
+      # extraFlags = [ "--verbose" ];
     };
   };
 }
