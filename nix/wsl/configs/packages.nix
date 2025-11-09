@@ -58,6 +58,8 @@
     nixos-rebuild-ng
     python313
     moon
-    postgresql
+    postgresql_18
+    nil
+    sqlcmd
   ];
 }

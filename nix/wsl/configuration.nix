@@ -35,7 +35,16 @@
 
   users.defaultUserShell = pkgs.nushell;
 
-  networking.hostName = "wsl";
+  networking = {
+    hostName = "wsl";
+    firewall = {
+      enable = false;
+      interfaces."podman[0-9]+".allowedUDPPorts = [ 53 ];
+    };
+  };
+
+  boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
+  boot.kernel.sysctl."net.ipv6.ip_forward" = 1;
 
   time.timeZone = "Africa/Cairo";
 

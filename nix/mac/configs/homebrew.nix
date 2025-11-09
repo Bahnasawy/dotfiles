@@ -1,5 +1,4 @@
-{ ... }:
-{
+_: {
   homebrew = {
     enable = true;
     casks = [
@@ -29,8 +28,7 @@
       "fastlane"
       "bun"
       "libiconv"
-      "postgis"
-      "postgresql"
+      "minio-mc"
     ];
     taps = [
       "oven-sh/bun"
@@ -45,7 +43,7 @@
     onActivation = {
       cleanup = "zap";
       autoUpdate = true;
-      upgrade = true;
+      upgrade = false;
       extraFlags = [ "--verbose" ];
     };
   };

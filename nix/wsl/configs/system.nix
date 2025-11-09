@@ -23,6 +23,7 @@
     nix-ld.libraries = with pkgs; [
       lua-language-server
       nodejs
+      icu
       # Add any missing dynamic libraries for unpackaged programs
       # here, NOT in environment.systemPackages
     ];
