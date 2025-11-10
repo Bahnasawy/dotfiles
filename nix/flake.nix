@@ -177,10 +177,12 @@
 
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.users.brandon = import ./p2/home.nix;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.brandon = import ./p2/home.nix;
+              };
               nixpkgs.overlays = overlays;
             }
           ];
@@ -194,10 +196,12 @@
 
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.users.bahnasawy = import ./wsl/home.nix;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.bahnasawy = import ./wsl/home.nix;
+              };
               nixpkgs.overlays = overlays;
             }
           ];
@@ -210,12 +214,14 @@
 
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.backupFileExtension = "backup";
-              home-manager.users.bahnasawy = import ./laptop/home.nix;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                backupFileExtension = "backup";
+                users.bahnasawy = import ./laptop/home.nix;
 
-              home-manager.sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+                sharedModules = [ plasma-manager.homeModules.plasma-manager ];
+              };
               nixpkgs.overlays = overlays;
             }
           ];

@@ -18,19 +18,15 @@
 
         packages =
           sdk: with sdk; [
-            build-tools-35-0-0
-            build-tools-34-0-0
+            build-tools-36-0-0
             cmdline-tools-latest
             emulator
-            platforms-android-35
-            platforms-android-34
-            sources-android-35
-            sources-android-34
-            ndk-26-1-10909125
-            ndk-27-1-12297006
-            system-images-android-35-google-apis-arm64-v8a
+            platforms-android-36
+            sources-android-36
+            ndk-29-0-14206865
+            system-images-android-36-google-apis-arm64-v8a
             platform-tools
-            cmake-3-22-1
+            cmake-4-1-2
           ];
       };
     }
