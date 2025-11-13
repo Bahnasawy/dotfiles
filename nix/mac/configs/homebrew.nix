@@ -26,9 +26,11 @@ _: {
       "bun"
       "libiconv"
       "minio-mc"
+      "tmux-fingers"
     ];
     taps = [
       "oven-sh/bun"
+      "morantron/tmux-fingers"
     ];
     masApps = {
       "XCode" = 497799835;

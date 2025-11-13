@@ -104,3 +104,7 @@ $env.CROSS_CONTAINER_OPTS = '--platform=linux/amd64'
 
 alias man = batman
 alias z = cd
+
+if $env.TERM != "tmux-256color" { 
+  tmux
+}
