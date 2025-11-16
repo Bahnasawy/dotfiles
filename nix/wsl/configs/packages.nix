@@ -62,5 +62,6 @@
     nil
     sqlcmd
     tmux
+    sqls
   ];
 }
