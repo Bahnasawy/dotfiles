@@ -43,7 +43,7 @@ _: {
       cleanup = "zap";
       autoUpdate = true;
       upgrade = true;
-      # extraFlags = [ "--verbose" ];
+      extraFlags = [ "--verbose" ];
     };
   };
 }
