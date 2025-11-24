@@ -19,6 +19,7 @@ _: {
       "zen"
       "handbrake-app"
       "virtualbox"
+      "pgadmin4"
     ];
     brews = [
       "mas"
