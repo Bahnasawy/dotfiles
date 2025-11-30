@@ -54,6 +54,8 @@
     discord
     zig
     tmux
+    flutter
+    devbox
   ];
 
   programs = {
