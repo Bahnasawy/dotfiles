@@ -55,6 +55,8 @@
     gobject-introspection
     gtk4
     python313Packages.evdev
+    tmux
+    devbox
   ];
 
   home.sessionVariables = {
