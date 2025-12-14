@@ -15,6 +15,7 @@
   },
   "lspconfig": {
     "vtsls": {
+      "enabled": false,
       "typescript.tsserver.maxTsServerMemory": 8192,
       "vtsls.autoUseWorkspaceTsdk": true
     },

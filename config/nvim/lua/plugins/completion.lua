@@ -43,6 +43,11 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      servers = {
+        vtsls = {
+          enabled = false,
+        },
+      },
       -- servers = {
       --   ---@type lspconfig.Config
       --   nixd = {

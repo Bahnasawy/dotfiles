@@ -39,6 +39,7 @@ _: {
       "GP Calendar" = 1632951751;
       "Screenshot Monitor" = 1336124970;
       "Blackmagic Disk Speed Test" = 425264550;
+      "Irvue" = 1039633667;
     };
     onActivation = {
       cleanup = "zap";
