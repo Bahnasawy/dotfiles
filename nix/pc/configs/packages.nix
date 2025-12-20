@@ -14,7 +14,7 @@
     tree-sitter
     gcc
     python3
-    xclip
+    wl-clipboard
     lazygit
     ripgrep
     unzip
