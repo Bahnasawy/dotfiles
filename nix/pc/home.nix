@@ -36,7 +36,6 @@
     home-manager.enable = true;
   };
   home = {
-
     username = "bahnasawy";
     homeDirectory = "/home/bahnasawy";
 

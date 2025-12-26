@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }:
@@ -30,6 +29,7 @@
     ]; # Enable ‘sudo’ for the user.
     shell = pkgs.nushell;
     createHome = true;
+    linger = true;
   };
 
   users.defaultUserShell = pkgs.nushell;

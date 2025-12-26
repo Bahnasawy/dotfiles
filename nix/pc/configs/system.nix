@@ -24,15 +24,18 @@
     blueman.enable = true;
 
     xserver = {
-      enable = true;
+      enable = false;
     };
     displayManager = {
       sddm = {
-        enable = false;
-        wayland.enable = true;
+        enable = true;
+        wayland = {
+          enable = true;
+        };
         autoLogin = {
           relogin = true;
         };
+        autoNumlock = true;
       };
     };
     desktopManager.plasma6.enable = true;
