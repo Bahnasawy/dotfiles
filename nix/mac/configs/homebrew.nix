@@ -42,10 +42,10 @@ _: {
       "Irvue" = 1039633667;
     };
     onActivation = {
-      cleanup = "zap";
+      # cleanup = "zap";
       autoUpdate = true;
       upgrade = true;
-      extraFlags = [ "--verbose" ];
+      # extraFlags = [ "--verbose" ];
     };
   };
 }
