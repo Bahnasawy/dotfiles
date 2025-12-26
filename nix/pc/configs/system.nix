@@ -6,9 +6,11 @@
   boot.loader = {
     systemd-boot.enable = false;
     efi.canTouchEfiVariables = true;
-    grub.device = "nodev";
-    grub.efiSupport = true;
-    grub.useOSProber = true;
+    grub = {
+      device = "nodev";
+      efiSupport = true;
+      useOSProber = true;
+    };
   };
 
   hardware = {
@@ -16,11 +18,11 @@
     bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   };
 
-  services.blueman.enable = true;
-
   i18n.defaultLocale = "en_US.UTF-8";
 
   services = {
+    blueman.enable = true;
+
     xserver = {
       enable = true;
     };
@@ -28,7 +30,6 @@
       sddm = {
         enable = false;
         wayland.enable = true;
-        settings.General.DisplayServer = "x11-user";
         autoLogin = {
           relogin = true;
         };
@@ -121,6 +122,7 @@
       # Add any missing dynamic libraries for unpackaged programs
       # here, NOT in environment.systemPackages
     ];
+    kdeconnect.enable = true;
   };
 
   fonts.packages = [

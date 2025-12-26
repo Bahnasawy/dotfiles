@@ -35,13 +35,15 @@
   programs = {
     home-manager.enable = true;
   };
+  home = {
 
-  home.username = "bahnasawy";
-  home.homeDirectory = "/home/bahnasawy";
+    username = "bahnasawy";
+    homeDirectory = "/home/bahnasawy";
 
-  home.stateVersion = "25.11"; # Please read the comment before changing.
+    stateVersion = "25.11"; # Please read the comment before changing.
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
   };
 }

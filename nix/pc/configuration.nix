@@ -29,6 +29,7 @@
       "docker"
     ]; # Enable ‘sudo’ for the user.
     shell = pkgs.nushell;
+    createHome = true;
   };
 
   users.defaultUserShell = pkgs.nushell;
