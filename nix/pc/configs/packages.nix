@@ -57,6 +57,10 @@
     python313Packages.evdev
     tmux
     devbox
+    lazydocker
+    imagemagick
+    firefox
+    lsof
   ];
 
   home.sessionVariables = {
@@ -67,6 +71,14 @@
     bat = {
       enable = true;
       extraPackages = with pkgs.bat-extras; [ batman ];
+    };
+
+    nh = {
+      enable = true;
+      flake = "/home/bahnasawy/dotfiles/nix/pc";
+      clean = {
+        enable = true;
+      };
     };
 
     nushell = {
@@ -112,7 +124,7 @@
               layout = "us";
             }
             {
-              layout = "ar";
+              layout = "eg";
             }
           ];
         };
@@ -137,9 +149,7 @@
         };
         wallpaperFillMode = "preserveAspectCrop";
       };
-
       panels = [ ];
-
     };
   };
 }

@@ -1,6 +1,5 @@
 return {
   -- Typescript
-  { "dmmulroy/ts-error-translator.nvim", lazy = true, ft = { "typescriptreact", "typescript" } },
   {
     "dmmulroy/tsc.nvim",
     ft = { "typescriptreact", "typescript" },
