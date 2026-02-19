@@ -5,7 +5,6 @@ _: {
       "iina"
       "the-unarchiver"
       "arc"
-      "bitwarden"
       "spotify"
       "notion"
       "notion-calendar"
@@ -16,10 +15,15 @@ _: {
       "shortcat"
       "transmission"
       "raycast"
-      "zen"
       "handbrake-app"
-      "virtualbox"
-      "pgadmin4"
+      "microsoft-teams"
+      "microsoft-outlook"
+      "microsoft-word"
+      "microsoft-excel"
+      "flutter"
+      "inkscape"
+      "postman"
+      "teamviewer"
     ];
     brews = [
       "mas"
@@ -36,15 +40,12 @@ _: {
     masApps = {
       "XCode" = 497799835;
       "Transporter" = 1450874784;
-      "GP Calendar" = 1632951751;
-      "Screenshot Monitor" = 1336124970;
-      "Blackmagic Disk Speed Test" = 425264550;
       "Irvue" = 1039633667;
     };
     onActivation = {
-      # cleanup = "zap";
-      autoUpdate = true;
-      upgrade = true;
+      cleanup = "zap";
+      # autoUpdate = true;
+      # upgrade = true;
       # extraFlags = [ "--verbose" ];
     };
   };

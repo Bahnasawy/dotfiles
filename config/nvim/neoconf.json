@@ -14,9 +14,11 @@
     "global_settings": "neoconf.json"
   },
   "lspconfig": {
+    "enabled": true,
     "vtsls": {
       "enabled": false,
       "typescript.tsserver.maxTsServerMemory": 8192,
+      "typescript.preferences.importModuleSpecifier": "non-relative",
       "vtsls.autoUseWorkspaceTsdk": true
     },
     "tailwindcss": {

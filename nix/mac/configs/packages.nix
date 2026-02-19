@@ -6,9 +6,6 @@
 {
   home.packages = with pkgs; [
     mkalias
-    iterm2
-    postman
-    git
     lazygit
     openssh
     zoxide
@@ -16,7 +13,6 @@
     nodejs
     tree-sitter
     rustup
-    raycast
     wget
     doppler
     gh
@@ -26,7 +22,6 @@
     statix
     ripgrep
     cocoapods
-    vscode
     sqlite
     luarocks
     lua5_1
@@ -35,27 +30,24 @@
     htop
     ngrok
     dwt1-shell-color-scripts
-    git-lfs
     ast-grep
-    nixfmt-rfc-style
+    nixfmt
     uv
     ghostscript
     neofetch
     btop
     yazi
     cargo-cross
-    uv
     python313
-    git
     bacon
     exercism
     moon
-    vscode
-    discord
     zig
     tmux
-    flutter
     devbox
+    vscode
+    just
+    lazydocker
   ];
 
   programs = {
@@ -71,14 +63,17 @@
         ld = "ld -L $NIX_LDFLAGS";
       };
     };
+
     bat = {
       enable = true;
-      # extraPackages = with pkgs.bat-extras; [ batman ];
+      extraPackages = with pkgs.bat-extras; [ batman ];
     };
+
     java = {
       enable = true;
       package = pkgs.openjdk17;
     };
+
     nushell = {
       enable = true;
       shellAliases = {
@@ -121,6 +116,23 @@
       defaultEditor = true;
       withPython3 = true;
       withNodeJs = true;
+      viAlias = true;
+      vimAlias = true;
+    };
+
+    nh = {
+      enable = true;
+      flake = "/Users/bahnasawy/dotfiles/nix";
+      clean = {
+        enable = true;
+      };
+    };
+
+    git = {
+      enable = true;
+      lfs = {
+        enable = true;
+      };
     };
   };
 }

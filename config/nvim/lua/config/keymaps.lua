@@ -11,5 +11,6 @@ map("n", "<Right>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 map("n", "<leader>m", ":w<cr>", { desc = "Save File", silent = true })
 map("n", "m", "x")
 
-map("n", "<CR>", "m`o<Esc>``")
-map("n", "<S-CR>", "m`O<Esc>``")
+-- map("n", "<leader>o", { desc = "Overseer", })
+map("n", "<leader>or", ":OverseerRun<cr>", { desc = "Overseer Run", remap = true })
+map("n", "<leader>ot", ":OverseerToggle<cr>", { desc = "Overseer Toggle", silent = true, remap = true })
