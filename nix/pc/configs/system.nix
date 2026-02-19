@@ -110,7 +110,6 @@
   ];
 
   programs = {
-    adb.enable = true;
     steam = {
       enable = true;
       extraCompatPackages = with pkgs; [

@@ -61,6 +61,8 @@
     imagemagick
     firefox
     lsof
+    lazydocker
+    android-tools
   ];
 
   home.sessionVariables = {
@@ -111,10 +113,9 @@
     zoxide.enableNushellIntegration = true;
 
     plasma = {
-      enable = true;
       workspace = {
-        colorScheme = "BreezeDark";
-        theme = "breeze-dark";
+        colorScheme = "Sweet";
+        theme = "Sweet";
         lookAndFeel = "org.kde.breezedark.desktop";
       };
       input = {

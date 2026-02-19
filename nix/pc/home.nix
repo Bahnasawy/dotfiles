@@ -1,8 +1,4 @@
-{
-  config,
-  android-nixpkgs,
-  ...
-}:
+{ ... }:
 {
   imports = [
     ./configs/packages.nix
