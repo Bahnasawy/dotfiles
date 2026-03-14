@@ -121,6 +121,27 @@
       gradle_8
       aapt
       lua-language-server
+      libGL
+      glib
+      nspr
+      nss
+      dbus
+      atk
+      cups
+      cairo
+      gtk3
+      pango
+      libx11
+      libxcomposite
+      libxdamage
+      libxext
+      libxfixes
+      libxrandr
+      libgbm
+      expat
+      libxcb
+      libxkbcommon
+      alsa-lib
       # Add any missing dynamic libraries for unpackaged programs
       # here, NOT in environment.systemPackages
     ];
@@ -145,7 +166,14 @@
         qemu
         virtiofsd
         podman-tui
+        gvproxy
       ];
+    };
+    libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;
+      };
     };
   };
 }

@@ -35,8 +35,8 @@
     gzip
     zig
     ghostty
-    neofetch
-    nixfmt-rfc-style
+    fastfetch
+    nixfmt
     dwt1-shell-color-scripts
     sqlite
     gparted
@@ -59,10 +59,19 @@
     devbox
     lazydocker
     imagemagick
+    ghostscript
+    poppler-utils
     firefox
     lsof
     lazydocker
     android-tools
+    just
+    mesa
+    htop
+    bridge-utils
+    awscli2
+    insomnia
+    flutter
   ];
 
   home.sessionVariables = {

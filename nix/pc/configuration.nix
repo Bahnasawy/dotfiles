@@ -26,6 +26,7 @@
       "kvm"
       "adbusers"
       "docker"
+      "libvirtd"
     ]; # Enable ‘sudo’ for the user.
     shell = pkgs.nushell;
     createHome = true;

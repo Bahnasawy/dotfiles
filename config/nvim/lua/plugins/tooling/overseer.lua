@@ -12,8 +12,11 @@ return {
     {
       "catppuccin",
       optional = true,
-      ---@type CatppuccinOptions
       opts = { integrations = { overseer = true } },
     },
+  },
+  keys = {
+    { "<leader>or", ":OverseerRun<cr>", desc = "Overseer Run", silent = true },
+    { "<leader>ot", ":OverseerToggle<cr>", desc = "Overseer Toggle", silent = true },
   },
 }

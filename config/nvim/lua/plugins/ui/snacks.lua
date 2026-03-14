@@ -2,6 +2,9 @@ return {
   "folke/snacks.nvim",
   --- @type snacks.Config
   opts = {
+    bigfile = { enabled = true },
+    quickfile = { enabled = true },
+    animate = { easing = "outQuint" },
     dashboard = {
       enabled = true,
       sections = {
