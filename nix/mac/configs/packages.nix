@@ -30,11 +30,11 @@
     htop
     ngrok
     dwt1-shell-color-scripts
-    ast-grep
+    # ast-grep
     nixfmt
     uv
     ghostscript
-    neofetch
+    fastfetch
     btop
     yazi
     cargo-cross
@@ -45,9 +45,9 @@
     zig
     tmux
     devbox
-    vscode
     just
     lazydocker
+    vscode
   ];
 
   programs = {

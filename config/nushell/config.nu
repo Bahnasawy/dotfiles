@@ -100,8 +100,8 @@ if $"(^uname)" == "Darwin" {
 $env.config.shell_integration.osc133 = false
 $env.CROSS_CONTAINER_ENGINE = 'podman'
 $env.CROSS_CONTAINER_OPTS = '--platform=linux/amd64'
-# $env.DOCKER_HOST = 'unix:///var/folders/z8/c_rjzdzn7893sqwkj8cv3g580000gn/T/podman/podman-machine-default-api.sock'
-$env.DOCKER_HOST = ''
+$env.DOCKER_HOST = 'unix:///var/folders/z8/c_rjzdzn7893sqwkj8cv3g580000gn/T/podman/podman-machine-default-api.sock'
+# $env.DOCKER_HOST = ''
 
 
 
