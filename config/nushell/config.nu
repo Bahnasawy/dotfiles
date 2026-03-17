@@ -7,7 +7,7 @@ def  db --wrapped [...rest] {
 }
 
 def collect-garbage [] {
-  sudo nix-collect-garbage -d
+  nh clean all
 }
 
 def fu [] {
@@ -83,11 +83,11 @@ prepend /etc/profiles/per-user/bahnasawy/bin |
 append /usr/bin/env |
 append /run/current-system/sw/bin |
 append ~/.bun/bin |
-append ~/.bun/bin |
 append ~/.local/bin |
 append ~/go/bin |
 append /opt/homebrew/bin |
-append ~/.cargo/bin
+append ~/.cargo/bin |
+append ~/.vite-plus/bin
 )
 if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/Users/bahnasawy/.android/sdk"

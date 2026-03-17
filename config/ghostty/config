@@ -4,3 +4,4 @@ theme = Catppuccin Mocha
 font-size = 12
 macos-option-as-alt=true
 cursor-opacity = 0.7
+maximize = true

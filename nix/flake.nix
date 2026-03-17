@@ -39,11 +39,9 @@
       android-nixpkgs,
     }@inputs:
     let
-      linuxSystem = "x86_64-linux";
-      linuxPackages = nixpkgs.legacyPackages.${linuxSystem};
+      linuxPackages = nixpkgs.legacyPackages.x86_64-linux;
 
-      darwinSystem = "aarch64-darwin";
-      darwinPackages = nixpkgs.legacyPackages.${darwinSystem};
+      darwinPackages = nixpkgs.legacyPackages.aarch64-darwin;
 
       overlays = [
         neovim.overlays.default
