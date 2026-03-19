@@ -44,9 +44,9 @@ _: {
     };
     onActivation = {
       cleanup = "zap";
-      # autoUpdate = true;
-      # upgrade = true;
-      # extraFlags = [ "--verbose" ];
+      autoUpdate = true;
+      upgrade = true;
+      extraFlags = [ "--verbose" ];
     };
   };
 }

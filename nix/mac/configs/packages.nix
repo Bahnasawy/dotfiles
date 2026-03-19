@@ -48,6 +48,7 @@
     just
     lazydocker
     vscode
+    awscli2
   ];
 
   programs = {
