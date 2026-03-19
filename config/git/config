@@ -1,0 +1,18 @@
+user.name = "Yousef Elbahnasawy"
+
+[filter "lfs"]
+	clean = "git-lfs clean -- %f"
+	process = "git-lfs filter-process"
+	required = true
+	smudge = "git-lfs smudge -- %f"
+
+
+[includeif "gitdir:~/fun/**"]
+  user.email = "yousef.elbahnasawy@gmail.com"
+  [core]
+    core.sshCommand = "ssh -i ~/.ssh/personal"
+
+[includeif "gitdir:~/index/**"]
+  user.email = "yousef.elbahnasawy@indexinfotech.com"
+  [core]
+    core.sshCommand = "ssh -i ~/.ssh/index"
