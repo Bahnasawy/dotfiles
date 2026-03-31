@@ -38,10 +38,6 @@
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/yazi";
         recursive = true;
       };
-      ".config/git" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/git";
-        recursive = true;
-      };
       ".zprofile" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/.zprofile";
       };

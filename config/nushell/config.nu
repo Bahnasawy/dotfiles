@@ -100,7 +100,7 @@ if $"(^uname)" == "Darwin" {
 $env.config.shell_integration.osc133 = false
 $env.CROSS_CONTAINER_ENGINE = 'podman'
 $env.CROSS_CONTAINER_OPTS = '--platform=linux/amd64'
-$env.DOCKER_HOST = $"unix://(podman machine inspect --format '{{ .ConnectionInfo.PodmanSocket.Path }}')"
+# $env.DOCKER_HOST = $"unix://(podman machine inspect --format '{{ .ConnectionInfo.PodmanSocket.Path }}')"
 
 alias man = batman
 alias z = cd

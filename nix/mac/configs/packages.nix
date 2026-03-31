@@ -41,7 +41,6 @@
     python313
     bacon
     exercism
-    moon
     zig
     tmux
     devbox
@@ -133,6 +132,25 @@
       enable = true;
       lfs = {
         enable = true;
+      };
+      includes = [
+        {
+          condition = "gitdir:~/fun/**";
+          contents = {
+            user.email = "yousef.elbahnasawy@gmail.com";
+            core.sshCommand = "ssh -i ~/.ssh/personal";
+          };
+        }
+        {
+          condition = "gitdir:~/index/**";
+          contents = {
+            user.email = "yousef.elbahnasawy@indexinfotech.com";
+            core.sshCommand = "ssh -i ~/.ssh/index";
+          };
+        }
+      ];
+      settings = {
+        user.name = "Yousef Elbahnasawy";
       };
     };
   };
