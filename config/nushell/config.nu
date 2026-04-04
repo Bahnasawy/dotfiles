@@ -102,6 +102,8 @@ $env.CROSS_CONTAINER_ENGINE = 'podman'
 $env.CROSS_CONTAINER_OPTS = '--platform=linux/amd64'
 # $env.DOCKER_HOST = $"unix://(podman machine inspect --format '{{ .ConnectionInfo.PodmanSocket.Path }}')"
 
+$env.NIX_PATH = '/Users/bahnasawy/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels'
+
 alias man = batman
 alias z = cd
 

@@ -48,6 +48,7 @@
     lazydocker
     vscode
     awscli2
+    gitmux
   ];
 
   programs = {

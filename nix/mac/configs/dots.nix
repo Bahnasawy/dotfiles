@@ -41,6 +41,9 @@
       ".zprofile" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/.zprofile";
       };
+      ".gitmux.conf" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/gitmux.conf";
+      };
       ".cargo/config.toml" = {
         text = ''
           [target.aarch64-apple-darwin]

@@ -16,17 +16,24 @@
 	"lspconfig": {
 		"enabled": true,
 		"vtsls": {
-			"enabled": false,
-			"typescript.tsserver.maxTsServerMemory": 8192,
-			"typescript.preferences.importModuleSpecifier": "non-relative",
-			"vtsls.autoUseWorkspaceTsdk": true
+			"enabled": false
 		},
 		"tailwindcss": {
-			"tailwindCSS.hovers": true
+			"tailwindCSS.hovers": true,
+			"tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list"],
+			"tailwindCSS.experimental.classRegex": [
+				["(?:\\w+)?ClassName\\s*=\\s*\"([^\"]*)\"", 1],
+				["(?:\\w+)?ClassName\\s*=\\s*'([^']*)'", 1],
+				["(?:\\w+)?ClassName\\s*=\\s*`([^`]*)`", 1]
+			],
+			"tailwindCSS.classFunctions": ["cn", "clsx"]
 		},
 		"pyright": {
 			"python.analysis.typeCheckingMode": "strict",
 			"python.analysis.useLibraryCodeForTypes": true
+		},
+		"jsonls": {
+			"enabled": true
 		}
 	}
 }

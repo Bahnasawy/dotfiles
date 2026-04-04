@@ -11,4 +11,6 @@ vim.g.lazyvim_blink_main = true
 vim.diagnostic.config({
 	update_in_insert = false, -- key setting
 })
+
+vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 -- vim.g.lazyvim_rust_diagnostics = "bacon-ls"

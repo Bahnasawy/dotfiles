@@ -67,14 +67,22 @@
 
   users.users.bahnasawy.shell = pkgs.nushell;
 
+  environment = {
+    systemPackages = with pkgs; [
+      dive # look into docker image layers
+      podman-tui # status of containers in the terminal
+      docker-compose # start group of containers for dev
+      nixfmt
+      #podman-compose # start group of containers for dev
+    ];
+
+    etc."pam.d/sudo_local".text = ''
+      # Managed by Nix Darwin
+      auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
+      auth       sufficient     pam_tid.so
+    '';
+  };
   # Useful other development tools
-  environment.systemPackages = with pkgs; [
-    dive # look into docker image layers
-    podman-tui # status of containers in the terminal
-    docker-compose # start group of containers for dev
-    nixfmt
-    #podman-compose # start group of containers for dev
-  ];
 
   services = {
     postgresql = {

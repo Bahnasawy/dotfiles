@@ -24,6 +24,7 @@ _: {
       "inkscape"
       "postman"
       "teamviewer"
+      # "huly"
     ];
     brews = [
       "mas"
@@ -50,8 +51,8 @@ _: {
     onActivation = {
       # cleanup = "zap";
       autoUpdate = true;
-      # upgrade = true;
-      # extraFlags = [ "--verbose" ];
+      upgrade = true;
+      extraFlags = [ "--verbose" ];
     };
   };
 }
