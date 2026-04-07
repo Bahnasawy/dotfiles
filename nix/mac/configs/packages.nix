@@ -49,6 +49,7 @@
     vscode
     awscli2
     gitmux
+    television
   ];
 
   programs = {
