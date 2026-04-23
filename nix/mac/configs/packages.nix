@@ -50,6 +50,7 @@
     awscli2
     gitmux
     television
+    sesh
   ];
 
   programs = {

@@ -1,11 +1,11 @@
 return {
-  {
-    "nvzone/typr",
-    dependencies = {
-      "nvzone/volt",
-    },
-    cmd = { "Typr", "TyprStats" },
-    opts = {},
-    -- enabled = false,
-  },
+	{
+		"nvzone/typr",
+		dependencies = {
+			"nvzone/volt",
+		},
+		cmd = { "Typr", "TyprStats" },
+		opts = {},
+		-- enabled = false,
+	},
 }

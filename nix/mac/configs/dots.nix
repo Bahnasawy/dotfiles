@@ -2,12 +2,12 @@
 {
   home = {
     file = {
-      ".config/nvim" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/nvim";
-        recursive = true;
-      };
       ".config/tmux" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/tmux";
+        recursive = true;
+      };
+      ".config/nvim" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/nvim";
         recursive = true;
       };
       ".config/nushell" = {
