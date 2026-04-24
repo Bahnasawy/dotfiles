@@ -51,6 +51,7 @@
     gitmux
     television
     sesh
+    neovim
   ];
 
   programs = {
@@ -114,14 +115,14 @@
     zoxide.enable = true;
     zoxide.enableNushellIntegration = true;
 
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      withPython3 = true;
-      withNodeJs = true;
-      viAlias = true;
-      vimAlias = true;
-    };
+    # neovim = {
+    #   enable = true;
+    #   defaultEditor = true;
+    #   withPython3 = true;
+    #   withNodeJs = true;
+    #   viAlias = true;
+    #   vimAlias = true;
+    # };
 
     nh = {
       enable = true;

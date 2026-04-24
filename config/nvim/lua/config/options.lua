@@ -6,8 +6,6 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 vim.o.shell = "/etc/profiles/per-user/" .. os.getenv("USER") .. "/bin/nu"
 
-vim.g.lazyvim_blink_main = true
-
 vim.diagnostic.config({
 	update_in_insert = false, -- key setting
 })
