@@ -226,12 +226,10 @@
         };
       };
 
-      darwinModules.podman = ./mac/modules/podman.nix;
       darwinConfigurations = {
         mac = nix-darwin.lib.darwinSystem {
           modules = [
             ./mac/configuration.nix
-            ./mac/modules/podman.nix
 
             nix-homebrew.darwinModules.nix-homebrew
             {

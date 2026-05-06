@@ -70,10 +70,7 @@
   environment = {
     systemPackages = with pkgs; [
       dive # look into docker image layers
-      podman-tui # status of containers in the terminal
       docker-compose # start group of containers for dev
-      nixfmt
-      #podman-compose # start group of containers for dev
     ];
 
     etc."pam.d/sudo_local".text = ''
@@ -81,22 +78,5 @@
       auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
       auth       sufficient     pam_tid.so
     '';
-  };
-  # Useful other development tools
-
-  services = {
-    postgresql = {
-      enable = true;
-      # ensureDatabases = [ "gold-db" ];
-      authentication = pkgs.lib.mkOverride 10 ''
-        #type database  DBuser      auth-method
-        local all       all     trust
-        host all       all     127.0.0.1/32 md5
-      '';
-      extraPlugins = with pkgs; [ postgresqlPackages.postgis ];
-      dataDir = "/usr/local/var/postgres";
-      package = pkgs.postgresql;
-      # port = 5432;
-    };
   };
 }

@@ -36,22 +36,20 @@
     ghostscript
     fastfetch
     btop
-    yazi
     cargo-cross
-    python313
     bacon
     exercism
     zig
     tmux
-    devbox
     just
     lazydocker
-    vscode
     awscli2
     gitmux
     television
     sesh
     neovim
+    duckdb
+    postgresql
   ];
 
   programs = {
@@ -114,15 +112,6 @@
 
     zoxide.enable = true;
     zoxide.enableNushellIntegration = true;
-
-    # neovim = {
-    #   enable = true;
-    #   defaultEditor = true;
-    #   withPython3 = true;
-    #   withNodeJs = true;
-    #   viAlias = true;
-    #   vimAlias = true;
-    # };
 
     nh = {
       enable = true;
