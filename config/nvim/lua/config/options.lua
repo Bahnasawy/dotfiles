@@ -10,4 +10,5 @@ vim.diagnostic.config({
 	update_in_insert = false, -- key setting
 })
 
+vim.lsp.inlay_hint.enable(false)
 -- vim.g.lazyvim_rust_diagnostics = "bacon-ls"
