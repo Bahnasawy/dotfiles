@@ -70,6 +70,7 @@
         "bahnasawy"
         "eshop"
       ];
+      package = pkgs.postgresql_18;
       ensureUsers = [
         {
           name = "bahnasawy";
@@ -123,6 +124,7 @@
       lua-language-server
       libGL
       glib
+      glibc
       nspr
       nss
       dbus
@@ -152,6 +154,7 @@
 
   fonts.packages = [
     pkgs.nerd-fonts.jetbrains-mono
+    pkgs.freetype
   ];
 
   nix = {

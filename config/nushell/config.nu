@@ -24,6 +24,10 @@ def dev --wrapped  [...rest] {
     }
 }
 
+def clone-index-repo [repo] {
+  gh repo clone Index-Infotech/($repo) -- -c core.sshCommand="ssh -i ~/.ssh/index"
+}
+
 $env.EDITOR = 'nvim'
 
 let carapace_completer = {|spans: list<string>|

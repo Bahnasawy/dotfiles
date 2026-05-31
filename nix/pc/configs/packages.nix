@@ -10,7 +10,7 @@
     fzf
     lsd
     luarocks
-    nodejs_20
+    nodejs_24
     tree-sitter
     gcc
     python3
@@ -72,6 +72,14 @@
     awscli2
     insomnia
     flutter
+    lua51Packages.tiktoken_core
+    lynx
+    android-studio
+    vscode
+    transmission_4-qt6
+    protontricks
+    duckdb
+    stremio-linux-shell
   ];
 
   home.sessionVariables = {

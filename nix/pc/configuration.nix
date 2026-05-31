@@ -58,16 +58,23 @@
   ];
 
   system.stateVersion = "24.11";
-
-  environment.defaultPackages = with pkgs; [ networkmanager ];
   networking.hostName = "pc";
   networking.networkmanager.enable = true;
+  environment = {
 
-  environment.systemPackages = with pkgs; [
-    dive
-    podman-tui
-    docker-compose
-  ];
+    defaultPackages = with pkgs; [ networkmanager ];
+
+    systemPackages = with pkgs; [
+      dive
+      podman-tui
+      docker-compose
+    ];
+
+    sessionVariables = {
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+    };
+
+  };
 
   time.timeZone = "Africa/Cairo";
 }
