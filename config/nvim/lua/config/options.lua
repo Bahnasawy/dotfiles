@@ -11,4 +11,5 @@ vim.diagnostic.config({
 })
 
 vim.lsp.inlay_hint.enable(false)
+vim.o.fillchars = "eob: ,fold: ,foldopen:,foldsep: ,foldinner: ,foldclose:"
 -- vim.g.lazyvim_rust_diagnostics = "bacon-ls"

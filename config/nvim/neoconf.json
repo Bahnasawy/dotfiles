@@ -1,42 +1,42 @@
 {
-  "neoconf": {
-    "plugins": {
-      "lspconfig": {
-        "enabled": true
-      },
-      "jsonls": {
-        "enabled": true
-      },
-      "lua_ls": {
-        "enabled": true
-      }
-    },
-    "global_settings": "neoconf.json"
-  },
-  "lspconfig": {
-    "enabled": true,
-    "vtsls": {
-      "enabled": false
-    },
-    "tailwindcss": {
-      "tailwindCSS.hovers": true,
-      "tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list"],
-      "tailwindCSS.experimental.classRegex": [
-        ["(?:\\w+)?ClassName\\s*=\\s*\"([^\"]*)\"", 1],
-        ["(?:\\w+)?ClassName\\s*=\\s*'([^']*)'", 1],
-        ["(?:\\w+)?ClassName\\s*=\\s*`([^`]*)`", 1]
-      ],
-      "tailwindCSS.classFunctions": ["cn", "clsx"]
-    },
-    "pyright": {
-      "python.analysis.typeCheckingMode": "strict",
-      "python.analysis.useLibraryCodeForTypes": true
-    },
-    "jsonls": {
-      "enabled": true
-    },
-    "dartls": {
-      "dart.lineLength": 160
-    }
-  }
+	"neoconf": {
+		"plugins": {
+			"lspconfig": {
+				"enabled": true
+			},
+			"jsonls": {
+				"enabled": true
+			},
+			"lua_ls": {
+				"enabled": true
+			}
+		},
+		"global_settings": "neoconf.json"
+	},
+	"lspconfig": {
+		"enabled": true,
+		"vtsls": {
+			"enabled": false
+		},
+		"tailwindcss": {
+			"tailwindCSS.hovers": true,
+			"tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list"],
+			"tailwindCSS.experimental.classRegex": [
+				["(?:\\w+)?ClassName\\s*=\\s*\"([^\"]*)\"", 1],
+				["(?:\\w+)?ClassName\\s*=\\s*'([^']*)'", 1],
+				["(?:\\w+)?ClassName\\s*=\\s*`([^`]*)`", 1]
+			],
+			"tailwindCSS.classFunctions": ["cn", "clsx"]
+		},
+		"pyright": {
+			"python.analysis.typeCheckingMode": "strict",
+			"python.analysis.useLibraryCodeForTypes": true
+		},
+		"jsonls": {
+			"enabled": true
+		},
+		"dartls": {
+			"dart.lineLength": 160
+		}
+	}
 }

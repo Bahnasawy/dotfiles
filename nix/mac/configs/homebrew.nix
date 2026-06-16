@@ -33,16 +33,17 @@ _: {
       "oven-sh/bun"
       "morantron/tmux-fingers"
     ];
-    # masApps = {
-    #   "XCode" = 497799835;
-    #   "Transporter" = 1450874784;
-    #   "Irvue" = 1039633667;
-    #   "Testflight" = 899247664;
-    # };
+    masApps = {
+      "XCode" = 497799835;
+      "Transporter" = 1450874784;
+      "Irvue" = 1039633667;
+      "Testflight" = 899247664;
+    };
     onActivation = {
       cleanup = "zap";
       autoUpdate = true;
       upgrade = true;
+      extraFlags = [ "--verbose" ];
     };
   };
 }
