@@ -10,6 +10,7 @@ return {
 			typescriptreact = { "oxfmt" },
 			json = { "oxfmt" },
 			vue = { "oxfmt" },
+			rust = { "rustfmt", lsp_format = "fallback" },
 		},
 	},
 }

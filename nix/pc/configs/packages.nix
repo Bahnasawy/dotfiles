@@ -80,6 +80,12 @@
     protontricks
     duckdb
     stremio-linux-shell
+    catppuccin-kde
+    vlc
+    vlc-bittorrent
+    lutris
+    webkitgtk_6_0
+    nix-index
   ];
 
   home.sessionVariables = {
