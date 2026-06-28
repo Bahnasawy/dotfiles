@@ -22,7 +22,6 @@ _: {
       "teamviewer"
     ];
     brews = [
-      "mas"
       "fastlane"
       "bun"
       "libiconv"

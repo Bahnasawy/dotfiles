@@ -1,0 +1,11 @@
+[[wildcard]]
+pattern = "~/fun/*"
+windows = ["code", "dev"]
+
+[[window]]
+name = "code"
+startup_script = "vi"
+
+[[window]]
+name = "dev"
+startup_script = "just dev"

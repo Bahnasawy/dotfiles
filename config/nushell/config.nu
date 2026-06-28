@@ -114,3 +114,5 @@ alias z = cd
 if $env.TERM != "tmux-256color" { 
   tmux
 }
+mkdir ($nu.data-dir | path join "vendor/autoload")
+tv init nu | save -f ($nu.data-dir | path join "vendor/autoload/tv.nu")

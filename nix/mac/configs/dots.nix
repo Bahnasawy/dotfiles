@@ -6,6 +6,10 @@
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/tmux";
         recursive = true;
       };
+      ".config/sesh" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/sesh";
+        recursive = true;
+      };
       ".config/nvim" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/nvim";
         recursive = true;

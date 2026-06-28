@@ -10,7 +10,7 @@
     openssh
     zoxide
     fzf
-    nodejs
+    nodejs_24
     tree-sitter
     rustup
     wget
