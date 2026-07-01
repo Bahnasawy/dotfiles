@@ -79,20 +79,22 @@ $env.config = {
     }
   }
 }
-$env.PATH = ($env.PATH |
-split row (char esep) |
-prepend ~/.local/bin |
-prepend ~/.apps |
-prepend /etc/profiles/per-user/bahnasawy/bin |
-append /usr/bin/env |
-append /run/current-system/sw/bin |
-append ~/.bun/bin |
-append ~/.local/bin |
-append ~/go/bin |
-append /opt/homebrew/bin |
-append ~/.cargo/bin |
-append ~/.vite-plus/bin
-)
+
+# $env.PATH = ($env.PATH |
+# split row (char esep) |
+# prepend ~/.local/bin |
+# prepend ~/.apps |
+# prepend /etc/profiles/per-user/bahnasawy/bin |
+# prepend /run/current-system/sw/bin |
+# append /usr/bin/env |
+# append ~/.bun/bin |
+# append ~/.local/bin |
+# append ~/go/bin |
+# append /opt/homebrew/bin |
+# append ~/.cargo/bin |
+# append ~/.vite-plus/bin
+# )
+
 if $"(^uname)" == "Darwin" {
     $env.ANDROID_HOME = "/Users/bahnasawy/.android/sdk"
     $env.ANDROID_SDK_ROOT = "/Users/bahnasawy/.android/sdk"
@@ -111,8 +113,5 @@ $env.NIX_PATH = '/Users/bahnasawy/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/n
 alias man = batman
 alias z = cd
 
-if $env.TERM != "tmux-256color" { 
-  tmux
-}
 mkdir ($nu.data-dir | path join "vendor/autoload")
 tv init nu | save -f ($nu.data-dir | path join "vendor/autoload/tv.nu")

@@ -1,5 +1,15 @@
+#:schema https://github.com/joshmedeski/sesh/raw/main/sesh.schema.json
+[[session]]
+name = "dotfiles"
+path = "~/dotfiles"
+startup_command = "vi"
+
 [[wildcard]]
 pattern = "~/fun/*"
+windows = ["code", "dev"]
+
+[[wildcard]]
+pattern = "~/index/*"
 windows = ["code", "dev"]
 
 [[window]]
@@ -8,4 +18,4 @@ startup_script = "vi"
 
 [[window]]
 name = "dev"
-startup_script = "just dev"
+startup_script = "dev"
