@@ -1,9 +1,14 @@
-{ config, android-nixpkgs, ... }:
+{
+  config,
+  inputs,
+  ...
+}:
 {
   imports = [
+    inputs.zen-browser.homeModules.twilight-official
     ./configs/packages.nix
     ./configs/dots.nix
-    android-nixpkgs.hmModule
+    inputs.android-nixpkgs.hmModule
     {
       android-sdk = {
         enable = true;

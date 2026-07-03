@@ -10,7 +10,7 @@
     fzf
     lsd
     luarocks
-    nodejs_24
+    nodejs_26
     tree-sitter
     gcc
     python3
@@ -98,6 +98,11 @@
       extraPackages = with pkgs.bat-extras; [ batman ];
     };
 
+    zen-browser = {
+      enable = true;
+      setAsDefaultBrowser = true;
+    };
+
     nh = {
       enable = true;
       flake = "/home/bahnasawy/dotfiles/nix/pc";
@@ -117,8 +122,10 @@
       configFile.source = config.lib.file.mkOutOfStoreSymlink ../../../config/nushell/config.nu;
     };
 
-    carapace.enable = true;
-    carapace.enableNushellIntegration = true;
+    carapace = {
+      enable = true;
+      enableNushellIntegration = true;
+    };
 
     starship = {
       enable = true;
@@ -132,8 +139,10 @@
       };
     };
 
-    zoxide.enable = true;
-    zoxide.enableNushellIntegration = true;
+    zoxide = {
+      enable = true;
+      enableNushellIntegration = true;
+    };
 
     plasma = {
       workspace = {

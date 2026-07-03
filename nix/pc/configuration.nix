@@ -61,7 +61,6 @@
   networking.hostName = "pc";
   networking.networkmanager.enable = true;
   environment = {
-
     defaultPackages = with pkgs; [ networkmanager ];
 
     systemPackages = with pkgs; [
