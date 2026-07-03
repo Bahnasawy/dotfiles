@@ -24,6 +24,14 @@
       url = "github:tadfisher/android-nixpkgs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        # IMPORTANT: To ensure compatibility with the latest Firefox version, use nixpkgs-unstable.
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
   };
 
   outputs =
@@ -37,6 +45,7 @@
       neovim,
       nixos-wsl,
       android-nixpkgs,
+      zen-browser,
     }@inputs:
     let
       linuxPackages = nixpkgs.legacyPackages.x86_64-linux;
@@ -133,7 +142,7 @@
                 useUserPackages = true;
                 backupFileExtension = "backup";
                 users.bahnasawy = import ./pc/home.nix;
-                extraSpecialArgs = { inherit android-nixpkgs; };
+                extraSpecialArgs = { inherit inputs; };
 
                 sharedModules = [
                   plasma-manager.homeModules.plasma-manager

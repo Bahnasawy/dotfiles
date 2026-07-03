@@ -13,7 +13,7 @@ _: {
       "whatsapp"
       "expo-orbit"
       "raycast"
-      "ghostty"
+      "ghostty@tip"
       "microsoft-teams"
       "microsoft-outlook"
       "microsoft-word"
@@ -28,6 +28,7 @@ _: {
       "libiconv"
       "tmux-fingers"
       "watchman"
+      "herdr"
     ];
     taps = [
       "oven-sh/bun"

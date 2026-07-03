@@ -113,5 +113,5 @@ $env.NIX_PATH = '/Users/bahnasawy/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/n
 alias man = batman
 alias z = cd
 
-mkdir ($nu.data-dir | path join "vendor/autoload")
-tv init nu | save -f ($nu.data-dir | path join "vendor/autoload/tv.nu")
+# mkdir ($nu.data-dir | path join "vendor/autoload")
+# tv init nu | save -f ($nu.data-dir | path join "vendor/autoload/tv.nu")

@@ -6,6 +6,9 @@ return {
 			vtsls = {
 				enabled = false,
 			},
+			bacon_ls = {
+				enabled = true,
+			},
 		},
 	},
 }

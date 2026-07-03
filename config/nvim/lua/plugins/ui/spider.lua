@@ -12,6 +12,9 @@ return {
 			{ "e", "<cmd>lua require('spider').motion('e')<CR>", mode = { "n", "o", "x" } },
 			{ "b", "<cmd>lua require('spider').motion('b')<CR>", mode = { "n", "o", "x" } },
 		},
-		opts = {}, -- calls `setup()`, which registers the precognition adapter
+		--- @type Spider.config
+		opts = {
+			consistentOperatorPending = true,
+		}, -- calls `setup()`, which registers the precognition adapter
 	},
 }
