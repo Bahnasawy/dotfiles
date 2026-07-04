@@ -86,6 +86,10 @@
     lutris
     webkitgtk_6_0
     nix-index
+    ulauncher
+    television
+    sesh
+    wmctrl
   ];
 
   home.sessionVariables = {

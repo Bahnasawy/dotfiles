@@ -6,6 +6,11 @@
       recursive = true;
     };
 
+    ".config/sesh" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/sesh";
+      recursive = true;
+    };
+
     ".config/neovide" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/neovide;
       recursive = true;
