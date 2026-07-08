@@ -50,6 +50,12 @@
     neovim
     duckdb
     postgresql
+    jujutsu
+    lazyjj
+    blazingjj
+    vscode
+    curl
+    opencode
   ];
 
   programs = {

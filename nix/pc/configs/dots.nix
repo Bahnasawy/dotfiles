@@ -6,6 +6,11 @@
       recursive = true;
     };
 
+    ".config/opencode" = {
+      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/opencode;
+      recursive = true;
+    };
+
     ".config/sesh" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/sesh;
       recursive = true;

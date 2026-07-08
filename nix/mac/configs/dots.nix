@@ -6,6 +6,10 @@
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/tmux";
         recursive = true;
       };
+      ".config/opencode" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/opencode";
+        recursive = true;
+      };
       ".config/nvim" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/nvim";
         recursive = true;

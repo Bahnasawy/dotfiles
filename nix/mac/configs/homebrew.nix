@@ -8,8 +8,6 @@ _: {
       "arc"
       "spotify"
       "notion"
-      "notion-calendar"
-      "notion-mail"
       "whatsapp"
       "expo-orbit"
       "raycast"
@@ -21,6 +19,7 @@ _: {
       "flutter"
       "postman"
       "teamviewer"
+      "codex-app"
     ];
     brews = [
       "fastlane"
@@ -29,6 +28,7 @@ _: {
       "tmux-fingers"
       "watchman"
       "herdr"
+      "codex-acp"
     ];
     taps = [
       "oven-sh/bun"

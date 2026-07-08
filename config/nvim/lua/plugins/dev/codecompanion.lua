@@ -10,4 +10,8 @@ return {
 			log_level = "DEBUG", -- or "TRACE"
 		},
 	},
+	config = function()
+		require("codecompanion").setup({
+		})
+	end,
 }
