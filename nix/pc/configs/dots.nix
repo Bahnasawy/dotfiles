@@ -7,7 +7,7 @@
     };
 
     ".config/sesh" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/sesh";
+      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/sesh;
       recursive = true;
     };
 

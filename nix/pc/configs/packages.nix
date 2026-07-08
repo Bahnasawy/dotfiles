@@ -90,6 +90,11 @@
     television
     sesh
     wmctrl
+    gvproxy
+    netavark
+    passt
+    podman
+    codex-acp
   ];
 
   home.sessionVariables = {
