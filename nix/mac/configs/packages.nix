@@ -56,6 +56,7 @@
     vscode
     curl
     opencode
+    beekeeper-studio
   ];
 
   programs = {
