@@ -30,7 +30,6 @@
     htop
     ngrok
     dwt1-shell-color-scripts
-    # ast-grep
     nixfmt
     uv
     ghostscript
@@ -48,15 +47,10 @@
     television
     sesh
     neovim
-    duckdb
     postgresql
     jujutsu
-    lazyjj
     blazingjj
-    vscode
     curl
-    opencode
-    beekeeper-studio
   ];
 
   programs = {

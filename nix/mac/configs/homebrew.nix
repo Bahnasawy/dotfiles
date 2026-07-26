@@ -16,10 +16,11 @@ _: {
       "microsoft-outlook"
       "microsoft-word"
       "microsoft-excel"
-      "flutter"
       "postman"
+      "beekeeper-studio"
+      "visual-studio-code"
       "teamviewer"
-      "codex-app"
+      "linear"
     ];
     brews = [
       "fastlane"
@@ -27,8 +28,7 @@ _: {
       "libiconv"
       "tmux-fingers"
       "watchman"
-      "herdr"
-      "codex-acp"
+      "opencode"
     ];
     taps = [
       "oven-sh/bun"
@@ -43,6 +43,7 @@ _: {
     onActivation = {
       autoUpdate = true;
       upgrade = true;
+      extraFlags = [ "--verbose" ];
     };
   };
 }

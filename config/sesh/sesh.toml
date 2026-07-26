@@ -10,16 +10,8 @@ startup_command = "vi"
 
 [[wildcard]]
 pattern = "~/fun/*"
-windows = ["code", "dev"]
+startup_command = "vi"
 
 [[wildcard]]
 pattern = "~/index/*"
-windows = ["code", "dev"]
-
-[[window]]
-name = "code"
-startup_script = "vi"
-
-[[window]]
-name = "dev"
-startup_script = "dev"
+startup_command = "vi"
