@@ -26,6 +26,11 @@
       recursive = true;
     };
 
+    ".config/herdr" = {
+      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/herdr;
+      recursive = true;
+    };
+
     ".config/nvim" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/nvim;
       recursive = true;
