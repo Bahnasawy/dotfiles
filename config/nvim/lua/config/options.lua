@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+vim.g.maplocalleader = "\\"
 vim.o.shell = "/etc/profiles/per-user/" .. os.getenv("USER") .. "/bin/nu"
 
 vim.diagnostic.config({

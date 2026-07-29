@@ -48,6 +48,6 @@ return {
 		},
 	},
 	keys = {
-		{ "<leader>zd", require("snacks").picker.zoxide, { desc = "Open LazyGit" } },
+		{ "<leader>zd", function() require("snacks").picker.zoxide() end, desc = "Zoxide" },
 	},
 }

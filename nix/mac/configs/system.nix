@@ -32,7 +32,6 @@
         orientation = "left";
         persistent-apps = [
           "/Applications/Arc.app"
-          "/Applications/Notion Calendar.app"
         ];
       };
       finder.FXPreferredViewStyle = "clmv";

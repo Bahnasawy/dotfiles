@@ -1,4 +1,4 @@
-if vim.loop.os_uname().sysname == "Linux" then
+if vim.uv.os_uname().sysname == "Linux" then
 	return {
 		cmd = { "nixd" },
 		settings = {
