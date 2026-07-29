@@ -28,7 +28,6 @@ _: {
       "libiconv"
       "tmux-fingers"
       "watchman"
-      "opencode"
     ];
     taps = [
       "oven-sh/bun"

@@ -51,6 +51,8 @@
     jujutsu
     blazingjj
     curl
+    herdr
+    opencode
   ];
 
   programs = {

@@ -4,7 +4,7 @@ return {
 		inlay_hints = { enabled = false },
 		servers = {
 			vtsls = {
-				enabled = false,
+				enabled = true,
 			},
 			bacon_ls = {
 				enabled = true,

@@ -1,5 +1,5 @@
 font-family = JetBrainsMonoNL Nerd Font Mono
-# command = /etc/profiles/per-user/bahnasawy/bin/nu
+# command = /bin/zsh -c nu
 theme = Catppuccin Mocha
 font-size = 12
 macos-option-as-alt=true

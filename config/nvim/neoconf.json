@@ -15,9 +15,6 @@
 	},
 	"lspconfig": {
 		"enabled": true,
-		"vtsls": {
-			"enabled": false
-		},
 		"tailwindcss": {
 			"tailwindCSS.hovers": true,
 			"tailwindCSS.classAttributes": ["class", "className", "ngClass", "class:list"],
