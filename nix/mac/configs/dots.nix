@@ -42,6 +42,10 @@
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/yazi";
         recursive = true;
       };
+      ".config/tuicr" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/tuicr";
+        recursive = true;
+      };
       ".gitmux.conf" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/gitmux.conf";
       };
