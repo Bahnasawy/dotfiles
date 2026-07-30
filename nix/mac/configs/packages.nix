@@ -53,6 +53,7 @@
     curl
     herdr
     opencode
+    tuicr
   ];
 
   programs = {
