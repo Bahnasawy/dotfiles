@@ -9,27 +9,27 @@
     ./configs/packages.nix
     ./configs/dots.nix
     inputs.android-nixpkgs.hmModule
-    {
-      android-sdk = {
-        enable = true;
-
-        # Optional; default path is "~/.local/share/android".
-        path = "${config.home.homeDirectory}/Android/sdk";
-
-        packages =
-          sdk: with sdk; [
-            build-tools-36-0-0
-            cmdline-tools-latest
-            emulator
-            platforms-android-36
-            sources-android-36
-            ndk-28-2-13676358
-            platform-tools
-            cmake-3-22-1
-            system-images-android-36-google-apis-x86-64
-          ];
-      };
-    }
+    # {
+    #   android-sdk = {
+    #     enable = true;
+    #
+    #     # Optional; default path is "~/.local/share/android".
+    #     path = "${config.home.homeDirectory}/Android/sdk";
+    #
+    #     packages =
+    #       sdk: with sdk; [
+    #         build-tools-36-0-0
+    #         cmdline-tools-latest
+    #         emulator
+    #         platforms-android-36
+    #         sources-android-36
+    #         ndk-28-2-13676358
+    #         platform-tools
+    #         cmake-3-22-1
+    #         system-images-android-36-google-apis-x86-64
+    #       ];
+    #   };
+    # }
   ];
 
   programs = {

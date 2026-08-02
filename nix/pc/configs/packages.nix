@@ -74,7 +74,6 @@
     flutter
     lua51Packages.tiktoken_core
     lynx
-    android-studio
     vscode
     transmission_4-qt6
     protontricks
@@ -94,7 +93,9 @@
     netavark
     passt
     podman
-    codex-acp
+    opencode
+    teamviewer
+    herdr
   ];
 
   home.sessionVariables = {

@@ -76,4 +76,6 @@
   };
 
   time.timeZone = "Africa/Cairo";
+
+  services.teamviewer.enable = true;
 }
