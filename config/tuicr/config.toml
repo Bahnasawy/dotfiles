@@ -1,0 +1,23 @@
+appearance = "system"
+theme_dark = "catppuccin-mocha"
+theme_light = "catppuccin-latte"
+
+diff_view = "side-by-side"
+show_file_list = true
+mouse = true
+leader = ";"
+wrap = false
+cursor_line = true
+scroll_offset = 4
+no_update_check = true
+
+comment_types = [
+  { id = "issue", definition = "correctness, security, or behavior problem", color = "red" },
+  { id = "suggestion", definition = "non-blocking improvement", color = "yellow" },
+  { id = "question", definition = "clarification needed", color = "blue" },
+  { id = "nit", definition = "small optional polish", color = "magenta" },
+  { id = "praise", definition = "positive feedback", color = "green" },
+]
+
+[forge]
+comment_type_prefix = true
