@@ -36,6 +36,15 @@
       recursive = true;
     };
 
+    ".config/zsh" = {
+      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/zsh;
+      recursive = true;
+    };
+
+    ".zshenv" = {
+      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/.zshenv;
+    };
+
     ".config/nvim" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/nvim;
       recursive = true;

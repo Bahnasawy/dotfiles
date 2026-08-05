@@ -54,6 +54,7 @@
     herdr
     opencode
     tuicr
+    zsh-syntax-highlighting
   ];
 
   programs = {
@@ -63,10 +64,7 @@
       sessionVariables = {
         NIX_LDFLAGS = "${pkgs.libiconv}/lib";
         LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
-      };
-
-      shellAliases = {
-        ld = "ld -L $NIX_LDFLAGS";
+        ZDOTDIR = "/Users/bahnasawy/.config/zsh";
       };
     };
 

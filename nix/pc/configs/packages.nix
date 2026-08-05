@@ -54,6 +54,8 @@
     perl
     nix-output-monitor
     zsh
+    zsh-autosuggestions
+    zsh-syntax-highlighting
     fd
     uv
     cairo

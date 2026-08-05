@@ -1,8 +1,9 @@
 font-family = JetBrainsMonoNL Nerd Font Mono
-# command = /bin/zsh -c nu
+command = zsh
 theme = Catppuccin Mocha
 font-size = 12
 macos-option-as-alt=true
 cursor-opacity = 0.7
+cursor-style = block
 maximize = true
 keybind = ctrl+enter=unbind
