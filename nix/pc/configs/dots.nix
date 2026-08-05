@@ -31,6 +31,11 @@
       recursive = true;
     };
 
+    ".config/tuicr" = {
+      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/tuicr;
+      recursive = true;
+    };
+
     ".config/nvim" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/nvim;
       recursive = true;

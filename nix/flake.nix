@@ -19,6 +19,7 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     neovim.url = "github:nix-community/neovim-nightly-overlay";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    purple.url = "github:erickochen/purple";
 
     android-nixpkgs = {
       url = "github:tadfisher/android-nixpkgs";
@@ -46,6 +47,7 @@
       nixos-wsl,
       android-nixpkgs,
       zen-browser,
+      purple,
     }@inputs:
     let
       linuxPackages = nixpkgs.legacyPackages.x86_64-linux;
@@ -69,6 +71,10 @@
               nixpkgs.overlays = overlays;
             }
           ];
+
+          extraSpecialArgs = {
+            inherit inputs;
+          };
         };
 
         usb = home-manager.lib.homeManagerConfiguration {

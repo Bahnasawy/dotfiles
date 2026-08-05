@@ -163,9 +163,13 @@
   };
 
   virtualisation = {
-    podman = {
+    docker = {
       enable = true;
-      dockerCompat = true;
+      enableOnBoot = true;
+    };
+    podman = {
+      enable = false;
+      dockerCompat = false;
       defaultNetwork.settings.dns_enabled = true;
       extraPackages = with pkgs; [
         qemu

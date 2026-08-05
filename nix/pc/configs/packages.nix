@@ -1,6 +1,12 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
 {
   home.packages = with pkgs; [
+    inputs.purple.packages.${pkgs.system}.default
     neovim
     vim
     wget
@@ -96,6 +102,9 @@
     opencode
     teamviewer
     herdr
+    tuicr
+    libsecret
+    anydesk
   ];
 
   home.sessionVariables = {
