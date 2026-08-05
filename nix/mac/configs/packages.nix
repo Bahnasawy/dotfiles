@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  lib,
   ...
 }:
 {
@@ -54,7 +55,6 @@
     herdr
     opencode
     tuicr
-    zsh-syntax-highlighting
   ];
 
   programs = {
@@ -64,8 +64,80 @@
       sessionVariables = {
         NIX_LDFLAGS = "${pkgs.libiconv}/lib";
         LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
-        ZDOTDIR = "/Users/bahnasawy/.config/zsh";
+        ANDROID_HOME = "/Users/bahnasawy/.android/sdk";
+        ANDROID_SDK_ROOT = "/Users/bahnasawy/.android/sdk";
+        CROSS_CONTAINER_ENGINE = "podman";
+        CROSS_CONTAINER_OPTS = "--platform=linux/amd64";
+        NIX_PATH = "/Users/bahnasawy/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels";
       };
+
+      defaultKeymap = "viins";
+
+      setOptions = [
+        "MENUCOMPLETE"
+        "COMPLETE_IN_WORD"
+      ];
+
+      autosuggestion.enable = true;
+
+      enableCompletion = true;
+
+      syntaxHighlighting.enable = true;
+
+      shellAliases = {
+        man = "batman";
+        cd = "z";
+        vi = "nvim";
+      };
+
+      initContent = lib.mkMerge [
+        (lib.mkOrder 550 ''
+          zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+          zstyle ':completion:*' menu select
+          zstyle ':completion:*' max-results 100
+          zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+        '')
+
+        (lib.mkOrder 700 ''
+          export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
+        '')
+
+        (lib.mkOrder 1000 ''
+          if [[ -n "$NIX_LDFLAGS" ]]; then
+            alias ld='ld -L $NIX_LDFLAGS'
+          fi
+
+          db() {
+            if [[ "$(uname)" == "Darwin" ]]; then
+              nh darwin switch "$HOME/dotfiles/nix" -H mac "$@"
+            else
+              nh os switch "$HOME/dotfiles/nix" -H "$(hostname)" "$@"
+            fi
+          }
+
+          collect-garbage() {
+            nh clean all
+          }
+
+          fu() {
+            if [[ "$(uname)" == "Darwin" ]]; then
+              nix flake update --flake "$HOME/dotfiles/nix"
+            else
+              sudo nix flake update --flake "$HOME/dotfiles/nix"
+            fi
+          }
+
+          dev() {
+            if command ls | command grep -q bun; then
+              bun run dev "$@"
+            fi
+          }
+
+          clone-index-repo() {
+            gh repo clone "Index-Infotech/$1" -- -c core.sshCommand="ssh -i ~/.ssh/index"
+          }
+        '')
+      ];
     };
 
     bat = {

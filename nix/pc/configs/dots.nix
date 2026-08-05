@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{config, ...}: {
   home.file = {
     ".config/kitty" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/kitty;
@@ -34,15 +33,6 @@
     ".config/tuicr" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/tuicr;
       recursive = true;
-    };
-
-    ".config/zsh" = {
-      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/zsh;
-      recursive = true;
-    };
-
-    ".zshenv" = {
-      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/.zshenv;
     };
 
     ".config/nvim" = {

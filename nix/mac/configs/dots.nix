@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{config, ...}: {
   home = {
     file = {
       ".config/tmux" = {
@@ -53,10 +52,6 @@
       };
       ".config/sesh" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/sesh";
-        recursive = true;
-      };
-      ".config/zsh" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/zsh";
         recursive = true;
       };
     };

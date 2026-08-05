@@ -7,7 +7,6 @@ _: {
       "the-unarchiver"
       "arc"
       "spotify"
-      "notion"
       "whatsapp"
       "expo-orbit"
       "raycast"
@@ -17,10 +16,10 @@ _: {
       "microsoft-word"
       "microsoft-excel"
       "postman"
-      "beekeeper-studio"
       "visual-studio-code"
       "teamviewer"
       "linear"
+      "handy"
     ];
     brews = [
       "fastlane"
@@ -32,6 +31,7 @@ _: {
     taps = [
       "oven-sh/bun"
       "morantron/tmux-fingers"
+      "nubjs/tap"
     ];
     # masApps = {
     #   "XCode" = 497799835;
