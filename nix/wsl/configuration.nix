@@ -33,7 +33,7 @@
     ]; # Enable ‘sudo’ for the user.
   };
 
-  users.defaultUserShell = pkgs.nushell;
+  users.defaultUserShell = pkgs.zsh;
 
   networking = {
     hostName = "wsl";

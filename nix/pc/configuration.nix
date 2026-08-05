@@ -28,12 +28,12 @@
       "docker"
       "libvirtd"
     ]; # Enable ‘sudo’ for the user.
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
     createHome = true;
     linger = true;
   };
 
-  users.defaultUserShell = pkgs.nushell;
+  users.defaultUserShell = pkgs.zsh;
 
   boot.extraModprobeConfig = ''
     blacklist nouveau

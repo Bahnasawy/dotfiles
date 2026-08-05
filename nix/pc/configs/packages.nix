@@ -132,25 +132,12 @@
       };
     };
 
-    nushell = {
-      enable = true;
-      shellAliases = {
-        vi = "nvim";
-        vim = "nvim";
-        nano = "nvim";
-      };
-
-      configFile.source = config.lib.file.mkOutOfStoreSymlink ../../../config/nushell/config.nu;
-    };
-
     carapace = {
       enable = true;
-      enableNushellIntegration = true;
     };
 
     starship = {
       enable = true;
-      enableNushellIntegration = true;
       settings = {
         add_newline = true;
         character = {
@@ -162,7 +149,6 @@
 
     zoxide = {
       enable = true;
-      enableNushellIntegration = true;
     };
 
     plasma = {

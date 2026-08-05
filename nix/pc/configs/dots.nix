@@ -50,9 +50,6 @@
       recursive = true;
     };
 
-    ".zoxide.nu" = {
-      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/zoxide.nu;
-    };
     ".config/tmux" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/tmux;
       recursive = true;

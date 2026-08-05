@@ -78,30 +78,10 @@
       package = pkgs.openjdk17;
     };
 
-    nushell = {
-      enable = true;
-      shellAliases = {
-        vi = "nvim";
-        vim = "nvim";
-        nano = "nvim";
-      };
-
-      configFile.source = config.lib.file.mkOutOfStoreSymlink ../../../config/nushell/config.nu;
-
-      extraConfig = ''
-        $env.NIX_LDFLAGS = "${pkgs.libiconv}/lib"
-        $env.LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib"
-
-        alias ld = ld -L $env.NIX_LDFLAGS
-      '';
-    };
-
     carapace.enable = true;
-    carapace.enableNushellIntegration = true;
 
     starship = {
       enable = true;
-      enableNushellIntegration = true;
       settings = {
         # "$schema" = "https://starship.rs/config-schema.json";
         add_newline = true;
@@ -113,7 +93,6 @@
     };
 
     zoxide.enable = true;
-    zoxide.enableNushellIntegration = true;
 
     nh = {
       enable = true;

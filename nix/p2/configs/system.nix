@@ -19,6 +19,7 @@
   ];
 
   programs = {
+    zsh.enable = true;
     nix-ld.enable = true;
     nix-ld.libraries = with pkgs; [
       lua-language-server

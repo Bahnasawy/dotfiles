@@ -111,6 +111,7 @@
   ];
 
   programs = {
+    zsh.enable = true;
     steam = {
       enable = true;
       extraCompatPackages = with pkgs; [

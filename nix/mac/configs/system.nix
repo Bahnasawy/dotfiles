@@ -64,7 +64,7 @@
     pkgs.nerd-fonts.jetbrains-mono
   ];
 
-  users.users.bahnasawy.shell = pkgs.nushell;
+  users.users.bahnasawy.shell = pkgs.zsh;
 
   environment = {
     systemPackages = with pkgs; [
