@@ -55,6 +55,7 @@
     herdr
     opencode
     tuicr
+    atuin
   ];
 
   programs = {

@@ -41,6 +41,10 @@
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/tuicr";
         recursive = true;
       };
+      ".config/gh-dash" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/gh-dash";
+        recursive = true;
+      };
       ".gitmux.conf" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/gitmux.conf";
       };
@@ -52,6 +56,16 @@
       };
       ".config/sesh" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/sesh";
+        recursive = true;
+      };
+
+      ".config/atuin" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/atuin";
+        recursive = true;
+      };
+
+      ".config/herdr" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/herdr";
         recursive = true;
       };
     };

@@ -81,7 +81,7 @@
     lua51Packages.tiktoken_core
     lynx
     vscode
-    transmission_4-qt6
+    transmission_4
     protontricks
     duckdb
     stremio-linux-shell
@@ -105,6 +105,7 @@
     tuicr
     libsecret
     anydesk
+    atuin
   ];
 
   home.sessionVariables = {
@@ -188,6 +189,8 @@
           clone-index-repo() {
             gh repo clone "Index-Infotech/$1" -- -c core.sshCommand="ssh -i ~/.ssh/index"
           }
+
+          eval "$(atuin init zsh)"
         '')
       ];
     };

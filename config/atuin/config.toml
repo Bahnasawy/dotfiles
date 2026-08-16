@@ -1,0 +1,15 @@
+[sync]
+records = true
+
+auto_sync = true
+
+[stats]
+pre_fill_ratio = 0.9
+
+[online]
+search_mode = "fuzzy"
+filter_mode = "global"
+history_limit = 999999
+
+[tmux]
+enabled = true

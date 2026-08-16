@@ -1,0 +1,69 @@
+#:schema https://gh-dash.dev/schema.json
+
+repoPaths:
+  Index-Infotech/*: ~/index/*
+  Bahnasawy/*: ~/fun/*
+
+pager:
+  diff: delta
+  log: delta
+
+prSections:
+  - title: My Pull Requests
+    filters: is:open author:@me sort:updated-desc
+  - title: Needs My Review
+    filters: is:open review-requested:@me sort:updated-desc
+  - title: Involving Me
+    filters: is:open involves:@me -author:@me sort:updated-desc
+
+issueSections:
+  - title: My Issues
+    filters: is:open author:@me sort:updated-desc
+  - title: Assigned to Me
+    filters: is:open assignee:@me sort:updated-desc
+  - title: Involving Me
+    filters: is:open involves:@me -author:@me sort:updated-desc
+
+notificationsSections:
+  - title: Participating
+    filters: reason:participating
+  - title: Mentioned
+    filters: reason:mention
+  - title: Review Requested
+    filters: reason:review-requested
+  - title: Assigned
+    filters: reason:assign
+  - title: Subscribed
+    filters: reason:subscribed
+
+defaults:
+  view: prs
+  refetchIntervalMinutes: 5
+  layout:
+    prs:
+      repoName:
+        hidden: true
+      base:
+        hidden: true
+  preview:
+    open: true
+    width: 84
+  prsLimit: 20
+  issuesLimit: 20
+  notificationsLimit: 20
+
+keybinds:
+  universal:
+    - key: g
+      name: lazygit
+      command: cd {{.RepoPath}} && lazygit
+  prs:
+    - key: O
+      builtin: checkout
+    - key: m
+      command: gh pr merge --admin --repo {{.RepoName}} {{.PrNumber}}
+    - key: C
+      name: code review
+      command: cd {{.RepoPath}} && gh pr checkout {{.PrNumber}} && nvim
+    - key: T
+      command: gh pr view {{.PrNumber}} --web

@@ -17,7 +17,7 @@
       "usb_storage"
       "sd_mod"
     ];
-    initrd.kernelModules = [ ];
+    initrd.kernelModules = [ "amdgpu" ];
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
   };
@@ -64,6 +64,7 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware = {
     cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    amdgpu.opencl.enable = true;
     graphics = {
       enable = true;
       enable32Bit = true;
