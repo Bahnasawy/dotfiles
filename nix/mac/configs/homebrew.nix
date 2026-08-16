@@ -27,11 +27,13 @@ _: {
       "libiconv"
       "tmux-fingers"
       "watchman"
+      "purple"
     ];
     taps = [
       "oven-sh/bun"
       "morantron/tmux-fingers"
       "nubjs/tap"
+      "erickochen/purple"
     ];
     # masApps = {
     #   "XCode" = 497799835;
@@ -43,6 +45,11 @@ _: {
       autoUpdate = true;
       upgrade = true;
       extraFlags = [ "--verbose" ];
+      extraEnv = {
+        HOMEBREW_NO_ENV_HINTS = "1";
+        HOMEBREW_NO_ANALYTICS = "1";
+        HOMEBREW_NO_UPDATE_REPORT_NEW = "1";
+      };
     };
   };
 }
