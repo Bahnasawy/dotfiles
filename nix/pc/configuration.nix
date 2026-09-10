@@ -34,11 +34,20 @@
   };
 
   users.defaultUserShell = pkgs.zsh;
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.extraModprobeConfig = ''
-    blacklist nouveau
-    options nouveau modeset=0
-  '';
+    extraModprobeConfig = ''
+      blacklist nouveau
+      options nouveau modeset=0
+    '';
+    blacklistedKernelModules = [
+      "nouveau"
+      "nvidia"
+      "nvidia_drm"
+      "nvidia_modeset"
+    ];
+  };
 
   services = {
     udev.extraRules = ''
@@ -54,12 +63,6 @@
 
     teamviewer.enable = true;
   };
-  boot.blacklistedKernelModules = [
-    "nouveau"
-    "nvidia"
-    "nvidia_drm"
-    "nvidia_modeset"
-  ];
 
   system.stateVersion = "24.11";
   networking.hostName = "pc";

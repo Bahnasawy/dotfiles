@@ -1,4 +1,4 @@
-{config, ...}: {
+{ config, ... }: {
   home.file = {
     ".config/kitty" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/kitty;
@@ -60,10 +60,10 @@
       recursive = true;
     };
 
-    ".config/git" = {
-      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/git;
-      recursive = true;
-    };
+    # ".config/git" = {
+    #   source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/git;
+    #   recursive = true;
+    # };
 
     ".config/yazi" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/yazi;

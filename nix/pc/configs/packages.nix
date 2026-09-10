@@ -12,7 +12,6 @@
     vim
     wget
     gh
-    google-chrome
     git
     fzf
     lsd
@@ -31,7 +30,6 @@
     deadnix
     statix
     doppler
-    bun
     kdePackages.filelight
     jdk17
     exercism
@@ -40,7 +38,6 @@
     rust-analyzer
     lua5_1
     gzip
-    zig
     ghostty
     fastfetch
     nixfmt
@@ -73,15 +70,12 @@
     android-tools
     just
     mesa
-    htop
+    htop-vim
     bridge-utils
     awscli2
-    insomnia
     flutter
     lua51Packages.tiktoken_core
-    lynx
-    vscode
-    transmission_4
+    transmission_4-qt
     protontricks
     duckdb
     stremio-linux-shell
@@ -91,14 +85,12 @@
     lutris
     webkitgtk_6_0
     nix-index
-    ulauncher
     television
     sesh
     wmctrl
     gvproxy
     netavark
     passt
-    podman
     opencode
     teamviewer
     herdr
@@ -106,6 +98,9 @@
     libsecret
     anydesk
     atuin
+    marksman
+    mpv
+    btop-rocm
   ];
 
   home.sessionVariables = {
@@ -121,7 +116,9 @@
         ANDROID_SDK_ROOT = "/home/bahnasawy/Android/sdk";
         CROSS_CONTAINER_ENGINE = "podman";
         CROSS_CONTAINER_OPTS = "--platform=linux/amd64";
-        NIX_PATH = "/Users/bahnasawy/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels";
+        NIX_PATH = "/home/bahnasawy/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels";
+        BUN_INSTALL = "$HOME/.bun";
+        PATH = "$BUN_INSTALL/bin:$PATH";
       };
 
       defaultKeymap = "viins";
@@ -141,6 +138,7 @@
         man = "batman";
         cd = "z";
         vi = "nvim";
+        ls = "lsd";
       };
 
       initContent = lib.mkMerge [

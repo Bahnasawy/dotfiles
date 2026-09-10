@@ -45,8 +45,7 @@
       pulse.enable = true;
       extraConfig.pipewire.adjust-sample-rate = {
         "context.properties" = {
-          "default.clock.rate" = 44100;
-          "defautlt.allowed-rates" = [
+          "default.allowed-rates" = [
             44100
             48000
           ];
@@ -148,6 +147,7 @@
       alsa-lib
       fuse
       fuse3
+      icu
       # Add any missing dynamic libraries for unpackaged programs
       # here, NOT in environment.systemPackages
     ];
