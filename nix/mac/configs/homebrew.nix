@@ -16,7 +16,6 @@ _: {
       "microsoft-word"
       "microsoft-excel"
       "postman"
-      "visual-studio-code"
       "teamviewer"
       "linear"
       "handy"
