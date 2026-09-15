@@ -1,0 +1,413 @@
+[
+  {
+    "plugin_id": "herdr-board",
+    "name": "Herdr Board",
+    "version": "0.17.0",
+    "min_herdr_version": "0.9.0",
+    "description": "Kanban board for AI coding agents: cards are prompts, columns are pipeline stages; moving a card dispatches an agent into a herdr pane.",
+    "manifest_path": "/Users/bahnasawy/dotfiles/config/herdr/plugins/github/herdr-board-948ba5448416/herdr-plugin.toml",
+    "plugin_root": "/Users/bahnasawy/dotfiles/config/herdr/plugins/github/herdr-board-948ba5448416",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "build": [
+      {
+        "command": [
+          "./scripts/build.sh"
+        ]
+      },
+      {
+        "command": [
+          "./scripts/install-cli.sh"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "open-board",
+        "title": "Open board",
+        "description": "Open the herdr-board kanban as an overlay pane (focus/toggle if already open).",
+        "command": [
+          "bash",
+          "scripts/open-board.sh"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "board",
+        "title": "Board",
+        "placement": "overlay",
+        "command": [
+          "./target/release/board",
+          "tui"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "nelsonPires5",
+      "repo": "herdr-board",
+      "requested_ref": "v0.17.0",
+      "resolved_commit": "b6c9bce7a2307053a3ba039db31eb880c8979230",
+      "managed_path": "/Users/bahnasawy/.config/herdr/plugins/github/herdr-board-948ba5448416",
+      "installed_unix_ms": 1789460780760
+    }
+  },
+  {
+    "plugin_id": "herdr.auto-title",
+    "name": "Auto Title",
+    "version": "0.6.0",
+    "min_herdr_version": "0.8.2",
+    "description": "Automatically generates contextual tab titles",
+    "manifest_path": "/Users/bahnasawy/dotfiles/config/herdr/plugins/github/herdr.auto-title-4b7d61f48ce8/herdr-plugin.toml",
+    "plugin_root": "/Users/bahnasawy/dotfiles/config/herdr/plugins/github/herdr.auto-title-4b7d61f48ce8",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "build": [
+      {
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "command": [
+          "go",
+          "build",
+          "-o",
+          "herdr-auto-title",
+          "./cmd/herdr-auto-title"
+        ]
+      },
+      {
+        "platforms": [
+          "windows"
+        ],
+        "command": [
+          "go",
+          "build",
+          "-o",
+          "herdr-auto-title.exe",
+          "./cmd/herdr-auto-title"
+        ]
+      }
+    ],
+    "startup": [
+      {
+        "platforms": [
+          "linux",
+          "macos"
+        ],
+        "command": [
+          "./herdr-auto-title"
+        ]
+      },
+      {
+        "platforms": [
+          "windows"
+        ],
+        "command": [
+          "./herdr-auto-title.exe"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "kryptamine",
+      "repo": "herdr-auto-title",
+      "resolved_commit": "270076954c4c9e17dbfaeca278f62e9075c83bee",
+      "managed_path": "/Users/bahnasawy/.config/herdr/plugins/github/herdr.auto-title-4b7d61f48ce8",
+      "installed_unix_ms": 1789460685037
+    }
+  },
+  {
+    "plugin_id": "hhdebb.herdr-radar",
+    "name": "Herdr Radar",
+    "version": "1.3.0",
+    "min_herdr_version": "0.9.0",
+    "description": "Readable Herdr sidebar: which agent is working, waiting on you, or abandoned — with groups, worktree trees and activity order.",
+    "manifest_path": "/Users/bahnasawy/dotfiles/config/herdr/plugins/github/hhdebb.herdr-radar-afabda667cbe/herdr-plugin.toml",
+    "plugin_root": "/Users/bahnasawy/dotfiles/config/herdr/plugins/github/hhdebb.herdr-radar-afabda667cbe",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "build": [
+      {
+        "command": [
+          "node",
+          "bin/setup.js"
+        ]
+      }
+    ],
+    "startup": [
+      {
+        "command": [
+          "node",
+          "bin/agent-icons.js"
+        ]
+      },
+      {
+        "command": [
+          "node",
+          "bin/agent-state.js"
+        ]
+      },
+      {
+        "command": [
+          "node",
+          "bin/agent-view.js",
+          "--reapply"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "configure",
+        "title": "Configure: install the sidebar, tab-bar and theme blocks",
+        "description": "Write (or repair) the three managed blocks in Herdr's config.toml and reload.",
+        "command": [
+          "node",
+          "bin/configure.js",
+          "--apply",
+          "--reload"
+        ]
+      },
+      {
+        "id": "install-font",
+        "title": "Font: install for this user and map codepoints in the terminal",
+        "description": "Copy the icon font into your user font directory (no admin needed) and write the codepoint map into ghostty/kitty configs that exist; other terminals get instructions in the log.",
+        "command": [
+          "node",
+          "bin/install-font.js"
+        ]
+      },
+      {
+        "id": "refresh",
+        "title": "Agent icons: refresh",
+        "description": "Reapply icon variants to all current panes.",
+        "command": [
+          "node",
+          "bin/agent-icons.js"
+        ]
+      },
+      {
+        "id": "settings",
+        "title": "Settings",
+        "description": "Open the settings popup.",
+        "command": [
+          "node",
+          "bin/settings.js",
+          "--open"
+        ]
+      },
+      {
+        "id": "state-start",
+        "title": "Agent state: start animator",
+        "description": "Start the lifecycle-state glyph animator.",
+        "command": [
+          "node",
+          "bin/agent-state.js"
+        ]
+      },
+      {
+        "id": "state-stop",
+        "title": "Agent state: stop animator",
+        "description": "Stop the lifecycle-state glyph animator and clear its marks. Titles and sort keys stay so the list stays readable; unconfigure clears everything.",
+        "command": [
+          "node",
+          "bin/agent-state.js",
+          "--stop"
+        ]
+      },
+      {
+        "id": "unconfigure",
+        "title": "Configure: remove the managed blocks",
+        "description": "Stop the daemon, clear every token it wrote, remove the three managed blocks from Herdr's config.toml and reload. Do this before uninstalling.",
+        "command": [
+          "node",
+          "bin/configure.js",
+          "--uninstall",
+          "--reload"
+        ]
+      },
+      {
+        "id": "uninstall-font",
+        "title": "Font: remove",
+        "description": "Remove the installed icon font and the terminal codepoint map this plugin wrote.",
+        "command": [
+          "node",
+          "bin/install-font.js",
+          "--uninstall"
+        ]
+      },
+      {
+        "id": "view-flip",
+        "title": "Agents: active <-> recent",
+        "description": "Flip between grouped-by-activity and flat-by-activity without leaving the plugin's order.",
+        "command": [
+          "node",
+          "bin/agent-view.js",
+          "--flip"
+        ]
+      },
+      {
+        "id": "view-native",
+        "title": "Agents: Herdr's panel <-> ours",
+        "description": "Toggle the whole Agents panel — order and row colours — between Herdr's own and the plugin's.",
+        "command": [
+          "node",
+          "bin/agent-view.js",
+          "--native"
+        ]
+      },
+      {
+        "id": "view-toggle",
+        "title": "Agents: cycle order (active / recent / off)",
+        "description": "Cycle the Agents panel: grouped by activity, flat by activity, or the panel's own order.",
+        "command": [
+          "node",
+          "bin/agent-view.js"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "on": "pane.agent_detected",
+        "command": [
+          "node",
+          "bin/agent-state.js"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "settings",
+        "title": "herdr-radar settings",
+        "placement": "popup",
+        "width": 84,
+        "height": 26,
+        "command": [
+          "node",
+          "bin/settings.js"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "hhdebb",
+      "repo": "herdr-radar",
+      "resolved_commit": "b85d2ee1678bd450d981696011ed795dbc56f55c",
+      "managed_path": "/Users/bahnasawy/.config/herdr/plugins/github/hhdebb.herdr-radar-afabda667cbe",
+      "installed_unix_ms": 1789460734061
+    }
+  },
+  {
+    "plugin_id": "persiyanov.reviewr",
+    "name": "reviewr",
+    "version": "0.37.1",
+    "min_herdr_version": "0.7.5",
+    "description": "Review agent-written diffs beside the chat and add line comments to the agent input.",
+    "manifest_path": "/Users/bahnasawy/dotfiles/config/herdr/plugins/github/persiyanov.reviewr-e87b654a74f8/herdr-plugin.toml",
+    "plugin_root": "/Users/bahnasawy/dotfiles/config/herdr/plugins/github/persiyanov.reviewr-e87b654a74f8",
+    "enabled": true,
+    "platforms": [
+      "macos",
+      "linux"
+    ],
+    "build": [
+      {
+        "command": [
+          "bash",
+          "herdr/install.sh"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "close",
+        "title": "reviewr: close pane",
+        "contexts": [
+          "pane",
+          "workspace"
+        ],
+        "command": [
+          "bash",
+          "herdr/pane.sh",
+          "close"
+        ]
+      },
+      {
+        "id": "open",
+        "title": "reviewr: open pane",
+        "contexts": [
+          "pane",
+          "workspace"
+        ],
+        "command": [
+          "bash",
+          "herdr/pane.sh",
+          "open"
+        ]
+      },
+      {
+        "id": "toggle",
+        "title": "reviewr: toggle pane",
+        "contexts": [
+          "pane",
+          "workspace"
+        ],
+        "command": [
+          "bash",
+          "herdr/pane.sh",
+          "toggle"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "on": "worktree.created",
+        "command": [
+          "bash",
+          "herdr/pane.sh",
+          "auto-open"
+        ]
+      },
+      {
+        "on": "worktree.opened",
+        "command": [
+          "bash",
+          "herdr/pane.sh",
+          "auto-open"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "pane",
+        "title": "reviewr",
+        "placement": "split",
+        "command": [
+          "sh",
+          "-c",
+          "exec \"$HERDR_PLUGIN_ROOT/bin/herdr-reviewr\""
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "persiyanov",
+      "repo": "herdr-reviewr",
+      "resolved_commit": "68f2faca2c203c536c25109a0c6e9a8c5d0b21ef",
+      "managed_path": "/Users/bahnasawy/.config/herdr/plugins/github/persiyanov.reviewr-e87b654a74f8",
+      "installed_unix_ms": 1789461064274
+    }
+  }
+]

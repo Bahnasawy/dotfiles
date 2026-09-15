@@ -17,6 +17,12 @@
         },
         "deepseek-v4-pro-0813": {
           "name": "Deepseek v4 Pro"
+        },
+        "glm-5.3-flash": {
+          "name": "GLM 5.3 Flash",
+          "attachment": true,
+          "tool_call": true,
+          "modalities": { "input": ["text", "image", "video"] }
         }
       }
     }

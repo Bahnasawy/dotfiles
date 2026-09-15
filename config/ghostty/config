@@ -7,3 +7,9 @@ cursor-opacity = 0.7
 cursor-style = block
 maximize = true
 keybind = ctrl+enter=unbind
+
+# >>> herdr-radar font block
+font-family = "Herdr Agent Icons Max"
+font-codepoint-map = U+E1A0-U+E1B6="Herdr Agent Icons Max"
+font-codepoint-map = U+E1C0-U+E1C5="Herdr Agent Icons Max"
+# <<< herdr-radar font block
