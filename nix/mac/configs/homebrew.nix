@@ -13,12 +13,12 @@ _: {
       "ghostty@tip"
       "microsoft-teams"
       "microsoft-outlook"
-      "microsoft-word"
-      "microsoft-excel"
       "postman"
       "teamviewer"
       "linear"
       "handy"
+      "openclaw"
+      "homebrew-app"
     ];
     brews = [
       "fastlane"
@@ -27,6 +27,7 @@ _: {
       "tmux-fingers"
       "watchman"
       "purple"
+      "openclaw-cli"
     ];
     taps = [
       "oven-sh/bun"
