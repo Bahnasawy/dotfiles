@@ -449,9 +449,3 @@ rows = [
   ],
 ]
 # <<< herdr-radar sidebar block
-
-# added by herdr-lazy
-[[keys.command]]
-key = "prefix+shift+l"
-type = "plugin_action"
-command = "herdr-lazy.manage"

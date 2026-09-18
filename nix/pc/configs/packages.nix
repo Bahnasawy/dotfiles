@@ -187,6 +187,13 @@
             gh repo clone "Index-Infotech/$1" -- -c core.sshCommand="ssh -i ~/.ssh/index"
           }
 
+          herdr-lazy() {
+            local root
+            root=$(herdr plugin list --json | python3 -c \
+              "import json,sys;print([p['plugin_root'] for p in json.load(sys.stdin)['result']['plugins'] if p['plugin_id']=='herdr-lazy'][0])")
+            "$root/target/release/herdr-lazy" "$@"
+          }
+
           eval "$(atuin init zsh)"
         '')
       ];
