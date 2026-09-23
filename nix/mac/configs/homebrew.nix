@@ -42,8 +42,8 @@ _: {
     #   "Testflight" = 899247664;
     # };
     onActivation = {
-      autoUpdate = true;
-      upgrade = true;
+      autoUpdate = false;
+      upgrade = false;
       extraFlags = [ "--verbose" ];
       extraEnv = {
         HOMEBREW_NO_ENV_HINTS = "1";
