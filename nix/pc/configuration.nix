@@ -27,6 +27,7 @@
       "adbusers"
       "docker"
       "libvirtd"
+      "ydotool" # access to ydotoold socket for synthetic input
     ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     createHome = true;
@@ -84,5 +85,4 @@
   };
 
   time.timeZone = "Africa/Cairo";
-
 }

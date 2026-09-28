@@ -152,6 +152,7 @@
       # here, NOT in environment.systemPackages
     ];
     kdeconnect.enable = true;
+    ydotool.enable = true; # synthetic keyboard/mouse input for desktop automation (ydotoold + /dev/uinput)
   };
 
   fonts.packages = [

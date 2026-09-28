@@ -87,6 +87,7 @@
     television
     sesh
     wmctrl
+    kdotool # query/manipulate KWin windows for desktop automation
     gvproxy
     netavark
     passt
