@@ -23,6 +23,8 @@
   services = {
     blueman.enable = true;
 
+    tailscale.enable = true; # mesh VPN — remote access without static IP (gateway exposure via tailscale serve)
+
     xserver = {
       enable = false;
     };
