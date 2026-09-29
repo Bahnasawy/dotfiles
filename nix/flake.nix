@@ -261,6 +261,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 users.bahnasawy = import ./mac/home.nix;
+                backupFileExtension = "bkp";
                 extraSpecialArgs = { inherit android-nixpkgs; };
               };
               users.users.bahnasawy.home = "/Users/bahnasawy";

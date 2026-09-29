@@ -56,6 +56,7 @@
     opencode
     tuicr
     atuin
+    yazi
   ];
 
   programs = {

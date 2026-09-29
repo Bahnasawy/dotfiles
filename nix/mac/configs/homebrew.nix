@@ -9,7 +9,7 @@ _: {
       "spotify"
       "whatsapp"
       "expo-orbit"
-      "raycast"
+      # "raycast"
       "ghostty@tip"
       "microsoft-teams"
       "microsoft-outlook"
@@ -44,7 +44,10 @@ _: {
     onActivation = {
       autoUpdate = false;
       upgrade = false;
-      extraFlags = [ "--verbose" ];
+      extraFlags = [
+        "--verbose"
+        "--force"
+      ];
       extraEnv = {
         HOMEBREW_NO_ENV_HINTS = "1";
         HOMEBREW_NO_ANALYTICS = "1";
