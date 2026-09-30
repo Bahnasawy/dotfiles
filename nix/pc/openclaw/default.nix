@@ -47,11 +47,18 @@
               {
                 id = "glm-5.3-flash";
                 name = "GLM 5.3 Flash";
+                input = [
+                  "text"
+                  "image"
+                ]; # vision-capable — required for the computer tool
               }
               {
                 id = "gemini-3.7-flash";
                 name = "Gemini 3.7 Flash";
-                input = [ "text" "image" ]; # vision-capable — required for the computer tool
+                input = [
+                  "text"
+                  "image"
+                ]; # vision-capable — required for the computer tool
               }
             ];
           };
