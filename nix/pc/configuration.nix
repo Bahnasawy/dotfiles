@@ -35,6 +35,20 @@
   };
 
   users.defaultUserShell = pkgs.zsh;
+
+  # Passwordless sudo for the primary user (explicitly requested 2026-09-30):
+  # enables autonomous rebuilds and system administration by OpenClaw.
+  security.sudo.extraRules = [
+    {
+      users = [ "bahnasawy" ];
+      commands = [
+        {
+          command = "ALL";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
 
