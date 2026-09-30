@@ -65,9 +65,17 @@
         };
       };
 
+      # Linear MCP — first-party remote server (streamable HTTP + OAuth).
+      # Authorize with: openclaw mcp login linear
+      mcp.servers.linear = {
+        url = "https://mcp.linear.app/mcp";
+        transport = "streamable-http";
+        auth = "oauth";
+      };
+
       # Vision-capable primary — the gateway only exposes the `computer` tool to
       # sessions whose model can process screenshots (computer-use requirement).
-      agents.defaults.model.primary = "custom/gemini-3.7-flash";
+      agents.defaults.model.primary = "custom/glm-5.3-flash";
     };
   };
 
