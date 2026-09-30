@@ -20,6 +20,7 @@
     neovim.url = "github:nix-community/neovim-nightly-overlay";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     purple.url = "github:erickochen/purple";
+    nix-openclaw.url = "github:openclaw/nix-openclaw";
 
     android-nixpkgs = {
       url = "github:tadfisher/android-nixpkgs";
@@ -48,6 +49,7 @@
       android-nixpkgs,
       zen-browser,
       purple,
+      nix-openclaw,
     }@inputs:
     let
       linuxPackages = nixpkgs.legacyPackages.x86_64-linux;
@@ -57,6 +59,7 @@
       overlays = [
         neovim.overlays.default
         android-nixpkgs.overlays.default
+        inputs.nix-openclaw.overlays.default
       ];
     in
     {
@@ -154,7 +157,14 @@
                   plasma-manager.homeModules.plasma-manager
                 ];
               };
-              nixpkgs.overlays = overlays;
+              nixpkgs = {
+                config.allowBroken = true;
+                config.permittedInsecurePackages = [
+                  "openclaw-2026.6.33"
+                ];
+
+                inherit overlays;
+              };
             }
           ];
         };
