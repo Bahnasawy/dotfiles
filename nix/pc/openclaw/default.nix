@@ -22,6 +22,10 @@
         tailscale.mode = "serve"; # publish gateway at https://pc.tailffec45.ts.net (tailnet-only)
       };
 
+      tools = {
+        alsoAllow = [ "computer" ]; # computer use: control paired node desktops (MacBook) via Peekaboo
+      };
+
       channels.telegram = {
         tokenFile = "/home/bahnasawy/.secrets/openclaw/telegram-bot-token";
         allowFrom = [ 8713324248 ];
