@@ -48,13 +48,19 @@
                 id = "glm-5.3-flash";
                 name = "GLM 5.3 Flash";
               }
+              {
+                id = "gemini-3.7-flash";
+                name = "Gemini 3.7 Flash";
+                input = [ "text" "image" ]; # vision-capable — required for the computer tool
+              }
             ];
           };
         };
       };
 
-      # Uncomment and fill in once the model above is set:
-      # agents.defaults.model.primary = "custom/MODEL_ID";
+      # Vision-capable primary — the gateway only exposes the `computer` tool to
+      # sessions whose model can process screenshots (computer-use requirement).
+      agents.defaults.model.primary = "custom/gemini-3.7-flash";
     };
   };
 
