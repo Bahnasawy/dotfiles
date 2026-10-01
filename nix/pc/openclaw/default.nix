@@ -73,6 +73,14 @@
         auth = "oauth";
       };
 
+      # Doppler MCP (read-only) — stdio wrapper injects DOPPLER_TOKEN at runtime
+      # from the local CLI auth; the token is never stored in config.
+      mcp.servers.doppler = {
+        command = "/home/bahnasawy/.local/bin/doppler-mcp";
+        transport = "stdio";
+        enabled = true;
+      };
+
       # Vision-capable primary — the gateway only exposes the `computer` tool to
       # sessions whose model can process screenshots (computer-use requirement).
       agents.defaults.model.primary = "custom/glm-5.3-flash";
