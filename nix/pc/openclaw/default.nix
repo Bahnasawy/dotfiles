@@ -73,6 +73,15 @@
         auth = "oauth";
       };
 
+      # Neon MCP (hosted) — DB branch/project management. Authorize with:
+      # openclaw mcp login neon. Scope via URL params when a GoCast project
+      # exists: ?projectId=<id> / ?readonly=true / ?category=querying
+      mcp.servers.neon = {
+        url = "https://mcp.neon.tech/mcp";
+        transport = "streamable-http";
+        auth = "oauth";
+      };
+
       # Doppler MCP (read-only) — stdio wrapper injects DOPPLER_TOKEN at runtime
       # from the local CLI auth; the token is never stored in config.
       mcp.servers.doppler = {
