@@ -73,11 +73,12 @@
         auth = "oauth";
       };
 
-      # Neon MCP (hosted) — DB branch/project management. Authorize with:
-      # openclaw mcp login neon. Scope via URL params when a GoCast project
-      # exists: ?projectId=<id> / ?readonly=true / ?category=querying
+      # Neon MCP (hosted) — DB branch/project management, pinned to the GoCast-360
+      # project. Authorized 2026-10-06 (gateway restart required after login for
+      # the daemon runtime to pick up the token). Scope params: ?readonly=true /
+      # ?category=querying for lower-trust use.
       mcp.servers.neon = {
-        url = "https://mcp.neon.tech/mcp";
+        url = "https://mcp.neon.tech/mcp?projectId=shy-smoke-13265855";
         transport = "streamable-http";
         auth = "oauth";
       };
