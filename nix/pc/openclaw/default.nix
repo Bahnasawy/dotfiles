@@ -2,6 +2,10 @@
   programs.openclaw = {
     enable = true;
 
+    # Declarative runtime plugin: @openclaw/parallel-plugin (keyless web_search).
+    # Nix-managed installs can't use `openclaw plugins install`.
+    runtimePlugins = [ "parallel" ];
+
     workspace.bootstrapFiles = {
       agents = ./workspace/AGENTS.md;
       soul = ./workspace/SOUL.md;
@@ -24,6 +28,13 @@
 
       tools = {
         alsoAllow = [ "computer" ]; # computer use: control paired node desktops (MacBook) via Peekaboo
+
+        # Keyless web_search via Parallel's free Search MCP. Key-free providers
+        # are never auto-selected; provider must be explicit.
+        web.search = {
+          enabled = true;
+          provider = "parallel-free";
+        };
       };
 
       channels.telegram = {
