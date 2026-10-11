@@ -101,6 +101,7 @@
     marksman
     mpv
     btop-rocm
+    claude-code-bin
   ];
 
   home.sessionVariables = {
