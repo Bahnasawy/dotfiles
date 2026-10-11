@@ -38,6 +38,8 @@
       };
 
       channels.telegram = {
+        # Telegram polling is handled by Timmy on the VPS.
+        enabled = false;
         tokenFile = "/home/bahnasawy/.secrets/openclaw/telegram-bot-token";
         allowFrom = [ 8713324248 ];
         groups = {
@@ -71,40 +73,50 @@
                   "image"
                 ]; # vision-capable — required for the computer tool
               }
+              {
+                id = "gpt-6-luna";
+                name = "GPT 6 Luna";
+                input = [
+                  "text"
+                  "image"
+                ]; # vision-capable — required for the computer tool
+              }
             ];
           };
         };
       };
 
-      # Linear MCP — first-party remote server (streamable HTTP + OAuth).
-      # Authorize with: openclaw mcp login linear
-      mcp.servers.linear = {
-        url = "https://mcp.linear.app/mcp";
-        transport = "streamable-http";
-        auth = "oauth";
-      };
+      mcp.servers = {
+        # Linear MCP — first-party remote server (streamable HTTP + OAuth).
+        # Authorize with: openclaw mcp login linear
+        linear = {
+          url = "https://mcp.linear.app/mcp";
+          transport = "streamable-http";
+          auth = "oauth";
+        };
 
-      # Neon MCP (hosted) — DB branch/project management, pinned to the GoCast-360
-      # project. Authorized 2026-10-06 (gateway restart required after login for
-      # the daemon runtime to pick up the token). Scope params: ?readonly=true /
-      # ?category=querying for lower-trust use.
-      mcp.servers.neon = {
-        url = "https://mcp.neon.tech/mcp?projectId=shy-smoke-13265855";
-        transport = "streamable-http";
-        auth = "oauth";
-      };
+        # Neon MCP (hosted) — DB branch/project management, pinned to the GoCast-360
+        # project. Authorized 2026-10-06 (gateway restart required after login for
+        # the daemon runtime to pick up the token). Scope params: ?readonly=true /
+        # ?category=querying for lower-trust use.
+        neon = {
+          url = "https://mcp.neon.tech/mcp?projectId=shy-smoke-13265855";
+          transport = "streamable-http";
+          auth = "oauth";
+        };
 
-      # Doppler MCP (read-only) — stdio wrapper injects DOPPLER_TOKEN at runtime
-      # from the local CLI auth; the token is never stored in config.
-      mcp.servers.doppler = {
-        command = "/home/bahnasawy/.local/bin/doppler-mcp";
-        transport = "stdio";
-        enabled = true;
+        # Doppler MCP (read-only) — stdio wrapper injects DOPPLER_TOKEN at runtime
+        # from the local CLI auth; the token is never stored in config.
+        doppler = {
+          command = "/home/bahnasawy/.local/bin/doppler-mcp";
+          transport = "stdio";
+          enabled = true;
+        };
       };
 
       # Vision-capable primary — the gateway only exposes the `computer` tool to
       # sessions whose model can process screenshots (computer-use requirement).
-      agents.defaults.model.primary = "custom/glm-5.3-flash";
+      agents.defaults.model.primary = "custom/gpt-6-luna";
     };
   };
 
