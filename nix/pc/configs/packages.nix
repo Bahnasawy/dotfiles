@@ -102,6 +102,7 @@
     mpv
     btop-rocm
     claude-code-bin
+    tuios
   ];
 
   home.sessionVariables = {
