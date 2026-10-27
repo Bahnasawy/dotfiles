@@ -1,4 +1,4 @@
-{config, ...}: {
+{ config, ... }: {
   home = {
     file = {
       ".config/tmux" = {
@@ -23,10 +23,6 @@
       };
       ".config/kitty" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/kitty";
-        recursive = true;
-      };
-      ".config/raycast" = {
-        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/raycast";
         recursive = true;
       };
       ".config/bat" = {
