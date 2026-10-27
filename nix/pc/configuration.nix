@@ -8,10 +8,14 @@
     ./configs/system.nix
   ];
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    max-substitution-jobs = 4;
+    http-connections = 8;
+  };
 
   nixpkgs.hostPlatform = "x86_64-linux";
   nixpkgs.config = {
@@ -90,6 +94,7 @@
       podman-tui
       docker-compose
       clinfo
+      gcc
     ];
 
     sessionVariables = {

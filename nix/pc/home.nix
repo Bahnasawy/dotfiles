@@ -5,8 +5,8 @@
 }:
 {
   imports = [
-    inputs.nix-openclaw.homeManagerModules.openclaw
-    ./openclaw
+    # inputs.nix-openclaw.homeManagerModules.openclaw
+    # ./openclaw
     inputs.zen-browser.homeModules.twilight-official
     ./configs/packages.nix
     ./configs/dots.nix

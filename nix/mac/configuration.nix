@@ -10,6 +10,8 @@ _: {
 
     # Necessary for using flakes on this system.
     settings.experimental-features = "nix-command flakes";
+    settings.max-substitution-jobs = 4;
+    settings.http-connections = 8;
   };
 
   # Enable alternative shell support in nix-darwin.

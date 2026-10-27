@@ -15,9 +15,7 @@
     fzf
     lsd
     luarocks
-    nodejs_26
     tree-sitter
-    gcc
     python3
     wl-clipboard
     lazygit
@@ -72,7 +70,6 @@
     htop-vim
     bridge-utils
     awscli2
-    flutter
     lua51Packages.tiktoken_core
     transmission_4-qt
     protontricks
@@ -101,7 +98,7 @@
     marksman
     mpv
     btop-rocm
-    claude-code-bin
+    claude-code
     tuios
   ];
 
@@ -153,6 +150,11 @@
 
         (lib.mkOrder 700 ''
           export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
+
+          # Used by the Claude Code GitHub plugin's MCP server
+          if command -v gh >/dev/null; then
+            export GITHUB_PERSONAL_ACCESS_TOKEN="$(gh auth token 2>/dev/null)"
+          fi
         '')
 
         (lib.mkOrder 1000 ''

@@ -102,6 +102,11 @@
 
         (lib.mkOrder 700 ''
           export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
+
+          # Used by the Claude Code GitHub plugin's MCP server
+          if command -v gh >/dev/null; then
+            export GITHUB_PERSONAL_ACCESS_TOKEN="$(gh auth token 2>/dev/null)"
+          fi
         '')
 
         (lib.mkOrder 1000 ''
