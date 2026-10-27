@@ -53,9 +53,9 @@
     blazingjj
     curl
     herdr
-    opencode
     tuicr
-    atuin
+    # 18.23.0: PTY e2e tests (e2e_capture, e2e_pty) fail in the darwin sandbox
+    (atuin.overrideAttrs { doCheck = false; })
     yazi
   ];
 

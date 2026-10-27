@@ -19,6 +19,7 @@ _: {
       "handy"
       "openclaw"
       "homebrew-app"
+      "claude-code"
     ];
     brews = [
       "fastlane"
@@ -28,6 +29,7 @@ _: {
       "watchman"
       "purple"
       "openclaw-cli"
+      "opencode"
     ];
     taps = [
       "oven-sh/bun"
