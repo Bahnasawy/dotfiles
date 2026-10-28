@@ -107,6 +107,11 @@
   };
 
   programs = {
+    mise = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
     zsh = {
       enable = true;
 
