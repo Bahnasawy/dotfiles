@@ -60,6 +60,11 @@
         recursive = true;
       };
 
+      ".config/tuios" = {
+        source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/tuios";
+        recursive = true;
+      };
+
       ".config/herdr" = {
         source = config.lib.file.mkOutOfStoreSymlink "/Users/bahnasawy/dotfiles/config/herdr";
         recursive = true;

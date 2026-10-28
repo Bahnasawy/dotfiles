@@ -30,6 +30,11 @@
       recursive = true;
     };
 
+    ".config/tuios" = {
+      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/tuios;
+      recursive = true;
+    };
+
     ".config/tuicr" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/tuicr;
       recursive = true;
