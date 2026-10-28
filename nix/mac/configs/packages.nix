@@ -71,6 +71,7 @@
         ANDROID_SDK_ROOT = "/Users/bahnasawy/.android/sdk";
         CROSS_CONTAINER_ENGINE = "podman";
         CROSS_CONTAINER_OPTS = "--platform=linux/amd64";
+        XDG_CONFIG_HOME = "/Users/bahnasawy/.config";
         NIX_PATH = "/Users/bahnasawy/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels";
       };
 
