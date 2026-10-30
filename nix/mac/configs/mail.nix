@@ -23,6 +23,9 @@
       # accounts.conf is a read-only symlink into the store
       general.unsafe-accounts-conf = true;
       ui.styleset-name = "catppuccin";
+      # Prefer the HTML part when a message has both; the default
+      # text/html filter renders it with a sandboxed w3m
+      viewer.alternatives = "text/html,text/plain";
     };
   };
 }
