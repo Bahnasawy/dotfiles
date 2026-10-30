@@ -8,6 +8,7 @@
   imports = [
     ./configs/packages.nix
     ./configs/dots.nix
+    ./configs/mail.nix
     # android-nixpkgs.hmModule
     # {
     #   android-sdk = {

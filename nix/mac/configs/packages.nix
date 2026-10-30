@@ -58,6 +58,7 @@
     # 18.23.0: PTY e2e tests (e2e_capture, e2e_pty) fail in the darwin sandbox
     (atuin.overrideAttrs { doCheck = false; })
     yazi
+    bitwarden-cli
   ];
 
   programs = {
@@ -122,6 +123,10 @@
             else
               nh os switch "$HOME/dotfiles/nix" -H "$(hostname)" "$@"
             fi
+          }
+
+          aerc() {
+            BW_SESSION="''${BW_SESSION:-$(bw unlock --raw)}" command aerc "$@"
           }
 
           collect-garbage() {
