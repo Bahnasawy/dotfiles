@@ -23,9 +23,19 @@
       # accounts.conf is a read-only symlink into the store
       general.unsafe-accounts-conf = true;
       ui.styleset-name = "catppuccin";
-      # Prefer the HTML part when a message has both; the default
-      # text/html filter renders it with a sandboxed w3m
+      # Prefer the HTML part when a message has both
       viewer.alternatives = "text/html,text/plain";
+      # aerc's stock filters, which it skips once aerc.conf exists. "html" is
+      # the bundled sandboxed w3m wrapper. Keys are written sorted and aerc
+      # uses the first match, so no wildcards.
+      filters = {
+        "text/plain" = "colorize";
+        "text/calendar" = "calendar";
+        "message/delivery-status" = "colorize";
+        "message/rfc822" = "colorize";
+        "text/html" = "! html";
+        ".headers" = "colorize";
+      };
     };
   };
 }
