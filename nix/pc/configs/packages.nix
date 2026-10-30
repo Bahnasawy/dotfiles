@@ -100,7 +100,6 @@
     btop-rocm
     claude-code
     tuios
-    bitwarden-cli
   ];
 
   home.sessionVariables = {
@@ -174,10 +173,6 @@
             else
               nh os switch "$HOME/dotfiles/nix" -H "$(hostname)" "$@"
             fi
-          }
-
-          aerc() {
-            BW_SESSION="''${BW_SESSION:-$(bw unlock --raw)}" command aerc "$@"
           }
 
           collect-garbage() {

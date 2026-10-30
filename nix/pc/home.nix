@@ -10,7 +10,6 @@
     inputs.zen-browser.homeModules.twilight-official
     ./configs/packages.nix
     ./configs/dots.nix
-    ./configs/mail.nix
     inputs.android-nixpkgs.hmModule
     {
       android-sdk = {
