@@ -25,6 +25,11 @@
       recursive = true;
     };
 
+    ".config/btop" = {
+      source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/btop;
+      recursive = true;
+    };
+
     ".config/herdr" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/herdr;
       recursive = true;

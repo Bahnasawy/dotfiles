@@ -1,0 +1,117 @@
+2026-10-29T18:31:48.629Z effort row: none found
+2026-10-29T18:35:54.221Z set effort: no effort setting found
+2026-10-29T18:35:54.240Z request: medium -> low
+2026-10-29T18:35:57.537Z request: medium -> low
+2026-10-29T18:35:59.901Z request: medium -> low
+2026-10-29T18:39:21.720Z effort row: none found
+2026-10-29T19:05:24.202Z set effort: no effort setting found
+2026-10-29T19:05:24.269Z request: medium -> low
+2026-10-29T19:06:04.673Z request: medium -> low
+2026-10-29T19:07:20.809Z request: medium -> low
+2026-10-29T19:07:29.772Z request: medium -> low
+2026-10-29T19:07:45.214Z request: medium -> low
+2026-10-29T19:23:12.664Z set effort: no effort setting found
+2026-10-29T20:01:10.749Z set effort: no effort setting found
+2026-10-29T20:01:10.876Z request: medium -> low
+2026-10-29T20:05:02.554Z request: medium -> low
+2026-10-29T20:05:10.238Z request: medium -> low
+2026-10-29T20:05:13.065Z request: medium -> low
+2026-10-29T20:05:24.476Z request: medium -> low
+2026-10-29T20:11:24.967Z request: medium -> low
+2026-10-29T20:11:45.582Z request: medium -> low
+2026-10-29T20:12:20.314Z request: medium -> low
+2026-10-29T20:12:28.545Z request: medium -> low
+2026-10-29T20:12:36.911Z request: medium -> low
+2026-10-29T20:12:38.973Z request: medium -> low
+2026-10-29T20:13:04.147Z request: medium -> low
+2026-10-29T20:13:06.408Z request: medium -> low
+2026-10-29T20:13:27.475Z request: medium -> low
+2026-10-29T20:13:35.267Z request: medium -> low
+2026-10-29T20:13:41.422Z request: medium -> low
+2026-10-29T20:15:08.730Z set effort: no effort setting found
+2026-10-29T20:15:08.837Z request: medium -> high
+2026-10-29T20:16:04.868Z request: medium -> high
+2026-10-29T20:23:52.740Z auto: pick failed: aborted
+2026-10-29T20:23:52.772Z request: medium -> high
+2026-10-29T20:24:25.915Z request: medium -> high
+2026-10-29T20:26:39.922Z effort row: none found
+2026-10-29T20:26:52.923Z effort row: none found
+2026-10-29T20:27:41.461Z set effort: no effort setting found
+2026-10-29T20:27:41.495Z request: medium -> low
+2026-10-29T20:27:44.233Z request: medium -> low
+2026-10-29T20:27:46.293Z request: medium -> low
+2026-10-29T20:27:48.351Z request: medium -> low
+2026-10-29T20:27:50.750Z request: medium -> low
+2026-10-29T20:27:53.351Z request: medium -> low
+2026-10-29T20:27:56.526Z request: medium -> high
+2026-10-29T20:27:56.690Z request: medium -> low
+2026-10-29T20:27:58.904Z request: medium -> low
+2026-10-29T20:28:03.711Z request: medium -> low
+2026-10-29T20:28:05.751Z request: medium -> low
+2026-10-29T20:28:12.640Z request: medium -> low
+2026-10-29T20:29:37.631Z request: medium -> low
+2026-10-29T20:29:40.420Z request: medium -> low
+2026-10-29T20:29:46.171Z request: medium -> low
+2026-10-29T20:30:36.334Z request: medium -> low
+2026-10-29T20:30:39.938Z request: medium -> low
+2026-10-29T20:30:44.381Z request: medium -> low
+2026-10-29T20:31:06.162Z request: medium -> low
+2026-10-29T20:31:19.360Z request: medium -> low
+2026-10-29T20:31:42.960Z request: medium -> low
+2026-10-29T20:31:58.119Z request: medium -> low
+2026-10-29T20:32:55.877Z set effort: no effort setting found
+2026-10-29T20:32:55.955Z request: medium -> low
+2026-10-29T21:01:00.631Z request: medium -> low
+2026-10-29T21:11:47.485Z set effort: no effort setting found
+2026-10-29T21:26:01.685Z set effort: no effort setting found
+2026-10-29T21:26:01.744Z request: medium -> low
+2026-10-29T21:26:05.558Z request: medium -> low
+2026-10-29T21:26:08.826Z request: medium -> low
+2026-10-29T21:26:12.952Z request: medium -> low
+2026-10-29T21:28:13.814Z request: medium -> low
+2026-10-29T21:28:18.034Z request: medium -> low
+2026-10-29T21:28:22.236Z request: medium -> low
+2026-10-29T21:28:25.523Z request: medium -> low
+2026-10-29T21:28:28.525Z request: medium -> low
+2026-10-29T21:28:33.665Z request: medium -> low
+2026-10-29T21:28:37.510Z request: medium -> low
+2026-10-29T21:36:11.651Z request: medium -> low
+2026-10-29T21:36:15.161Z request: medium -> low
+2026-10-29T21:36:39.350Z request: medium -> low
+2026-10-29T21:38:50.645Z request: medium -> low
+2026-10-29T21:38:56.573Z request: medium -> low
+2026-10-29T21:39:18.057Z request: medium -> low
+2026-10-29T21:41:19.756Z request: medium -> low
+2026-10-29T21:41:24.931Z request: medium -> low
+2026-10-29T21:41:29.038Z request: medium -> low
+2026-10-29T21:41:48.027Z request: medium -> low
+2026-10-29T21:41:55.791Z request: medium -> low
+2026-10-29T21:41:57.704Z request: medium -> low
+2026-10-29T21:44:44.294Z request: medium -> low
+2026-10-29T21:44:50.071Z request: medium -> low
+2026-10-29T21:44:59.579Z request: medium -> low
+2026-10-29T21:45:19.516Z request: medium -> low
+2026-10-29T21:45:26.886Z request: medium -> low
+2026-10-29T21:45:30.443Z request: medium -> low
+2026-10-29T21:50:20.213Z request: medium -> low
+2026-10-29T21:50:24.403Z request: medium -> low
+2026-10-29T21:50:29.205Z request: medium -> low
+2026-10-29T21:56:28.394Z request: medium -> low
+2026-10-29T21:56:37.985Z request: medium -> low
+2026-10-29T21:57:38.166Z request: medium -> low
+2026-10-29T21:57:48.456Z request: medium -> low
+2026-11-02T08:17:10.629Z effort row: none found
+2026-11-02T08:18:37.978Z effort row: none found
+2026-11-02T08:18:44.629Z set effort: no effort setting found
+2026-11-02T08:18:44.672Z request: medium -> high
+2026-11-02T08:18:51.040Z request: medium -> high
+2026-11-02T08:18:53.655Z request: medium -> high
+2026-11-02T08:18:57.623Z request: medium -> high
+2026-11-02T08:19:05.357Z request: medium -> high
+2026-11-02T08:19:05.438Z effort row: none found
+2026-11-02T08:19:09.978Z request: medium -> high
+2026-11-02T08:19:11.323Z set effort: no effort setting found
+2026-11-02T08:19:11.365Z request: medium -> low
+2026-11-02T08:19:13.790Z request: medium -> low
+2026-11-02T08:19:14.190Z request: medium -> high
+2026-11-02T08:19:16.069Z request: medium -> high
