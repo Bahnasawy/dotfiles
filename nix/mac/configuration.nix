@@ -14,6 +14,12 @@ _: {
     settings.http-connections = 8;
   };
 
+  # Exported to launchd so GUI apps (e.g. Expo Orbit) see the Android SDK and AVDs.
+  launchd.user.envVariables = {
+    ANDROID_HOME = "/Users/bahnasawy/.android/sdk";
+    ANDROID_AVD_HOME = "/Users/bahnasawy/.android/avd";
+  };
+
   # Enable alternative shell support in nix-darwin.
   # programs.fish.enable = false;
 
