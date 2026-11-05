@@ -25,6 +25,13 @@
 
     tailscale.enable = true; # mesh VPN — remote access without static IP (gateway exposure via tailscale serve)
 
+    hardware.openrgb = {
+      enable = true; # RGB control GUI/daemon — ROG Falchion keyboard + B660 AURA LED controller
+      motherboard = "intel"; # loads i2c modules for motherboard/RAM RGB
+    };
+
+    input-remapper.enable = true; # GUI key remapping/macros at evdev level (works on Wayland, TTY, login screen)
+
     xserver = {
       enable = false;
     };
