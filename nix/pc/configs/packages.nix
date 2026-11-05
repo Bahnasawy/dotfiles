@@ -7,6 +7,7 @@
 {
   home.packages = with pkgs; [
     inputs.purple.packages.${pkgs.system}.default
+    (pkgs.callPackage ../pkgs/expo-orbit.nix { })
     neovim
     vim
     wget
@@ -65,6 +66,7 @@
     lsof
     lazydocker
     android-tools
+    ffmpeg # expo-device-hub encodes the emulator stream
     just
     mesa
     htop-vim
@@ -118,11 +120,13 @@
       sessionVariables = {
         ANDROID_HOME = "/home/bahnasawy/Android/sdk";
         ANDROID_SDK_ROOT = "/home/bahnasawy/Android/sdk";
+        # expo-device-hub streams emulators over gRPC; headless emulators skip it unless asked
+        EXPO_DEVICE_HUB_EMULATOR_EXTRA_ARGS = "-grpc 8554 -grpc-use-token";
         CROSS_CONTAINER_ENGINE = "podman";
         CROSS_CONTAINER_OPTS = "--platform=linux/amd64";
         NIX_PATH = "/home/bahnasawy/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels";
         BUN_INSTALL = "$HOME/.bun";
-        PATH = "$BUN_INSTALL/bin:$PATH";
+        PATH = "$HOME/.local/bin:$BUN_INSTALL/bin:$PATH";
       };
 
       defaultKeymap = "viins";
