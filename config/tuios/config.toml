@@ -145,11 +145,11 @@ enabled = false
 follow = "mouse"
 
 [appearance.sidebar.left]
-enabled = false
+enabled = true
 
 [appearance.sidebar]
 enabled = true
-position = "right"
+position = "left"
 sections = "sessions:25,terminals,files:25,agents:29,git,spacer"
 header_case = "uppercase"
 row_style = "pill"
@@ -167,7 +167,7 @@ subagent_rows = "tree"
 subagent_collapse = "expanded"
 
 [appearance.sidebar.right]
-enabled = true
+enabled = false
 
 [screenshot]
 format = "png"
@@ -200,3 +200,9 @@ command = '''memory_pressure | awk '/free percentage/ { printf "RAM: %d%%\n", 10
 refresh = "5s"
 bg = "bg"
 fg = "fg"
+
+[[keybindings.command]]
+key = "prefix+alt+s"
+type = "popup"
+command = 'dir=$(find ~/fun ~/index -mindepth 1 -maxdepth 1 -type d -not -name ".*" | sort | fzf --prompt "project> ") && tuios switch-session --create --cwd "$dir" "$(basename "$dir")"'
+description = "Open a project"
