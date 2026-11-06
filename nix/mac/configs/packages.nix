@@ -212,6 +212,13 @@
             core.sshCommand = "ssh -i ~/.ssh/index";
           };
         }
+        {
+          condition = "gitdir:~/dotfiles/**";
+          contents = {
+            user.email = "yousef.elbahnasawy@gmail.com";
+            core.sshCommand = "ssh -i ~/.ssh/personal";
+          };
+        }
       ];
       settings = {
         user.name = "Yousef Elbahnasawy";
