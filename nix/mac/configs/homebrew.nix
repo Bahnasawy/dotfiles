@@ -20,6 +20,7 @@ _: {
       "openclaw"
       "homebrew-app"
       "claude-code"
+      "tailscale-app"
     ];
     brews = [
       "fastlane"
