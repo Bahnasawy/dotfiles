@@ -31,6 +31,7 @@ Personal dotfiles for **Yousef Elbahnasawy**, managed with **Nix flakes + home-m
 - Package lists live in `nix/<host>/configs/packages.nix`; system-level tuning in `system.nix`.
 - `stateVersion`: `pc` is `26.11`, `mac` is `26.05` — do not change unless deliberately bumping.
 - `config/opencode/` has a local `node_modules` (contains `@opencode-ai/plugin`) and `package.json`.
+- `config/claude-plugins/` holds local Claude Code plugin marketplaces. They are not symlinked; install per host with `claude plugin marketplace add <repo>/config/claude-plugins/<name>` then `claude plugin install <plugin>@<name>` (e.g. `effort-optimizer@benai-effort-optimizer`).
 - `.zprofile` holds macOS-only env exports (Homebrew paths, `OLLAMA_CONTEXT_LENGTH`); Zsh config itself was moved into Nix.
 - The repo also carries a `.jj` (Jujutsu) working copy.
 
