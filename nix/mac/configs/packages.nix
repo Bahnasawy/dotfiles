@@ -58,6 +58,10 @@
     # 18.23.0: PTY e2e tests (e2e_capture, e2e_pty) fail in the darwin sandbox
     (atuin.overrideAttrs { doCheck = false; })
     yazi
+    # Language servers for the Claude Code LSP plugins
+    typescript-language-server
+    pyright
+    gopls
   ];
 
   programs = {
