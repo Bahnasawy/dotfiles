@@ -7,17 +7,18 @@ _: {
     # List packages installed in system profile. To search by name, run:
     # $ nix-env -qaP | grep wget
     enable = true;
-
-    # Necessary for using flakes on this system.
-    settings.experimental-features = "nix-command flakes";
-    settings.max-substitution-jobs = 4;
-    settings.http-connections = 8;
+    settings = {
+      # Necessary for using flakes on this system.
+      experimental-features = "nix-command flakes";
+      max-substitution-jobs = 4;
+      http-connections = 8;
+    };
   };
 
   # Exported to launchd so GUI apps (e.g. Expo Orbit) see the Android SDK and AVDs.
   launchd.user.envVariables = {
-    ANDROID_HOME = "/Users/bahnasawy/.android/sdk";
-    ANDROID_AVD_HOME = "/Users/bahnasawy/.android/avd";
+    ANDROID_HOME = "/Users/bahnasawy/Android/sdk";
+    ANDROID_AVD_HOME = "/Users/bahnasawy/Android/avd";
   };
 
   # Enable alternative shell support in nix-darwin.

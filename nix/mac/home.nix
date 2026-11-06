@@ -14,7 +14,7 @@
         enable = true;
 
         # Optional; default path is "~/.local/share/android".
-        path = "${config.home.homeDirectory}/.android/sdk";
+        path = "${config.home.homeDirectory}/Android/sdk";
 
         # Matches React Native 0.88 / Expo SDK 58 (compileSdk 37, NDK 27.1)
         packages =
