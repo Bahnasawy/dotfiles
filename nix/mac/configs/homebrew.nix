@@ -5,7 +5,6 @@ _: {
     casks = [
       "iina"
       "the-unarchiver"
-      "arc"
       "spotify"
       "whatsapp"
       "expo-orbit"
