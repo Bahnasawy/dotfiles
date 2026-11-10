@@ -30,6 +30,7 @@ _: {
       "purple"
       "openclaw-cli"
       "opencode"
+      "tuicr"
     ];
     taps = [
       "oven-sh/bun"

@@ -53,7 +53,6 @@
     blazingjj
     curl
     herdr
-    tuicr
     tuios
     # 18.23.0: PTY e2e tests (e2e_capture, e2e_pty) fail in the darwin sandbox
     (atuin.overrideAttrs { doCheck = false; })
@@ -71,8 +70,9 @@
       sessionVariables = {
         NIX_LDFLAGS = "${pkgs.libiconv}/lib";
         LIBSQLITE = "${pkgs.sqlite.out}/lib/libsqlite3.dylib";
-        ANDROID_HOME = "/Users/bahnasawy/.android/sdk";
-        ANDROID_SDK_ROOT = "/Users/bahnasawy/.android/sdk";
+        ANDROID_HOME = "/Users/bahnasawy/Android/sdk";
+        ANDROID_SDK_ROOT = "/Users/bahnasawy/Android/sdk";
+        CHROME_EXECUTABLE = "/Applications/Dia.app/Contents/MacOS/Dia";
         CROSS_CONTAINER_ENGINE = "podman";
         CROSS_CONTAINER_OPTS = "--platform=linux/amd64";
         XDG_CONFIG_HOME = "/Users/bahnasawy/.config";

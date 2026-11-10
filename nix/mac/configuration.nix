@@ -18,7 +18,7 @@ _: {
   # Exported to launchd so GUI apps (e.g. Expo Orbit) see the Android SDK and AVDs.
   launchd.user.envVariables = {
     ANDROID_HOME = "/Users/bahnasawy/Android/sdk";
-    ANDROID_AVD_HOME = "/Users/bahnasawy/Android/avd";
+    ANDROID_AVD_HOME = "/Users/bahnasawy/.android/avd";
   };
 
   # Enable alternative shell support in nix-darwin.
