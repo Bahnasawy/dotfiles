@@ -103,6 +103,8 @@
       config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/kscreenlockerrc;
     ".config/darklyrc".source =
       config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/darklyrc;
+    ".config/panel-colorizer/presets/tight-glass".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/panel-colorizer/tight-glass;
     ".local/share/color-schemes/CatppuccinMochaMauve.colors".source =
       config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/color-schemes/CatppuccinMochaMauve.colors;
 

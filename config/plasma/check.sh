@@ -153,7 +153,21 @@ check_windows() {
   fi
 }
 
-ALL_SECTIONS=(links look widgets windows)
+check_panels() {
+  local actual want line
+  actual=$(qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript \
+    'var o=[]; panels().forEach(function(p){ o.push(p.location+"|"+p.height+"|"+p.hiding+"|"+p.widgets().map(function(w){return w.type}).join(",")); }); print(o.sort().join("\n"));')
+  want="left|46|autohide|org.kde.plasma.kickoff,org.kde.plasma.icontasks,org.kde.plasma.panelspacer,org.kde.plasma.pager,luisbocanegra.panel.colorizer
+right|46|autohide|org.kde.plasma.digitalclock,org.kde.plasma.panelspacer,org.kde.plasma.systemtray,org.kde.plasma.lock_logout,luisbocanegra.panel.colorizer
+top|30|autohide|com.github.antroids.application-title-bar,org.kde.plasma.appmenu,org.kde.plasma.panelspacer,com.github.antroids.application-title-bar,luisbocanegra.panel.colorizer"
+  if [ "$actual" != "$want" ]; then
+    fail "panel layout differs:"
+    diff <(echo "$want") <(echo "$actual") | sed 's/^/    /'
+  fi
+  is_link "$CFG/panel-colorizer/presets/tight-glass"
+}
+
+ALL_SECTIONS=(links look widgets windows panels)
 
 run() {
   section=$1
