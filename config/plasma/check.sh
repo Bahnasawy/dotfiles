@@ -157,9 +157,10 @@ check_panels() {
   local actual want line
   actual=$(qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript \
     'var o=[]; panels().forEach(function(p){ o.push(p.location+"|"+p.height+"|"+p.hiding+"|"+p.widgets().map(function(w){return w.type}).join(",")); }); print(o.sort().join("\n"));')
-  want="left|46|autohide|org.kde.plasma.kickoff,org.kde.plasma.icontasks,org.kde.plasma.panelspacer,org.kde.plasma.pager,luisbocanegra.panel.colorizer
-right|46|autohide|org.kde.plasma.digitalclock,org.kde.plasma.panelspacer,org.kde.plasma.systemtray,org.kde.plasma.lock_logout,luisbocanegra.panel.colorizer
-top|30|autohide|com.github.antroids.application-title-bar,org.kde.plasma.appmenu,org.kde.plasma.panelspacer,com.github.antroids.application-title-bar,luisbocanegra.panel.colorizer"
+  # Thickness is the visible size (46 rails, 30 top bar) plus 24px of slack.
+  want="left|70|autohide|org.kde.plasma.kickoff,org.kde.plasma.icontasks,org.kde.plasma.pager,luisbocanegra.panel.colorizer
+right|70|autohide|org.kde.plasma.digitalclock,org.kde.plasma.systemtray,org.kde.plasma.lock_logout,luisbocanegra.panel.colorizer
+top|54|autohide|com.github.antroids.application-title-bar,org.kde.plasma.appmenu,org.kde.plasma.panelspacer,com.github.antroids.application-title-bar,luisbocanegra.panel.colorizer"
   if [ "$actual" != "$want" ]; then
     fail "panel layout differs:"
     diff <(echo "$want") <(echo "$actual") | sed 's/^/    /'

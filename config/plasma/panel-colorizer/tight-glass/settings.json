@@ -3,12 +3,12 @@
     "panel": {
       "normal": {
         "enabled": true,
-        "blurBehind": true,
+        "blurBehind": false,
         "backgroundColor": {
           "enabled": true,
           "lightnessValue": 0.5,
           "saturationValue": 0.5,
-          "alpha": 0.78,
+          "alpha": 1,
           "systemColor": "backgroundColor",
           "systemColorSet": "Window",
           "custom": "#313244",
@@ -913,7 +913,7 @@
     },
     "nativePanel": {
       "background": {
-        "enabled": true,
+        "enabled": false,
         "opacity": 0,
         "shadow": false
       },

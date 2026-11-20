@@ -1,18 +1,20 @@
 [PlasmaViews][Panel 59]
 floating=0
+panelLengthMode=1
 panelVisibility=1
 shell=org.kde.plasma.desktop
 
 [PlasmaViews][Panel 59][Defaults]
-thickness=46
+thickness=70
 
 [PlasmaViews][Panel 65]
 floating=0
+panelLengthMode=1
 panelVisibility=1
 shell=org.kde.plasma.desktop
 
 [PlasmaViews][Panel 65][Defaults]
-thickness=46
+thickness=70
 
 [PlasmaViews][Panel 85]
 floating=0
@@ -23,6 +25,7 @@ shell=org.kde.plasma.desktop
 [PlasmaViews][Panel 85][Defaults]
 maxLength=3336
 minLength=3336
+thickness=54
 
 [PlasmaViews][Panel 85][Horizontal3440]
 maxLength=3336
