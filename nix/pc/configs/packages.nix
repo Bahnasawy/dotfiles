@@ -65,7 +65,7 @@
     firefox
     lsof
     lazydocker
-    android-tools
+    # android-tools
     ffmpeg # expo-device-hub encodes the emulator stream
     just
     mesa
@@ -128,10 +128,10 @@
       enable = true;
 
       sessionVariables = {
-        ANDROID_HOME = "/home/bahnasawy/Android/sdk";
-        ANDROID_SDK_ROOT = "/home/bahnasawy/Android/sdk";
+        # ANDROID_HOME = "/home/bahnasawy/Android/sdk";
+        # ANDROID_SDK_ROOT = "/home/bahnasawy/Android/sdk";
         # expo-device-hub streams emulators over gRPC; headless emulators skip it unless asked
-        EXPO_DEVICE_HUB_EMULATOR_EXTRA_ARGS = "-grpc 8554 -grpc-use-token";
+        # EXPO_DEVICE_HUB_EMULATOR_EXTRA_ARGS = "-grpc 8554 -grpc-use-token";
         CROSS_CONTAINER_ENGINE = "podman";
         CROSS_CONTAINER_OPTS = "--platform=linux/amd64";
         NIX_PATH = "/home/bahnasawy/.nix-defexpr/channels:nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels";
@@ -235,7 +235,7 @@
 
     nh = {
       enable = true;
-      flake = "/home/bahnasawy/dotfiles/nix/pc";
+      flake = "/home/bahnasawy/dotfiles/nix";
       clean = {
         enable = true;
       };

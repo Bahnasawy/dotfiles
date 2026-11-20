@@ -20,7 +20,7 @@
   nixpkgs.hostPlatform = "x86_64-linux";
   nixpkgs.config = {
     allowUnfree = true;
-    android_sdk.accept_license = true;
+    # android_sdk.accept_license = true;
   };
 
   users.users.bahnasawy = {

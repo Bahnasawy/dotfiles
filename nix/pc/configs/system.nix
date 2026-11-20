@@ -131,7 +131,7 @@
     nix-ld.enable = true;
     nix-ld.libraries = with pkgs; [
       gradle_8
-      aapt
+      # aapt
       lua-language-server
       libGL
       glib

@@ -19,37 +19,40 @@ in
   imports = [
     # inputs.nix-openclaw.homeManagerModules.openclaw
     # ./openclaw
-    inputs.zen-browser.homeModules.twilight-official
+    inputs.zen-browser.homeModules.beta
     ./configs/packages.nix
     ./configs/dots.nix
-    inputs.android-nixpkgs.hmModule
-    {
-      android-sdk = {
-        enable = true;
-
-        # Optional; default path is "~/.local/share/android".
-        path = "${config.home.homeDirectory}/Android/sdk";
-
-        packages =
-          sdk: with sdk; [
-            build-tools-35-0-0
-            build-tools-36-0-0
-            build-tools-37-0-0
-            # 20+ wrap the Android CLI, which writes .sdk into the read-only SDK
-            # and crashes `sdkmanager --list_installed`; tools expect it at latest/.
-            (cmdline-tools-19-0 // { path = "cmdline-tools/latest"; })
-            emulator
-            platforms-android-36
-            platforms-android-37-0
-            sources-android-36
-            ndk-27-1-12297006
-            platform-tools
-            (withNixNinja cmake-3-22-1)
-            (withNixNinja cmake-3-30-5)
-            system-images-android-36-google-apis-x86-64
-          ];
-      };
-    }
+    # Android disabled. To re-enable: uncomment this block, plus android-tools
+    # and the ANDROID_*/EXPO_DEVICE_HUB vars in configs/packages.nix, aapt in
+    # configs/system.nix, and android_sdk.accept_license in configuration.nix.
+    # inputs.android-nixpkgs.hmModule
+    # {
+    #   android-sdk = {
+    #     enable = true;
+    #
+    #     # Optional; default path is "~/.local/share/android".
+    #     path = "${config.home.homeDirectory}/Android/sdk";
+    #
+    #     packages =
+    #       sdk: with sdk; [
+    #         build-tools-35-0-0
+    #         build-tools-36-0-0
+    #         build-tools-37-0-0
+    #         # 20+ wrap the Android CLI, which writes .sdk into the read-only SDK
+    #         # and crashes `sdkmanager --list_installed`; tools expect it at latest/.
+    #         (cmdline-tools-19-0 // { path = "cmdline-tools/latest"; })
+    #         emulator
+    #         platforms-android-36
+    #         platforms-android-37-0
+    #         sources-android-36
+    #         ndk-27-1-12297006
+    #         platform-tools
+    #         (withNixNinja cmake-3-22-1)
+    #         (withNixNinja cmake-3-30-5)
+    #         system-images-android-36-google-apis-x86-64
+    #       ];
+    #   };
+    # }
   ];
 
   programs = {
