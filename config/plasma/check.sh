@@ -103,7 +103,57 @@ check_widgets() {
   key darklyrc Style ToolBarDrawItemSeparator false
 }
 
-ALL_SECTIONS=(links look widgets)
+# Rounded-corners key names come from KDE-Rounded-Corners src/kcm/options.kcfg.
+check_windows() {
+  local r
+  key kwinrc Windows BorderlessMaximizedWindows true
+  key kwinrc Effect-overview BorderActivate 9
+  key kwinrc Plugins kwin4_effect_shapecornersEnabled true
+  key kwinrc Round-Corners Size 3
+  key kwinrc Round-Corners InactiveCornerRadius 3
+  key kwinrc Round-Corners OutlineThickness 1
+  key kwinrc Round-Corners OutlineColor 203,166,247
+  key kwinrc Round-Corners InactiveOutlineColor 69,71,90
+  key kwinrulesrc open-maximized maximizehoriz true
+  key kwinrulesrc open-maximized maximizehorizrule 3
+  key kwinrulesrc open-maximized maximizevert true
+  key kwinrulesrc open-maximized maximizevertrule 3
+  key kwinrulesrc open-maximized types 1
+  # open-maximized must be the last rule so the small-window rules win.
+  case "$(kreadconfig6 --file kwinrulesrc --group General --key Order)" in
+    *,open-maximized) ;;
+    *) fail "open-maximized is not last in kwinrulesrc Order" ;;
+  esac
+  # Windows that must stay small keep an explicit not-maximized rule.
+  for r in 854ac35e-bd6f-46f6-8ce5-696177d70e8c 7bcab82b-d549-4005-be33-8ec67ed4d42f \
+    b3f61c94-3e34-45ef-8fef-f96d8f1037a2; do
+    key kwinrulesrc "$r" maximizehoriz false
+    key kwinrulesrc "$r" maximizehorizrule 3
+    key kwinrulesrc "$r" maximizevert false
+    key kwinrulesrc "$r" maximizevertrule 3
+  done
+  # Behavior: a fresh normal window opens covering the whole 3440x1440 screen.
+  local win geo i
+  kwrite >/dev/null 2>&1 &
+  for i in 1 2 3 4 5 6 7 8 9 10; do
+    sleep 0.5
+    win=$(kdotool search --class kwrite 2>/dev/null | head -1)
+    [ -n "$win" ] && break
+  done
+  if [ -z "$win" ]; then
+    fail "kwrite window did not appear"
+  else
+    sleep 1
+    geo=$(kdotool getwindowgeometry "$win" | tr -d ' \n')
+    case "$geo" in
+      *Position:0,0*Geometry:3440x1440*) ;;
+      *) fail "kwrite opened at '$geo', want position 0,0 size 3440x1440" ;;
+    esac
+    kdotool windowclose "$win"
+  fi
+}
+
+ALL_SECTIONS=(links look widgets windows)
 
 run() {
   section=$1

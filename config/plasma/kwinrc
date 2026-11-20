@@ -4,8 +4,23 @@ Id_2=3ae0d1b8-f0cf-4631-91c4-c2ba0451e15f
 Number=2
 Rows=1
 
+[Effect-overview]
+BorderActivate=9
+
 [Plugins]
 hidecursorEnabled=true
+kwin4_effect_shapecornersEnabled=true
+
+[Round-Corners]
+InactiveCornerRadius=3
+InactiveOutlineColor=69,71,90
+InactiveOutlineThickness=1
+InactiveSecondOutlineThickness=0
+OutlineColor=203,166,247
+OutlineThickness=1
+SecondOutlineThickness=0
+Size=3
+UseSquircleShape=false
 
 [Tiling][3ae0d1b8-f0cf-4631-91c4-c2ba0451e15f][]
 padding=4
@@ -64,6 +79,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Tiling][ecddea2a-e9ba-50ad-a840-14b3238c92e5]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Windows]
+BorderlessMaximizedWindows=true
 
 [Windows_HDR]
 MaxFrameAverage=0
