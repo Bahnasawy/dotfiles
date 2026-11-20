@@ -139,6 +139,7 @@ new_window_follow_ssh = true
 max_fps = 170
 preferred_shell = "zsh"
 zoom_borderless = false
+zen_mode = "disabled"
 
 [spotlight]
 enabled = false
@@ -148,7 +149,7 @@ follow = "mouse"
 enabled = true
 
 [appearance.sidebar]
-enabled = true
+enabled = false
 position = "left"
 sections = "sessions:25,terminals,files:25,agents:29,git,spacer"
 header_case = "uppercase"
