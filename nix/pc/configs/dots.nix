@@ -103,6 +103,19 @@
       config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/kscreenlockerrc;
     ".config/darklyrc".source =
       config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/darklyrc;
+    ".config/gtk-3.0/gtk.css".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/gtk/gtk.css;
+    ".config/gtk-4.0/gtk.css".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/gtk/gtk.css;
+    ".config/fastfetch".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/fastfetch;
+    # Catppuccin Mocha mauve for Zen (stable profile).
+    ".config/zen/exgyz0bm.Default Profile/chrome/userChrome.css".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/zen/userChrome.css;
+    ".config/zen/exgyz0bm.Default Profile/chrome/userContent.css".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/zen/userContent.css;
+    ".config/zen/exgyz0bm.Default Profile/chrome/zen-logo-mocha.svg".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/zen/zen-logo-mocha.svg;
     ".config/panel-colorizer/presets/tight-glass".source =
       config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/panel-colorizer/tight-glass;
     ".local/share/color-schemes/CatppuccinMochaMauve.colors".source =

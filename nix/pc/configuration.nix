@@ -90,6 +90,13 @@
     defaultPackages = with pkgs; [ networkmanager ];
 
     systemPackages = with pkgs; [
+      # SDDM login theme for the Plasma rice.
+      (catppuccin-sddm.override {
+        flavor = "mocha";
+        accent = "mauve";
+        font = "Inter";
+        fontSize = "10";
+      })
       dive
       podman-tui
       docker-compose

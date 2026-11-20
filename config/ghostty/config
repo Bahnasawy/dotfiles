@@ -6,6 +6,8 @@ macos-option-as-alt = true
 cursor-opacity = 0.7
 cursor-style = block
 maximize = true
+window-padding-x = 6
+window-padding-y = 4
 keybind = ctrl+enter=unbind
 keybind = alt+arrow_left=unbind
 keybind = alt+arrow_right=unbind

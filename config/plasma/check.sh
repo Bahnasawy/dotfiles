@@ -167,7 +167,25 @@ top|30|autohide|com.github.antroids.application-title-bar,org.kde.plasma.appmenu
   is_link "$CFG/panel-colorizer/presets/tight-glass"
 }
 
-ALL_SECTIONS=(links look widgets windows panels)
+check_extras() {
+  is_link "$CFG/gtk-3.0/gtk.css"
+  is_link "$CFG/gtk-4.0/gtk.css"
+  is_link "$CFG/fastfetch"
+  is_link "$CFG/zen/exgyz0bm.Default Profile/chrome/userChrome.css"
+  is_link "$CFG/zen/exgyz0bm.Default Profile/chrome/userContent.css"
+  key gtk-3.0/settings.ini Settings gtk-theme-name Breeze
+  key gtk-4.0/settings.ini Settings gtk-theme-name Breeze
+  grep -q 'window-padding-x' "$CFG/ghostty/config" || fail "ghostty has no window padding"
+  starship print-config 2>/dev/null | grep -q "palette = ['\"]catppuccin_mocha['\"]" ||
+    fail "starship palette is not catppuccin_mocha"
+  # Lock screen follows the desktop: Simon Stalenhag picture of the day.
+  key kscreenlockerrc Greeter WallpaperPlugin org.kde.potd
+  key kscreenlockerrc Greeter/Wallpaper/org.kde.potd/General Provider simonstalenhag
+  grep -qs 'catppuccin-mocha-mauve' /etc/sddm.conf /etc/sddm.conf.d/* ||
+    fail "SDDM theme is not catppuccin-mocha-mauve"
+}
+
+ALL_SECTIONS=(links look widgets windows panels extras)
 
 run() {
   section=$1

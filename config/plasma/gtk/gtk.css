@@ -1,0 +1,16 @@
+/* Linked to ~/.config/gtk-3.0/gtk.css and ~/.config/gtk-4.0/gtk.css.
+   Plasma writes colors.css next to it from the active color scheme. */
+@import 'colors.css';
+
+button,
+entry,
+spinbutton,
+combobox button,
+menu,
+menuitem,
+popover,
+popover > contents,
+.menu,
+tooltip {
+  border-radius: 3px;
+}

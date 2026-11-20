@@ -45,6 +45,7 @@
           relogin = true;
         };
         autoNumlock = true;
+        theme = "catppuccin-mocha-mauve";
       };
     };
     desktopManager.plasma6.enable = true;
