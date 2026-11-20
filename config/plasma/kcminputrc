@@ -8,4 +8,5 @@ ScrollFactor=2
 
 [Mouse]
 X11LibInputXAccelProfileFlat=true
-cursorTheme=breeze_cursors
+cursorSize=24
+cursorTheme=catppuccin-mocha-dark-cursors

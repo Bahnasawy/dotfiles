@@ -70,7 +70,24 @@ check_links() {
   fc-list | grep -q "Inter" || fail "Inter font not installed"
 }
 
-ALL_SECTIONS=(links)
+check_look() {
+  key kdeglobals General ColorScheme CatppuccinMochaMauve
+  # No AccentColor key: Plasma darkens an explicit accent (mauve became 151,125,186).
+  # The scheme itself carries mauve, so the accent must stay unset.
+  key kdeglobals General AccentColor ""
+  key kdeglobals "Colors:View" BackgroundNormal 30,30,46
+  key kdeglobals "Colors:Window" BackgroundNormal 24,24,37
+  key kdeglobals "Colors:Selection" BackgroundNormal 203,166,247
+  key kdeglobals General font "Inter,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+  key kdeglobals General smallestReadableFont "Inter,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+  key kdeglobals General fixed "JetBrainsMono Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+  key kdeglobals WM activeFont "Inter,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1"
+  key kdeglobals Icons Theme Papirus-Dark
+  key kcminputrc Mouse cursorTheme catppuccin-mocha-dark-cursors
+  key kcminputrc Mouse cursorSize 24
+}
+
+ALL_SECTIONS=(links look)
 
 run() {
   section=$1
