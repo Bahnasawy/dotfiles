@@ -168,8 +168,9 @@ top|30|autohide|com.github.antroids.application-title-bar,org.kde.plasma.appmenu
 }
 
 check_extras() {
-  is_link "$CFG/gtk-3.0/gtk.css"
-  is_link "$CFG/gtk-4.0/gtk.css"
+  # Copies, not links: Plasma's GTK helper replaces these files (see apply.sh).
+  cmp -s "$CFG/gtk-3.0/gtk.css" "${REPO_CONFIG}plasma/gtk/gtk.css" || fail "gtk-3.0/gtk.css differs from the repo copy; run apply.sh"
+  cmp -s "$CFG/gtk-4.0/gtk.css" "${REPO_CONFIG}plasma/gtk/gtk.css" || fail "gtk-4.0/gtk.css differs from the repo copy; run apply.sh"
   is_link "$CFG/fastfetch"
   is_link "$CFG/zen/exgyz0bm.Default Profile/chrome/userChrome.css"
   is_link "$CFG/zen/exgyz0bm.Default Profile/chrome/userContent.css"
@@ -181,6 +182,9 @@ check_extras() {
   # Lock screen follows the desktop: Simon Stalenhag picture of the day.
   key kscreenlockerrc Greeter WallpaperPlugin org.kde.potd
   key kscreenlockerrc Greeter/Wallpaper/org.kde.potd/General Provider simonstalenhag
+  # Top bar hides while Zen is focused.
+  is_link "$HOME/.local/share/kwin/scripts/zen-no-topbar"
+  key kwinrc Plugins zen-no-topbarEnabled true
   grep -qs 'catppuccin-mocha-mauve' /etc/sddm.conf /etc/sddm.conf.d/* ||
     fail "SDDM theme is not catppuccin-mocha-mauve"
 }

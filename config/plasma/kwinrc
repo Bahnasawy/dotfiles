@@ -10,6 +10,7 @@ BorderActivate=9
 [Plugins]
 hidecursorEnabled=true
 kwin4_effect_shapecornersEnabled=true
+zen-no-topbarEnabled=true
 
 [Round-Corners]
 InactiveCornerRadius=3

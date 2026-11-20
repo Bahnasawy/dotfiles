@@ -1,0 +1,13 @@
+{
+  "KPackageStructure": "KWin/Script",
+  "X-Plasma-API": "javascript",
+  "X-Plasma-MainScript": "code/main.js",
+  "KPlugin": {
+    "Id": "zen-no-topbar",
+    "Name": "Hide top bar for Zen",
+    "Description": "Hides the top panel while a Zen browser window is focused.",
+    "Version": "1.0",
+    "License": "MIT",
+    "EnabledByDefault": true
+  }
+}

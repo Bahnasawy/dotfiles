@@ -1,4 +1,4 @@
-/* Linked to ~/.config/gtk-3.0/gtk.css and ~/.config/gtk-4.0/gtk.css.
+/* Copied by apply.sh to ~/.config/gtk-3.0/gtk.css and ~/.config/gtk-4.0/gtk.css.
    Plasma writes colors.css next to it from the active color scheme. */
 @import 'colors.css';
 
