@@ -87,7 +87,23 @@ check_look() {
   key kcminputrc Mouse cursorSize 24
 }
 
-ALL_SECTIONS=(links look)
+# Key names come from Darkly's kstyle/darkly.kcfg (no schema is installed).
+# It has no scrollbar-width setting.
+check_widgets() {
+  key kdeglobals KDE widgetStyle Darkly
+  key darklyrc Common CornerRadius 3
+  key darklyrc Common FancyMargins false
+  key darklyrc Common ButtonHeight 1
+  key darklyrc Common MenuItemHeight 2
+  key darklyrc Style MenuOpacity 90
+  key darklyrc Style SidePanelDrawFrame false
+  key darklyrc Style DockWidgetDrawFrame false
+  key darklyrc Style TitleWidgetDrawFrame false
+  key darklyrc Style ToolBarDrawSeparator false
+  key darklyrc Style ToolBarDrawItemSeparator false
+}
+
+ALL_SECTIONS=(links look widgets)
 
 run() {
   section=$1

@@ -149,7 +149,7 @@ AnimationDurationFactor=0.17677669529663687
 LookAndFeelPackage=org.kde.breezedark.desktop
 contrast=4
 frameContrast=0.2
-widgetStyle=Breeze
+widgetStyle=Darkly
 
 [KFileDialog Settings]
 Allow Expansion=false

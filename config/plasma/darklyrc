@@ -1,0 +1,13 @@
+[Common]
+ButtonHeight=1
+CornerRadius=3
+FancyMargins=false
+MenuItemHeight=2
+
+[Style]
+DockWidgetDrawFrame=false
+MenuOpacity=90
+SidePanelDrawFrame=false
+TitleWidgetDrawFrame=false
+ToolBarDrawItemSeparator=false
+ToolBarDrawSeparator=false
