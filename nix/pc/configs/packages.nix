@@ -78,6 +78,16 @@
     duckdb
     stremio-linux-shell
     catppuccin-kde
+    # Plasma rice (config lives in config/plasma, see docs/superpowers/specs)
+    darkly
+    plasma-panel-colorizer
+    kde-rounded-corners
+    application-title-bar
+    (catppuccin-papirus-folders.override {
+      flavor = "mocha";
+      accent = "mauve";
+    })
+    catppuccin-cursors.mochaDark
     vlc
     vlc-bittorrent
     lutris
@@ -248,47 +258,6 @@
 
     zoxide = {
       enable = true;
-    };
-
-    plasma = {
-      workspace = {
-        colorScheme = "Sweet";
-        theme = "Sweet";
-        lookAndFeel = "org.kde.breezedark.desktop";
-      };
-      input = {
-        keyboard = {
-          layouts = [
-            {
-              layout = "us";
-            }
-            {
-              layout = "eg";
-            }
-          ];
-        };
-      };
-      powerdevil.AC = {
-        autoSuspend.action = "nothing";
-        autoSuspend.idleTimeout = null;
-        dimDisplay = {
-          enable = false;
-          idleTimeout = null;
-        };
-        powerButtonAction = "turnOffScreen";
-        turnOffDisplay.idleTimeout = null;
-      };
-      krunner = {
-        activateWhenTypingOnDesktop = true;
-        position = "center";
-      };
-      workspace = {
-        wallpaperPictureOfTheDay = {
-          provider = "bing";
-        };
-        wallpaperFillMode = "preserveAspectCrop";
-      };
-      panels = [ ];
     };
   };
 }

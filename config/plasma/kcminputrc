@@ -1,0 +1,11 @@
+[ButtonRebinds][Mouse]
+ExtraButton1=Key,Meta+Ctrl+Right
+ExtraButton2=Key,Meta+Ctrl+Left
+
+[Libinput][2821][6460][ASUSTeK ROG FALCHION Mouse]
+PointerAccelerationProfile=1
+ScrollFactor=2
+
+[Mouse]
+X11LibInputXAccelProfileFlat=true
+cursorTheme=breeze_cursors

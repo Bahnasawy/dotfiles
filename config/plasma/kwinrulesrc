@@ -1,0 +1,100 @@
+[5af93935-1e28-43fc-b90e-fc746ca51e3c]
+Description=Settings for zen zen-twilght
+desktops=3ae0d1b8-f0cf-4631-91c4-c2ba0451e15f
+desktopsrule=3
+wmclass=zen zen-twilight
+wmclasscomplete=true
+wmclassmatch=1
+
+[7bcab82b-d549-4005-be33-8ec67ed4d42f]
+Description=Zen browser PiP
+above=true
+aboverule=3
+decorationpolicy=none
+decorationpolicyrule=3
+desktops=\\0
+desktopsrule=3
+position=2840,1103
+positionrule=3
+size=600,337
+sizerule=3
+skippager=true
+skippagerrule=3
+skipswitcher=true
+skipswitcherrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+title=Picture-in-Picture
+titlematch=1
+wmclass=zen zen-twilight
+wmclasscomplete=true
+wmclassmatch=1
+
+[854ac35e-bd6f-46f6-8ce5-696177d70e8c]
+Description=Window settings for mpv
+above=true
+aboverule=3
+decorationpolicy=none
+decorationpolicyrule=3
+desktops=\\0
+desktopsrule=3
+position=1778,1113
+positionrule=3
+size=782,327
+sizerule=3
+skippagerrule=3
+skipswitcherrule=3
+skiptaskbarrule=3
+types=1
+wmclass=mpv mpv
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+Order=854ac35e-bd6f-46f6-8ce5-696177d70e8c,b7fd7e82-8b8d-4c77-bce5-acffb9ce31f6,b3f61c94-3e34-45ef-8fef-f96d8f1037a2,daf1a499-be82-434b-abdf-b9b98eb96c92,7bcab82b-d549-4005-be33-8ec67ed4d42f,5af93935-1e28-43fc-b90e-fc746ca51e3c
+
+[b3f61c94-3e34-45ef-8fef-f96d8f1037a2]
+Description=Window settings for chrome
+above=true
+aboverule=3
+position=1646,919
+positionrule=3
+size=580,333
+sizerule=3
+skipswitcher=true
+skipswitcherrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+title=Picture in picture
+titlematch=1
+types=1
+wmclass=chrome
+wmclassmatch=1
+
+[b7fd7e82-8b8d-4c77-bce5-acffb9ce31f6]
+Description=Window settings for ulauncher
+decorationpolicy=none
+decorationpolicyrule=3
+shortcut=Ctrl+Shift+Space
+shortcutrule=3
+skippager=true
+skippagerrule=3
+skipswitcher=true
+skipswitcherrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+title=Ulauncher Preferences
+types=1
+wmclass=python3.13 ulauncher
+wmclasscomplete=true
+wmclassmatch=1
+
+[daf1a499-be82-434b-abdf-b9b98eb96c92]
+Description=Application settings for com.mitchellh.ghostty
+decorationpolicy=none
+decorationpolicyrule=3
+desktops=e6e122ac-55db-42ee-a5ab-8d0cc2a83c95
+desktopsrule=3
+wmclass=ghostty com.mitchellh.ghostty
+wmclasscomplete=true
+wmclassmatch=1

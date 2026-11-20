@@ -80,6 +80,32 @@
       recursive = true;
     };
 
+    # Plasma rice: per-file links, Plasma keeps these loose in ~/.config.
+    ".config/kdeglobals".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/kdeglobals;
+    ".config/kwinrc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/kwinrc;
+    ".config/kwinrulesrc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/kwinrulesrc;
+    ".config/plasmarc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/plasmarc;
+    ".config/plasmashellrc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/plasmashellrc;
+    ".config/plasma-org.kde.plasma.desktop-appletsrc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/plasma-org.kde.plasma.desktop-appletsrc;
+    ".config/kcminputrc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/kcminputrc;
+    ".config/kxkbrc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/kxkbrc;
+    ".config/powerdevilrc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/powerdevilrc;
+    ".config/kscreenlockerrc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/kscreenlockerrc;
+    ".config/darklyrc".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/darklyrc;
+    ".local/share/color-schemes/CatppuccinMochaMauve.colors".source =
+      config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/plasma/color-schemes/CatppuccinMochaMauve.colors;
+
     ".gitmux.conf" = {
       source = config.lib.file.mkOutOfStoreSymlink /home/bahnasawy/dotfiles/config/gitmux.conf;
     };
